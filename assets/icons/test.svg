@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 24 24"
+     width="240"
+     height="240">
+
+  <path
+    d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9s9-4.03 9-9s-4.03-9-9-9"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.5"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    stroke-dasharray="60"
+    stroke-dashoffset="60">
+    <animate attributeName="stroke-dashoffset"
+             values="60;0"
+             dur="0.6s"
+             fill="freeze"/>
+  </path>
+
+  <path d="M10 8.5L16 12L10 15.5Z"
+        fill="currentColor"
+        opacity="0">
+    <set attributeName="opacity"
+         begin="0.6s"
+         to="1"
+         fill="freeze"/>
+    <animate attributeName="d"
+             begin="0.6s"
+             dur="0.2s"
+             values="M12 11L12 12L12 13Z;M10 8.5L16 12L10 15.5Z"
+             fill="freeze"/>
+  </path>
+
+</svg>

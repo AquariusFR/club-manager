@@ -1,0 +1,294 @@
+/* ========================================
+   LAYOUT
+======================================== */
+
+/* ----------------------------------------
+   Container
+---------------------------------------- */
+
+.container {
+    width: min(
+        calc(100% - (var(--container-padding) * 2)),
+        var(--container-width)
+    );
+
+    margin-inline: auto;
+}
+
+
+/* ----------------------------------------
+   Sections
+---------------------------------------- */
+
+.section {
+    padding-block: var(--spacing-6);
+}
+
+.section__header {
+    margin-bottom: var(--spacing-4);
+}
+
+.section__header h2 {
+    margin-bottom: var(--spacing-1);
+}
+
+.section__header p {
+    margin-bottom: 0;
+    color: var(--color-text-light);
+}
+
+
+/* ----------------------------------------
+   Header
+---------------------------------------- */
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+
+    min-height: var(--header-height);
+
+    background: var(--color-background);
+
+    border-bottom: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.site-header > .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: var(--header-height);
+}
+
+.site-header__logo img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+}
+
+
+/* ----------------------------------------
+   Navigation mobile
+---------------------------------------- */
+
+.site-header__navigation {
+    position: absolute;
+
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+
+    display: none;
+
+    padding: var(--spacing-2);
+
+    background: var(--color-background);
+
+    border-bottom: 1px solid var(--color-border);
+
+    box-shadow: var(--shadow-md);
+}
+
+.site-header__navigation.is-open {
+    display: block;
+}
+
+.site-header__navigation ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.site-header__navigation a {
+    display: block;
+
+    padding: 0.875rem 1rem;
+
+    border-radius: var(--radius-sm);
+
+    font-weight: var(--font-weight-medium);
+}
+
+.site-header__navigation a:hover,
+.site-header__navigation a:focus-visible {
+    color: var(--color-primary);
+
+    background: var(--color-primary-light);
+}
+
+
+/* ----------------------------------------
+   Menu hamburger
+---------------------------------------- */
+
+.site-header__menu-button {
+    display: flex;
+
+    width: 44px;
+    height: 44px;
+
+    padding: 0;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+    gap: 5px;
+
+    border: 0;
+    border-radius: var(--radius-sm);
+
+    background: transparent;
+}
+
+.site-header__menu-button span {
+    display: block;
+
+    width: 24px;
+    height: 2px;
+
+    background: var(--color-text);
+
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+/* ----------------------------------------
+   Hero
+---------------------------------------- */
+
+.hero {
+    padding-block: 5rem;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--color-primary-dark),
+            var(--color-primary)
+        );
+}
+
+.hero h1 {
+    margin-bottom: var(--spacing-2);
+
+    font-size: var(--font-size-3xl);
+}
+
+.hero p {
+    max-width: 600px;
+
+    margin-bottom: var(--spacing-3);
+
+    font-size: var(--font-size-lg);
+}
+
+
+/* ----------------------------------------
+   Grilles
+---------------------------------------- */
+
+.club-grid {
+    display: grid;
+    gap: var(--spacing-3);
+}
+
+.news-list {
+    display: grid;
+    gap: var(--spacing-3);
+}
+
+
+/* ----------------------------------------
+   Footer
+---------------------------------------- */
+
+.site-footer {
+    padding-block: var(--spacing-5);
+
+    color: #ffffff;
+
+    background: #17212b;
+}
+
+.site-footer__content {
+    display: grid;
+    gap: var(--spacing-4);
+}
+
+.site-footer__copyright {
+    margin-top: var(--spacing-4);
+    margin-bottom: 0;
+
+    color: #aeb8c2;
+    font-size: var(--font-size-sm);
+}
+
+
+/* ----------------------------------------
+   Tablet / Desktop
+---------------------------------------- */
+
+@media (min-width: 768px) {
+
+    :root {
+        --container-padding: 1.5rem;
+    }
+
+    .site-header__menu-button {
+        display: none;
+    }
+
+    .site-header__navigation {
+        position: static;
+
+        display: block;
+
+        padding: 0;
+
+        border: 0;
+        box-shadow: none;
+    }
+
+    .site-header__navigation ul {
+        flex-direction: row;
+        align-items: center;
+        gap: 0.25rem;
+    }
+
+    .site-header__navigation a {
+        padding: 0.5rem 0.75rem;
+
+        font-size: var(--font-size-sm);
+    }
+
+    .club-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .site-footer__content {
+        grid-template-columns: 1fr auto;
+        align-items: start;
+    }
+
+}
+
+
+@media (min-width: 1024px) {
+
+    .hero {
+        padding-block: 7rem;
+    }
+
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+
+}

@@ -1,0 +1,153 @@
+/* ========================================
+   COMPONENTS
+======================================== */
+
+
+/* ----------------------------------------
+   Boutons
+---------------------------------------- */
+
+.button {
+    display: inline-flex;
+
+    min-height: 44px;
+
+    padding: 0.75rem 1.25rem;
+
+    align-items: center;
+    justify-content: center;
+
+    border: 0;
+    border-radius: var(--radius-md);
+
+    color: var(--color-text);
+
+    background: var(--color-secondary);
+
+    font-weight: var(--font-weight-bold);
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+    background: var(--color-secondary-dark);
+
+    transform: translateY(-1px);
+}
+
+
+/* ----------------------------------------
+   Cartes
+---------------------------------------- */
+
+.news-card,
+.club-card {
+    padding: var(--spacing-3);
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    background: var(--color-background);
+
+    box-shadow: var(--shadow-sm);
+}
+
+.news-card__content time {
+    display: block;
+
+    margin-bottom: var(--spacing-1);
+
+    color: var(--color-text-light);
+
+    font-size: var(--font-size-sm);
+}
+
+.news-card h3,
+.club-card h3 {
+    margin-bottom: var(--spacing-2);
+
+    font-size: var(--font-size-xl);
+}
+
+.news-card p,
+.club-card p {
+    color: var(--color-text-light);
+}
+
+.news-card a,
+.club-card a {
+    color: var(--color-primary);
+
+    font-weight: var(--font-weight-bold);
+}
+
+
+/* ----------------------------------------
+   Réseaux sociaux
+---------------------------------------- */
+
+.social-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: var(--spacing-2);
+}
+
+.social-links a {
+    display: inline-flex;
+
+    min-height: 44px;
+
+    padding: 0.75rem 1rem;
+
+    align-items: center;
+
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+
+    font-weight: var(--font-weight-medium);
+
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+    color: var(--color-primary);
+
+    background: var(--color-primary-light);
+}
+
+
+/* ----------------------------------------
+   Accessibilité
+---------------------------------------- */
+
+:focus-visible {
+    outline: 3px solid var(--color-secondary);
+    outline-offset: 2px;
+}
+
+
+/* ----------------------------------------
+   Préférences utilisateur
+---------------------------------------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+
+}

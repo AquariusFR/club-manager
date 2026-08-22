@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Icônes du dossier</title>
+	<style>
+		:root {
+			color-scheme: light;
+			--background: #f4f1eb;
+			--ink: #20251f;
+			--muted: #6e756d;
+			--line: #d8d4ca;
+			--accent: #d9553f;
+		}
+
+		* { box-sizing: border-box; }
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			padding: 48px clamp(20px, 6vw, 88px);
+			background: var(--background);
+			color: var(--ink);
+			font-family: Georgia, "Times New Roman", serif;
+		}
+
+		header {
+			display: flex;
+			align-items: end;
+			justify-content: space-between;
+			gap: 24px;
+			margin-bottom: 36px;
+			border-bottom: 1px solid var(--line);
+			padding-bottom: 20px;
+		}
+
+		h1 {
+			margin: 0;
+			font-size: clamp(2rem, 5vw, 4.5rem);
+			font-weight: 400;
+			line-height: .95;
+			letter-spacing: -.04em;
+		}
+
+		.count {
+			margin: 0 0 4px;
+			color: var(--muted);
+			font: 600 .75rem/1.2 "Segoe UI", sans-serif;
+			letter-spacing: .12em;
+			text-transform: uppercase;
+		}
+
+		.gallery {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+			gap: 12px;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+
+		.icon-card {
+			display: grid;
+			min-height: 190px;
+			align-content: space-between;
+			gap: 24px;
+			padding: 18px;
+			border: 1px solid var(--line);
+			background: rgba(255, 255, 255, .42);
+			transition: border-color .2s ease, transform .2s ease;
+		}
+
+		.icon-card:hover {
+			border-color: var(--accent);
+			transform: translateY(-3px);
+		}
+
+		.icon-preview {
+			display: grid;
+			min-height: 112px;
+			place-items: center;
+			background: #fffdf8;
+			color: var(--accent);
+		}
+
+		.icon-preview img {
+			width: 72px;
+			height: 72px;
+		}
+
+		.icon-name {
+			margin: 0;
+			font: 600 .85rem/1.2 "Segoe UI", sans-serif;
+			overflow-wrap: anywhere;
+		}
+
+		.empty {
+			color: var(--muted);
+			font: 1rem/1.5 "Segoe UI", sans-serif;
+		}
+
+		@media (max-width: 520px) {
+			body { padding-top: 28px; }
+			header { display: block; }
+			.count { margin-top: 18px; }
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Icônes</h1>
+		<p class="count" id="icon-count"></p>
+	</header>
+
+	<main>
+		<ul class="gallery" id="icon-gallery"></ul>
+		<p class="empty" id="empty-state" hidden>Aucune icône SVG dans ce dossier.</p>
+	</main>
+
+	<script>
+		// Keep this list in sync when new files are added to this folder.
+		const icons = ["youtube.svg", "bell-alert.svg", "instagram.svg", "facebook.svg"];
+		const gallery = document.querySelector("#icon-gallery");
+		const count = document.querySelector("#icon-count");
+		const emptyState = document.querySelector("#empty-state");
+
+		count.textContent = `${icons.length} icône${icons.length > 1 ? "s" : ""}`;
+		emptyState.hidden = icons.length > 0;
+
+		icons.forEach((filename) => {
+			const item = document.createElement("li");
+			item.className = "icon-card";
+			item.innerHTML = `
+				<div class="icon-preview">
+					<img src="./${filename}" alt="">
+				</div>
+				<p class="icon-name">${filename}</p>
+			`;
+			gallery.append(item);
+		});
+	</script>
+</html>
