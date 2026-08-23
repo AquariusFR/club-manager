@@ -1,0 +1,120 @@
+/* ========================================
+   UTILITIES
+======================================== */
+
+/* Texte */
+
+.text-center{text-align:center;}
+.text-left{text-align:left;}
+.text-right{text-align:right;}
+
+.text-primary{color:var(--color-primary);}
+.text-secondary{color:var(--color-secondary);}
+.text-muted{color:var(--color-text-light);}
+.text-white{color:white;}
+
+/* Font */
+
+.fw-normal{font-weight:var(--font-weight-normal);}
+.fw-medium{font-weight:var(--font-weight-medium);}
+.fw-bold{font-weight:var(--font-weight-bold);}
+.fw-black{font-weight:var(--font-weight-black);}
+
+/* Display */
+
+.d-flex{display:flex;}
+.d-grid{display:grid;}
+.d-block{display:block;}
+.d-none{display:none;}
+
+.flex-column{flex-direction:column;}
+.flex-wrap{flex-wrap:wrap;}
+
+.items-center{align-items:center;}
+.justify-center{justify-content:center;}
+.justify-between{justify-content:space-between;}
+
+/* Gaps */
+
+.gap-1{gap:var(--spacing-1);}
+.gap-2{gap:var(--spacing-2);}
+.gap-3{gap:var(--spacing-3);}
+.gap-4{gap:var(--spacing-4);}
+
+/* Marges */
+
+.mt-1{margin-top:var(--spacing-1);}
+.mt-2{margin-top:var(--spacing-2);}
+.mt-3{margin-top:var(--spacing-3);}
+.mt-4{margin-top:var(--spacing-4);}
+.mt-5{margin-top:var(--spacing-5);}
+
+.mb-1{margin-bottom:var(--spacing-1);}
+.mb-2{margin-bottom:var(--spacing-2);}
+.mb-3{margin-bottom:var(--spacing-3);}
+.mb-4{margin-bottom:var(--spacing-4);}
+.mb-5{margin-bottom:var(--spacing-5);}
+
+/* Padding */
+
+.p-1{padding:var(--spacing-1);}
+.p-2{padding:var(--spacing-2);}
+.p-3{padding:var(--spacing-3);}
+.p-4{padding:var(--spacing-4);}
+
+/* Largeurs */
+
+.w-100{width:100%;}
+.max-w-600{max-width:600px;}
+.max-w-800{max-width:800px;}
+
+/* Radius */
+
+.rounded-sm{border-radius:var(--radius-sm);}
+.rounded-md{border-radius:var(--radius-md);}
+.rounded-lg{border-radius:var(--radius-lg);}
+.rounded-full{border-radius:var(--radius-full);}
+
+/* Ombres */
+
+.shadow-sm{box-shadow:var(--shadow-sm);}
+.shadow-md{box-shadow:var(--shadow-md);}
+
+/* Background */
+
+.bg-white{background:white;}
+.bg-alt{background:var(--color-background-alt);}
+.bg-primary{background:var(--color-primary);}
+.bg-secondary{background:var(--color-secondary);}
+
+.animate-reveal-text-vertical {
+    animation: var(--animate-reveal-text-vertical);
+}
+
+/* Responsive */
+
+@media (max-width:767px){
+
+    .hidden-mobile{
+
+        display:none!important;
+    }
+}
+
+@media (min-width:768px){
+
+    .hidden-desktop{
+
+        display:none!important;
+    }
+}
+
+/* Alignements complémentaires */
+
+.mx-auto {
+    margin-inline: auto;
+}
+
+.mb-0 {
+    margin-bottom: 0;
+}

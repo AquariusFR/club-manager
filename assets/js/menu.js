@@ -5,10 +5,8 @@ if (menuButton && navigation) {
     menuButton.addEventListener("click", () => {
         const isOpen = navigation.classList.toggle("is-open");
 
-        menuButton.setAttribute("aria-expanded", String(isOpen));
-        menuButton.setAttribute(
-            "aria-label",
-            isOpen ? "Fermer le menu" : "Ouvrir le menu"
-        );
+        menuButton.setAttribute("aria-expanded", isOpen);
+        
+        menuButton.classList.toggle("is-active", isOpen);
     });
 }

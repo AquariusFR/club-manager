@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+
+    <path d="M256 24
+             L458 120
+             L430 380
+             L256 488
+             L82 380
+             L54 120 Z"
+          fill="#10207C"/>
+
+    <path d="M256 40
+             L440 126
+             L414 370
+             L256 468
+             L98 370
+             L72 126 Z"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="14"/>
+
+    <path d="M256 52
+             L428 132
+             L404 362
+             L256 454
+             L108 362
+             L84 132 Z"
+          fill="none"
+          stroke="#27B314"
+          stroke-width="6"/>
+
+    <g fill="#27B314">
+        <rect x="120" y="250" width="46" height="150"/>
+        <rect x="233" y="250" width="46" height="180"/>
+        <rect x="346" y="250" width="46" height="150"/>
+    </g>
+
+    <line x1="70" y1="245" x2="442" y2="245"
+          stroke="#FFFFFF" stroke-width="10"/>
+
+    <circle cx="256" cy="250" r="66"
+            fill="#FFFFFF"
+            stroke="#10207C"
+            stroke-width="10"/>
+
+    <g fill="#10207C">
+        <polygon points="256,212 274,226 268,248 244,248 238,226"/>
+        <polygon points="218,258 234,270 228,290 206,286 202,266"/>
+        <polygon points="294,258 310,270 304,290 282,286 278,266"/>
+    </g>
+
+    <text x="256"
+          y="188"
+          text-anchor="middle"
+          font-size="82"
+          font-family="Impact, Arial Black, sans-serif"
+          font-weight="900"
+          fill="#27B314"
+          stroke="#10207C"
+          stroke-width="3">
+        RCBA
+    </text>
+
+</svg>

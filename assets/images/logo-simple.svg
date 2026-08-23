@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700">
+
+    <path d="M300 20
+             L560 150
+             L520 500
+             L300 680
+             L80 500
+             L40 150 Z"
+          fill="#10207C"/>
+
+    <path d="M300 40
+             L540 155
+             L505 488
+             L300 650
+             L95 488
+             L60 155 Z"
+          fill="none"
+          stroke="#FFFFFF"
+          stroke-width="18"/>
+
+    <path d="M300 55
+             L525 160
+             L495 480
+             L300 635
+             L105 480
+             L75 160 Z"
+          fill="none"
+          stroke="#27B314"
+          stroke-width="7"/>
+
+    <g fill="#27B314">
+        <rect x="110" y="300" width="60" height="220"/>
+        <rect x="240" y="300" width="60" height="280"/>
+        <rect x="370" y="300" width="60" height="220"/>
+    </g>
+
+    <line x1="55" y1="290" x2="545" y2="290"
+          stroke="#FFFFFF" stroke-width="12"/>
+
+    <circle cx="300" cy="290" r="82"
+            fill="#FFFFFF"
+            stroke="#10207C"
+            stroke-width="10"/>
+
+    <text x="300"
+          y="165"
+          text-anchor="middle"
+          font-size="92"
+          font-family="Impact, Arial Black, sans-serif"
+          font-weight="900"
+          fill="#27B314"
+          stroke="#10207C"
+          stroke-width="4">
+        RCBA
+    </text>
+
+    <text x="300"
+          y="82"
+          text-anchor="middle"
+          font-size="36"
+          font-family="Arial Black"
+          fill="#27B314">
+        2020
+    </text>
+
+</svg>

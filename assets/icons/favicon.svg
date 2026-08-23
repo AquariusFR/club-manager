@@ -1,0 +1,31 @@
+<svg
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg">
+  <g
+     id="layer1">
+    <circle
+       style="fill:#10207c;"
+       id="path1"
+       cy="12"
+       cx="12"
+       r="12" />
+    <path
+       id="path10"
+       style="fill:#27b314;"
+       d="M 23.082829,7.3995483 2.4727173,19.296497 A 12,12 0 0 0 11.999784,24.000085 12,12 0 0 0 24.000085,11.999784 12,12 0 0 0 23.082829,7.3995483 Z" />
+    <text
+       style="font-size:12.7px;text-align:center;writing-mode:lr-tb;direction:ltr;text-anchor:middle;opacity:1;fill:#27b314;stroke:none;stroke-width:12.7;"
+       x="11.260324"
+       y="11.178548"
+       id="text10"><tspan
+         id="tspan10"
+         style="font-style:italic;font-variant:normal;font-weight:900;font-stretch:normal;font-size:12.7px;font-family:'Segoe UI';-inkscape-font-specification:'Segoe UI Bold Italic';direction:ltr;stroke:none;stroke-width:12.7;stroke-dasharray:none"
+         x="11.260324"
+         y="11.178548"
+         rotate="0 0">R</tspan></text>
+  </g>
+</svg>

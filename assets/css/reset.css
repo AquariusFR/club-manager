@@ -11,6 +11,12 @@
 html {
     font-size: 16px;
     scroll-behavior: smooth;
+  /* Taille : auto ou thin (fin) */
+  scrollbar-width: auto;
+  
+  /* Couleur : [curseur] [fond/piste] */
+  scrollbar-color: var(--color-secondary) white
+
 }
 
 body {
@@ -18,21 +24,28 @@ body {
     min-width: 320px;
 
     font-family:
+        "virageNarrow",
         system-ui,
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
         sans-serif;
 
+    line-height: 1.5;
+
     color: var(--color-text);
     background: var(--color-background);
 
-    line-height: 1.5;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
 }
 
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
     margin-top: 0;
 }
@@ -63,6 +76,8 @@ select {
 
 button {
     cursor: pointer;
+    border: none;
+    background: none;
 }
 
 ul,
@@ -74,4 +89,70 @@ ol {
 
 address {
     font-style: normal;
+}
+
+
+@font-face {
+    ascent-override: 100%;
+    font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowSemiboldItalic.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: italic
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowSemibold.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowSemiboldItalic.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 600;
+    font-style: italic
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowBold.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowBoldItalic.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowUltrabold.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowUltraboldItalic.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 800;
+    font-style: italic
+}
+
+@font-face {
+    ascent-override:100%;font-family: virageNarrow;
+    src: url(../fonts/Virage_NarrowUltraboldItalicExtra.woff2)format("woff2");
+    font-display: swap;
+    font-weight: 900;
+    font-style: italic
 }

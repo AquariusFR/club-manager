@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200">
+
+    <g transform="translate(20,20) scale(.32)">
+        <path d="M256 24 L458 120 L430 380 L256 488 L82 380 L54 120 Z"
+              fill="#10207C"/>
+        <path d="M256 40 L440 126 L414 370 L256 468 L98 370 L72 126 Z"
+              fill="none"
+              stroke="#FFFFFF"
+              stroke-width="14"/>
+        <path d="M256 52 L428 132 L404 362 L256 454 L108 362 L84 132 Z"
+              fill="none"
+              stroke="#27B314"
+              stroke-width="6"/>
+    </g>
+
+    <text x="220"
+          y="82"
+          font-size="58"
+          font-family="Impact, Arial Black, sans-serif"
+          font-weight="900"
+          fill="#10207C">
+        RCBA
+    </text>
+
+    <text x="220"
+          y="125"
+          font-size="28"
+          font-family="Arial, sans-serif"
+          fill="#27B314">
+        Racing Club Bû Abondant
+    </text>
+
+</svg>

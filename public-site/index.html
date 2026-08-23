@@ -4,165 +4,134 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>RCBA</title>
+    <title>RCBA — Racing Club Bû Abondant</title>
 
     <meta name="description"
-        content="Découvrez le RCBA, son actualité, ses équipes, ses éducateurs, ses bénévoles et les valeurs du club.">
+        content="Site officiel du Racing Club Bu Abondant. Actualités, équipes, éducateurs, bénévoles, licences et vie du club.">
 
-    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#10207C">
 
-    <!-- Open Graph -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="RCBA — Club de football">
-    <meta property="og:description" content="Découvrez le RCBA, son actualité, ses équipes, ses éducateurs, ses bénévoles et les valeurs du club.">
-    <meta property="og:url" content="/">
-    <meta property="og:image" content="/assets/images/RCBA.png">
+    <meta property="og:title" content="RCBA — Racing Club Bû Abondant">
+    <meta property="og:description" content="Découvrez toute la vie du Racing Club Bû Abondant.">
+    <meta property="og:image" content="/assets/images/logo.svg">
 
-    <!-- CSS -->
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
+
     <link rel="stylesheet" href="/assets/css/reset.css">
     <link rel="stylesheet" href="/assets/css/variables.css">
     <link rel="stylesheet" href="/assets/css/layout.css">
     <link rel="stylesheet" href="/assets/css/components.css">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <link rel="stylesheet" href="/assets/css/utilities.css">
 </head>
 
 <body>
 
-    <!-- =========================
-         HEADER
-    ========================== -->
     <header class="site-header">
 
         <div class="container">
 
-            <a href="/" class="site-header__logo" aria-label="Accueil du RCBA">
-                <img src="/assets/images/RCBA.png" alt="Logo du RCBA" width="80" height="80">
+            <a href="/" class="site-header__brand">
+                <img src="/assets/icons/rcba_flat_logo.svg" alt="RCBA" width="52" height="52">
+
+                <div class="hidden-mobile">
+                    <strong>RCBA</strong>
+                    <span>Racing Club Bû Abondant</span>
+                </div>
             </a>
 
-            <button class="site-header__menu-button" type="button" aria-label="Ouvrir le menu" aria-expanded="false"
+            <button class="site-header__menu-button hidden-desktop" aria-label="Ouvrir le menu" aria-expanded="false"
                 aria-controls="main-navigation">
+
                 <span></span>
                 <span></span>
                 <span></span>
+
             </button>
 
             <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
+
                 <ul>
-                    <li>
-                        <a href="/" aria-current="page">Accueil</a>
-                    </li>
-
-                    <li>
-                        <a href="/equipes.html">Nos équipes</a>
-                    </li>
-
-                    <li>
-                        <a href="/educateurs.html">Nos éducateurs</a>
-                    </li>
-
-                    <li>
-                        <a href="/benevoles.html">Nos bénévoles</a>
-                    </li>
-
-                    <li>
-                        <a href="/valeurs.html">Nos valeurs</a>
-                    </li>
-
-                    <li>
-                        <a href="/licences.html">Licences</a>
-                    </li>
-
-                    <li>
-                        <a href="/palmares.html">Palmarès</a>
-                    </li>
-
-                    <li>
-                        <a href="/contact.html">Où sommes-nous ?</a>
-                    </li>
+                    <li><a href="/" aria-current="page">Accueil</a></li>
+                    <li><a href="/equipes.html">Équipes</a></li>
+                    <li><a href="/educateurs.html">Éducateurs</a></li>
+                    <li><a href="/benevoles.html">Bénévoles</a></li>
+                    <li><a href="/valeurs.html">Valeurs</a></li>
+                    <li><a href="/licences.html">Licences</a></li>
+                    <li><a href="/palmares.html">Palmarès</a></li>
+                    <li><a href="/contact.html">Nous trouver</a></li>
                 </ul>
+
             </nav>
 
         </div>
 
     </header>
 
-
     <main>
 
-        <!-- =========================
-             HERO
-        ========================== -->
         <section class="hero">
 
-            <div class="container">
+            <div class="container text-center">
 
-                <h1>
-                    Bienvenue au RCBA
-                </h1>
+                <img src="/assets/images/rcba.png" alt="" width="180" class="mx-auto mb-3">
 
-                <p>
-                    Retrouvez toute l'actualité et la vie de notre club
-                    de football.
+                <h1>RACING CLUB BÛ-ABONDANT</h1>
+
+                <p class="mx-auto max-w-600">
+                    Bienvenue sur le site officiel du RCBA.
+                    Retrouvez toute l'actualité du club, nos équipes,
+                    nos éducateurs et la vie associative.
                 </p>
 
-                <a href="/equipes.html" class="button">
-                    Découvrir nos équipes
-                </a>
+                <div class="d-flex gap-2 justify-center flex-wrap">
+
+                    <a href="/equipes.html" class="button">
+                        Nos équipes
+                    </a>
+
+                    <a href="/actualites.html" class="button button--secondary">
+                        Actualités
+                    </a>
+
+                </div>
 
             </div>
 
         </section>
 
-
-        <!-- =========================
-             ACTUALITÉS
-        ========================== -->
-        <section class="section section--news">
+        <section class="section">
 
             <div class="container">
 
-                <header class="section__header">
-                    <h2>Les dernières infos</h2>
+                <div class="section__header">
 
-                    <a href="/actualites.html">
-                        Toutes les actualités
-                    </a>
-                </header>
+                    <h2>À la une</h2>
+
+                    <p>Les dernières informations du club.</p>
+
+                </div>
 
                 <div class="news-list">
 
-                    <!--
-                        Les actualités seront ajoutées ici.
-                        Plus tard, cette section pourra être
-                        générée automatiquement depuis le backend.
-                    -->
-
                     <article class="news-card">
 
-                        <div class="news-card__content">
+                        <time datetime="2026-08-22">
+                            22 août 2026
+                        </time>
 
-                            <time datetime="2026-08-22">
-                                22 août 2026
-                            </time>
+                        <h3>Bienvenue sur notre nouveau site</h3>
 
-                            <h3>
-                                Bienvenue sur le nouveau site du RCBA
-                            </h3>
+                        <p>
+                            Cette nouvelle plateforme accompagnera la vie du RCBA
+                            avec un espace public et bientôt un espace réservé au club.
+                        </p>
 
-                            <p>
-                                Retrouvez prochainement toutes les
-                                informations du club.
-                            </p>
-
-                            <a href="/actualites.html">
-                                Lire la suite
-                            </a>
-
-                        </div>
+                        <a href="/actualites.html">
+                            Lire la suite →
+                        </a>
 
                     </article>
 
@@ -172,17 +141,17 @@
 
         </section>
 
-
-        <!-- =========================
-             LE CLUB
-        ========================== -->
-        <section class="section section--club">
+        <section class="section bg-alt">
 
             <div class="container">
 
-                <header class="section__header">
-                    <h2>Le club</h2>
-                </header>
+                <div class="section__header text-center">
+
+                    <h2>Découvrir le RCBA</h2>
+
+                    <p>Un club, des valeurs, une passion commune.</p>
+
+                </div>
 
                 <div class="club-grid">
 
@@ -191,45 +160,37 @@
                         <h3>Nos équipes</h3>
 
                         <p>
-                            Découvrez toutes les équipes du club,
-                            des plus jeunes aux seniors.
+                            Des U7 jusqu'aux Vétérans,
+                            découvrez toutes les catégories du club.
                         </p>
 
-                        <a href="/equipes.html">
-                            Découvrir les équipes
-                        </a>
+                        <a href="/equipes.html">En savoir plus →</a>
 
                     </article>
-
 
                     <article class="club-card">
 
                         <h3>Nos éducateurs</h3>
 
                         <p>
-                            Découvrez les éducateurs et accompagnateurs
-                            qui font vivre nos équipes.
+                            Des bénévoles et éducateurs engagés
+                            pour transmettre la passion du football.
                         </p>
 
-                        <a href="/educateurs.html">
-                            Découvrir nos éducateurs
-                        </a>
+                        <a href="/educateurs.html">Les rencontrer →</a>
 
                     </article>
-
 
                     <article class="club-card">
 
                         <h3>Nos valeurs</h3>
 
                         <p>
-                            Le football est avant tout une aventure
-                            collective.
+                            Respect, engagement, plaisir et esprit d'équipe
+                            sont au cœur du RCBA.
                         </p>
 
-                        <a href="/valeurs.html">
-                            Découvrir nos valeurs
-                        </a>
+                        <a href="/valeurs.html">Découvrir →</a>
 
                     </article>
 
@@ -239,33 +200,32 @@
 
         </section>
 
-
-        <!-- =========================
-             RÉSEAUX SOCIAUX
-        ========================== -->
-        <section class="section section--social">
+        <section class="section">
 
             <div class="container">
 
-                <header class="section__header">
+                <div class="section__header text-center">
+
                     <h2>Suivez-nous</h2>
 
-                    <p>
-                        Retrouvez toute la vie du club sur nos réseaux.
-                    </p>
-                </header>
+                    <p>Retrouvez la vie du club sur nos réseaux sociaux.</p>
 
-                <div class="social-links">
+                </div>
 
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook du RCBA">
+                <div class="social-links justify-center">
+
+                    <a href="#" aria-label="Facebook RCBA">
+                        <img src="/assets/icons/facebook.svg" alt="Logo RCBA" width="24" height="24">
                         Facebook
                     </a>
 
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram du RCBA">
+                    <a href="#" aria-label="Instagram RCBA">
+                        <img src="/assets/icons/instagram.svg" alt="Logo RCBA" width="24" height="24">
                         Instagram
                     </a>
 
-                    <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube du RCBA">
+                    <a href="#" aria-label="YouTube RCBA">
+                        <img src="/assets/icons/youtube.svg" alt="Logo RCBA" width="24" height="24">
                         YouTube
                     </a>
 
@@ -275,30 +235,29 @@
 
         </section>
 
+        <section class="section bg-alt">
 
-        <!-- =========================
-             LOCALISATION
-        ========================== -->
-        <section class="section section--location">
+            <div class="container text-center">
 
-            <div class="container">
+                <div class="section__header">
 
-                <header class="section__header">
-                    <h2>Où nous trouver ?</h2>
-                </header>
+                    <h2>Nous trouver</h2>
 
-                <address>
-                    RCBA<br>
-                    Adresse du stade<br>
-                    Ville
+                </div>
+
+                <address class="mb-3">
+
+                    Racing Club Bû Abondant<br>
+                    Stade du RCBA<br>
+                    Bû — Eure-et-Loir
+
                 </address>
 
-                <!--
-                    La carte sera ajoutée ultérieurement.
-                    On évite pour l'instant d'intégrer Google Maps
-                    afin de limiter les scripts tiers et les problèmes
-                    RGPD.
-                -->
+                <a class="button" href="https://www.openstreetmap.org/" target="_blank" rel="noopener">
+
+                    Voir l'itinéraire
+
+                </a>
 
             </div>
 
@@ -306,55 +265,50 @@
 
     </main>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
     <footer class="site-footer">
 
         <div class="container">
 
             <div class="site-footer__content">
 
-                <div>
-                    <strong>RCBA</strong>
+                <div class="d-flex items-center gap-2">
 
-                    <p>
-                        Club de football
-                    </p>
+                    <img src="/assets/icons/rcba_flat_logo.svg" alt="Logo RCBA" width="48" height="48">
+
+                    <div>
+
+                        <strong>Racing Club Bû Abondant</strong>
+
+                        <p class="mb-0 text-white">
+                            Football • Passion • Respect
+                        </p>
+
+                    </div>
+
                 </div>
 
                 <nav aria-label="Navigation secondaire">
 
-                    <ul>
+                    <ul class="d-flex flex-column gap-1">
+
                         <li>
                             <a href="/mentions-legales.html">
                                 Mentions légales
                             </a>
                         </li>
-
                         <li>
-                            <a href="/politique-confidentialite.html">
-                                Politique de confidentialité
-                            </a>
+                            <a href="/politique-confidentialite.html">Politique de confidentialité</a>
                         </li>
                     </ul>
-
                 </nav>
-
             </div>
 
-            <p class="site-footer__copyright">
-                © <span id="current-year">2026</span> RCBA —
-                Tous droits réservés.
-            </p>
+            <p class="site-footer__copyright">© 2026 Racing Club Bû Abondant — Tous droits réservés.</p>
 
         </div>
 
     </footer>
 
-
-    <!-- JavaScript minimal -->
     <script src="/assets/js/menu.js" defer></script>
 
 </body>

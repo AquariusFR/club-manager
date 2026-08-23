@@ -1,92 +1,78 @@
 /* ========================================
-   VARIABLES
+   RCBA DESIGN TOKENS
 ======================================== */
 
 :root {
 
-    /* ----------------------------------------
-       Couleurs
-    ---------------------------------------- */
+    /* Couleurs RCBA */
 
-    --color-primary: #0057a8;
-    --color-primary-dark: #003f7a;
-    --color-primary-light: #eaf3fb;
+    --color-primary: #10207C;
+    --color-primary-dark: #09124A;
+    --color-primary-light: #E8ECFF;
 
-    --color-secondary: #f5c400;
-    --color-secondary-dark: #d9ad00;
+    --color-secondary: #27B314;
+    --color-secondary-dark: #1E8A10;
+    --color-secondary-light: #E8FFE4;
 
-    --color-text: #1f2933;
-    --color-text-light: #5b6570;
+    --color-text: #1C2430;
+    --color-text-light: #5E6773;
 
-    --color-background: #ffffff;
-    --color-background-alt: #f5f7f9;
+    --color-background: #FFFFFF;
+    --color-background-alt: #F3F5F8;
 
-    --color-border: #dfe4e8;
+    --color-border: #D9DFE7;
 
-    --color-success: #16803c;
-    --color-danger: #c62828;
+    --color-success: #16803C;
+    --color-danger: #C62828;
 
+    /* Typographie */
 
-    /* ----------------------------------------
-       Typographie
-    ---------------------------------------- */
-
-    --font-size-xs: 0.75rem;
-    --font-size-sm: 0.875rem;
+    --font-size-xs: .75rem;
+    --font-size-sm: .875rem;
     --font-size-md: 1rem;
     --font-size-lg: 1.125rem;
     --font-size-xl: 1.5rem;
     --font-size-2xl: 2rem;
-    --font-size-3xl: 2.5rem;
-
+    --font-size-3xl: 3.5rem;
     --font-weight-normal: 400;
     --font-weight-medium: 500;
     --font-weight-bold: 700;
+    --font-weight-black: 800;
 
+    /* Espacements */
 
-    /* ----------------------------------------
-       Espacements
-    ---------------------------------------- */
-
-    --spacing-1: 0.5rem;
+    --spacing-1: .5rem;
     --spacing-2: 1rem;
     --spacing-3: 1.5rem;
     --spacing-4: 2rem;
     --spacing-5: 3rem;
     --spacing-6: 4rem;
 
-
-    /* ----------------------------------------
-       Mise en page
-    ---------------------------------------- */
+    /* Layout */
 
     --container-width: 1200px;
     --container-padding: 1rem;
 
-
-    /* ----------------------------------------
-       Bordures
-    ---------------------------------------- */
-
-    --radius-sm: 0.375rem;
-    --radius-md: 0.75rem;
-    --radius-lg: 1rem;
-
-
-    /* ----------------------------------------
-       Ombres
-    ---------------------------------------- */
-
-    --shadow-sm:
-        0 1px 3px rgb(0 0 0 / 8%);
-
-    --shadow-md:
-        0 4px 12px rgb(0 0 0 / 10%);
-
-
-    /* ----------------------------------------
-       Header
-    ---------------------------------------- */
-
     --header-height: 72px;
+
+    /* Radius */
+
+    --radius-sm: .375rem;
+    --radius-md: .75rem;
+    --radius-lg: 1rem;
+    --radius-full: 999px;
+
+    /* Ombres */
+
+    --shadow-sm: 0 1px 3px rgb(0 0 0 / .08);
+
+    --shadow-md: 0 8px 24px rgb(16 32 124 / .15);
+
+    --transition: .2s ease;
+
+    --animate-hero-image: hero-image var.75s cubic-bezier(.3, 0, 0, 1);
+    --animate-reveal-text-vertical: reveal-text-vertical .75s cubic-bezier(.3, 0, 0, 1) forwards;
+    
+    --line-height-120: 120%;
+    --letter-spacing-normal: .03125rem;
 }
