@@ -108,13 +108,12 @@
 
 .site-header__navigation a {
 
-    display: block;
-
+    display: flex;
     padding: .9rem 1rem;
-
     border-radius: var(--radius-sm);
-
     font-weight: var(--font-weight-medium);
+    align-items: center;
+    flex-direction: column;
 }
 
 .site-header__navigation a:hover {
