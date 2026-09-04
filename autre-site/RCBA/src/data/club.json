@@ -1,0 +1,185 @@
+{
+  "club": {
+    "name": "Racing Club Bû Abondant",
+    "shortName": "RCBA",
+    "logo": "https://s3.static-footeo.com/1200/uploads/rcba/logo__76f4vnjjt.png",
+    "colors": {
+      "primary": "#00a8e7",
+      "secondary": "#ffffff",
+      "accent": "#0056b3"
+    },
+    "hierarchy": {
+      "presidence": [
+        {
+          "name": "Marc WAROQUIER",
+          "role": "Président",
+          "image": "https://s3.static-footeo.com/uploads/rcba/executives/marc-waroquier__sl3ql0.jpg",
+          "email": "marc.waroquier@rcba.club"
+        },
+        {
+          "name": "Vincent GODET",
+          "role": "Secrétaire général",
+          "image": "https://s2.static-footeo.com/uploads/rcba/executives/vincent-godet__sl3ql2.jpg",
+          "email": "vincent.godet@rcba.club"
+        },
+        {
+          "name": "Matthieu VITTY",
+          "role": "Vice président",
+          "image": "https://s3.static-footeo.com/uploads/rcba/executives/matthieu-vity__qvgoyb.jpg",
+          "email": "matthieu.vitty@rcba.club"
+        }
+      ],
+      "poles": [
+        {
+          "id": "administratif",
+          "name": "Pôle Administratif & RH",
+          "responsable": "Vincent GODET",
+          "members": [
+            {
+              "name": "Vincent GODET",
+              "role": "Responsable",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/vincent-godet__sl3ql2.jpg"
+            },
+            {
+              "name": "Vanessa AMELINE",
+              "role": "Membre / Secrétaire Adjointe",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/vanessa-ameline.jpg"
+            },
+            {
+              "name": "Ghislaine Vity",
+              "role": "Responsable administratif",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/ghislaine-vity.jpg"
+            }
+          ]
+        },
+        {
+          "id": "communication",
+          "name": "Pôle Communication",
+          "responsable": "Nicolas HIBLOT",
+          "members": [
+            {
+              "name": "Nicolas HIBLOT",
+              "role": "Responsable communication",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/nicolas-hiblot.jpg"
+            },
+            {
+              "name": "Sabine COIPEAU",
+              "role": "Membre Pôle communication",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/sabine-coipeau.jpg"
+            },
+            {
+              "name": "Florence RACLOT",
+              "role": "Membre Pôle communication",
+              "image": "https://s3.static-footeo.com/uploads/rcba/executives/florence-raclot.jpg"
+            },
+            {
+              "name": "Sebastien GUILLAUMIN",
+              "role": "Membre Pôle communication",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "id": "partenariat",
+          "name": "Pôle Partenariat & Sponsoring",
+          "responsable": "Vanessa DESSIRIER",
+          "members": [
+            {
+              "name": "Vanessa DESSIRIER",
+              "role": "Responsable sponsoring",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/vanessa-dessirier.jpg"
+            },
+            {
+              "name": "Marc WAROQUIER",
+              "role": "Membre",
+              "image": "https://s3.static-footeo.com/uploads/rcba/executives/marc-waroquier__sl3ql0.jpg"
+            }
+          ]
+        },
+        {
+          "id": "financier",
+          "name": "Pôle Financier",
+          "responsable": "Vincent GODET",
+          "members": [
+            {
+              "name": "Vincent GODET",
+              "role": "Responsable",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/vincent-godet__sl3ql2.jpg"
+            },
+            {
+              "name": "Marc WAROQUIER",
+              "role": "Trésorier",
+              "image": "https://s3.static-footeo.com/uploads/rcba/executives/marc-waroquier__sl3ql0.jpg"
+            },
+            {
+              "name": "Sabine COIPEAU",
+              "role": "Trésorière Adjointe",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/sabine-coipeau.jpg"
+            }
+          ]
+        },
+        {
+          "id": "sportif",
+          "name": "Pôle Sportif & Technique",
+          "responsable": "Benjamin VANDIER",
+          "members": [
+            {
+              "name": "Benjamin VANDIER",
+              "role": "Responsable Technique Club",
+              "image": ""
+            },
+            {
+              "name": "Quentin LE CORRE",
+              "role": "Resp. École de Foot",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/quentin-le-corre__rivjzr.jpg"
+            },
+            {
+              "name": "Philippe BARBIER",
+              "role": "Resp. Foot à 11",
+              "image": "https://s3.static-footeo.com/uploads/rcba/executives/philippe-barbier__sl567r.jpg"
+            },
+            {
+              "name": "Yannick CAVADASKI",
+              "role": "Resp. Foot Féminin",
+              "image": "https://s3.static-footeo.com/uploads/rcba/executives/yannick-cavadaski.jpg"
+            }
+          ]
+        },
+        {
+          "id": "animation",
+          "name": "Pôle Animation & Événements",
+          "responsable": "Quentin LE CORRE",
+          "members": [
+            {
+              "name": "Quentin LE CORRE",
+              "role": "Responsable animation",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/quentin-le-corre__rivjzr.jpg"
+            },
+            {
+              "name": "Comité de Direction",
+              "role": "Membres",
+              "image": ""
+            }
+          ]
+        },
+        {
+          "id": "intendance",
+          "name": "Pôle Intendance & Buvette",
+          "responsable": "Ghislaine Vity",
+          "members": [
+            {
+              "name": "Ghislaine Vity",
+              "role": "Responsable buvette",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/ghislaine-vity.jpg"
+            },
+            {
+              "name": "Vanessa AMELINE",
+              "role": "Membre",
+              "image": "https://s2.static-footeo.com/uploads/rcba/executives/vanessa-ameline.jpg"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
