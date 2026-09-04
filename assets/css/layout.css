@@ -169,12 +169,25 @@
     display: flex;
     align-items: center;
     gap: .75rem;
+    flex: auto;
 }
+
 
 .site-header__brand strong {
     display: block;
     font-size: 1.25rem;
     color: var(--color-primary);
+}
+@media (max-width:767px) {
+    .site-header__brand strong {
+        font-size: 2rem;
+        font-weight: var(--font-weight-black);
+    }
+    .site-header__title.hidden-desktop {
+        flex: auto;
+        justify-content: center;
+        display: flex;
+    }
 }
 
 .site-header__brand span {
@@ -205,12 +218,26 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: url(/assets/icons/rcba_flat_logo.svg);
     opacity: .12;
+    background: url(/assets/icons/rcba_flat_logo.svg);
+}
+
+@media (min-width:768px) {
+    .hero::before {
     background-position-x: -18rem;
     background-position-y: -12rem;
     background-repeat: no-repeat;
     background-size: 90vw;
+    }
+}
+
+@media (max-width:767px) {
+    .hero::before {
+        background-position-x: -10rem;
+        background-position-y: -6rem;
+        background-size: 182vw;
+        background-repeat: no-repeat;
+    }
 }
 
 .hero .container {
