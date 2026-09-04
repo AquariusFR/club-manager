@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "skills": {
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "computedHash": "516bd2154eb843a8240e43d5b285229129853114ad7075a5e141e1c08e408c84"
+    },
+    "make-interfaces-feel-better": {
+      "source": "jakubkrehel/make-interfaces-feel-better",
+      "sourceType": "github",
+      "skillPath": "skills/make-interfaces-feel-better/SKILL.md",
+      "computedHash": "2c3576e63d8c39d75ed327f1dcf6aab7aec0edf293a55f6cb3f7b8571974a01c"
+    },
+    "simplify": {
+      "source": "brianlovin/claude-config",
+      "sourceType": "github",
+      "skillPath": "skills/simplify/SKILL.md",
+      "computedHash": "80ddf9f6ae4ad33f03b4e84e183c9458e19f6e13d85129261394634529aeb4b8"
+    },
+    "transitions-dev": {
+      "source": "Jakubantalik/transitions-dev",
+      "sourceType": "github",
+      "skillPath": "skills/transitions-dev/SKILL.md",
+      "computedHash": "c4dd7001f07f4b95219d9116854f506118af4877b16bb5bed22a03381622a22e"
+    },
+    "ui-ux-pro-max": {
+      "source": "nextlevelbuilder/ui-ux-pro-max-skill",
+      "sourceType": "github",
+      "skillPath": ".claude/skills/ui-ux-pro-max/SKILL.md",
+      "computedHash": "6337038fe1fe6bbe1b9f252ab678ee575859190bab6f0f246f4061824eb40875"
+    },
+    "skillspector": {
+      "source": "NVIDIA/SkillSpector",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/skillspector/SKILL.md",
+      "addedAt": "2026-06-11",
+      "note": "manually-crafted"
+    },
+    "npkill": {
+      "source": "voidcosmos/npkill",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/npkill/SKILL.md",
+      "addedAt": "2026-06-11",
+      "note": "manually-crafted"
+    },
+    "github-actions-course": {
+      "source": "sidpalas/devops-directive-github-actions-course",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/github-actions-course/SKILL.md",
+      "addedAt": "2026-06-11",
+      "note": "manually-crafted"
+    },
+    "openui": {
+      "source": "thesysdev/openui",
+      "sourceType": "github",
+      "skillPath": ".agents/skills/openui/SKILL.md",
+      "addedAt": "2026-06-11",
+      "note": "manually-crafted"
+    }
+  }
+}

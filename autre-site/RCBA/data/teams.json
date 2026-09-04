@@ -1,0 +1,337 @@
+[
+  {
+    "id": "u7",
+    "name": "U7 / Baby",
+    "category": "École de Football",
+    "coach": "Quentin LE CORRE",
+    "description": "L'école du football pour les plus petits. Apprentissage ludique et éveil au sport.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/plateau/equipe-r-c-b-a-u7-baby.html",
+    "ranking": "-",
+    "latestResults": [
+      {
+        "opponent": "Plateau Bû",
+        "result": "V",
+        "score": "-",
+        "date": "2026-04-26"
+      }
+    ],
+    "training": [
+      {
+        "day": "Mercredi",
+        "time": "15:15 - 16:30",
+        "location": "Stade de Bû"
+      }
+    ]
+  },
+  {
+    "id": "u9",
+    "name": "U9",
+    "category": "École de Football",
+    "coach": "Quentin LE CORRE",
+    "description": "Développement des bases techniques et premier esprit d'équipe sur les plateaux.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/niveau-1/equipe-r-c-b-a-u9.html",
+    "ranking": "-",
+    "latestResults": [
+      {
+        "opponent": "Plateau Dreux",
+        "result": "N",
+        "score": "-",
+        "date": "2026-04-26"
+      }
+    ],
+    "training": [
+      {
+        "day": "Lundi",
+        "time": "18:00 - 19:30",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Mercredi",
+        "time": "17:00 - 18:15",
+        "location": "Stade de Bû"
+      }
+    ]
+  },
+  {
+    "id": "u10",
+    "name": "U10",
+    "category": "Foot Animation",
+    "coach": "Quentin LE CORRE",
+    "description": "Transition vers le foot à 8. Perfectionnement technique et tactique.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/niveau-1/equipe-r-c-b-a-u10.html",
+    "ranking": "3ème",
+    "latestResults": [
+      {
+        "opponent": "USVL/OCC/LOG/MAR/FCL 30",
+        "result": "D",
+        "score": "3-5",
+        "date": "2026-05-02"
+      }
+    ],
+    "training": [
+      {
+        "day": "Mardi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Jeudi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      }
+    ]
+  },
+  {
+    "id": "u11",
+    "name": "U11",
+    "category": "Foot Animation",
+    "coach": "Quentin LE CORRE",
+    "description": "Compétition et plaisir. Consolidation des acquis en foot à 8.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/niveau-2/equipe-r-c-b-a-u11.html",
+    "ranking": "8ème",
+    "latestResults": [
+      {
+        "opponent": "TREON A.S.",
+        "result": "V",
+        "score": "6-0",
+        "date": "2026-05-02"
+      },
+      {
+        "opponent": "MAINTENON",
+        "result": "D",
+        "score": "1-6",
+        "date": "2026-05-02"
+      }
+    ],
+    "training": [
+      {
+        "day": "Mardi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Jeudi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      }
+    ]
+  },
+  {
+    "id": "u12",
+    "name": "U12",
+    "category": "Foot Animation",
+    "coach": "Quentin LE CORRE",
+    "description": "Pré-formation. Intensification du travail technique.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/d1/equipe-r-c-b-a-u12.html",
+    "ranking": "6ème",
+    "latestResults": [
+      {
+        "opponent": "CS MAINVILLIERS 31",
+        "result": "N",
+        "score": "1-1",
+        "date": "2026-05-02"
+      }
+    ],
+    "training": [
+      {
+        "day": "Lundi",
+        "time": "18:00 - 19:30",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Mardi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Mercredi",
+        "time": "17:00 - 18:20",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Jeudi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      }
+    ]
+  },
+  {
+    "id": "u13",
+    "name": "U13",
+    "category": "Foot Animation",
+    "coach": "Quentin LE CORRE",
+    "description": "Dernière étape avant le foot à 11. Focus sur la polyvalence.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/d2/equipe-r-c-b-a-u13.html",
+    "ranking": "8ème",
+    "latestResults": [
+      {
+        "opponent": "CHERISY C OLY",
+        "result": "V",
+        "score": "6-1",
+        "date": "2026-05-02"
+      }
+    ],
+    "training": [
+      {
+        "day": "Lundi",
+        "time": "18:00 - 19:30",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Mardi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Mercredi",
+        "time": "17:00 - 18:20",
+        "location": "Stade de Bû"
+      },
+      {
+        "day": "Jeudi",
+        "time": "18:30 - 20:00",
+        "location": "Stade de Bû"
+      }
+    ]
+  },
+  {
+    "id": "u15",
+    "name": "U15",
+    "category": "Pré-formation",
+    "coach": "Yannick CAVADASKI",
+    "description": "Le passage au grand terrain. Développement athlétique et tactique.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/d2/equipe-r-c-b-a-u15.html",
+    "ranking": "4ème",
+    "latestResults": [
+      {
+        "opponent": "SENONCHOIS FCP",
+        "result": "V",
+        "score": "3-1",
+        "date": "2026-05-02"
+      }
+    ],
+    "training": [
+      {
+        "day": "Mardi",
+        "time": "18:30 - 20:00",
+        "location": "Stade d'Abondant"
+      },
+      {
+        "day": "Jeudi",
+        "time": "18:30 - 20:00",
+        "location": "Stade d'Abondant"
+      }
+    ]
+  },
+  {
+    "id": "u18",
+    "name": "U18",
+    "category": "Formation",
+    "coach": "Philippe BARBIER",
+    "description": "L'antichambre des seniors. Rigueur, discipline et performance.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/d1/equipe-r-c-b-a-u18.html",
+    "ranking": "2ème",
+    "latestResults": [
+      {
+        "opponent": "MONTARGIS USM F 21",
+        "result": "V",
+        "score": "3-2",
+        "date": "2026-05-02"
+      },
+      {
+        "opponent": "FC ML INGRE 22",
+        "result": "V",
+        "score": "5-3",
+        "date": "2026-04-25"
+      }
+    ],
+    "training": [
+      {
+        "day": "Lundi",
+        "time": "19:00 - 20:30",
+        "location": "Stade d'Abondant"
+      },
+      {
+        "day": "Mercredi",
+        "time": "19:00 - 20:30",
+        "location": "Stade d'Abondant"
+      },
+      {
+        "day": "Vendredi",
+        "time": "19:00 - 20:30",
+        "location": "Stade d'Abondant"
+      }
+    ]
+  },
+  {
+    "id": "senior",
+    "name": "Seniors",
+    "category": "Compétition",
+    "coach": "Matthieu VITY",
+    "description": "L'équipe fanion du club. Ambition et solidarité en championnat D3.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/d3/equipe-r-c-b-a-senior.html",
+    "ranking": "5ème",
+    "latestResults": [
+      {
+        "opponent": "DREUX A PORTU",
+        "result": "V",
+        "score": "4-0",
+        "date": "2026-05-03"
+      }
+    ],
+    "training": [
+      {
+        "day": "Mardi",
+        "time": "20:00 - 22:00",
+        "location": "Stade d'Abondant"
+      },
+      {
+        "day": "Vendredi",
+        "time": "20:00 - 22:00",
+        "location": "Stade d'Abondant"
+      }
+    ]
+  },
+  {
+    "id": "veteran",
+    "name": "Vétérans",
+    "category": "Loisir & Compétition",
+    "coach": "Guillaume BERGER",
+    "description": "Le football n'a pas d'âge. Convivialité et esprit de compétition.",
+    "url": "https://rcba.footeo.com/saison-2025-2026/d1/equipe-r-c-b-a-veteran.html",
+    "ranking": "3ème",
+    "latestResults": [
+      {
+        "opponent": "AUNAY S AUNEA 31",
+        "result": "V",
+        "score": "3-0",
+        "date": "2026-05-03"
+      },
+      {
+        "opponent": "COURVILLE 31",
+        "result": "V",
+        "score": "4-1",
+        "date": "2026-05-03"
+      },
+      {
+        "opponent": "U.S.P. 31",
+        "result": "V",
+        "score": "4-0",
+        "date": "2026-04-26"
+      },
+      {
+        "opponent": "NOGENT LE ROI 32",
+        "result": "N",
+        "score": "2-2",
+        "date": "2026-04-19"
+      }
+    ],
+    "training": [
+      {
+        "day": "Jeudi",
+        "time": "20:30 - 22:30",
+        "location": "Stade d'Abondant"
+      }
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "name": "portal",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "@ai-sdk/google": "^4.0.18",
+    "@ai-sdk/openai": "^4.0.16",
+    "@google/generative-ai": "^0.24.1",
+    "@serwist/next": "^9.5.11",
+    "ai": "^7.0.31",
+    "cheerio": "^1.2.0",
+    "clsx": "^2.1.1",
+    "date-fns": "^4.4.0",
+    "framer-motion": "^12.38.0",
+    "html-to-image": "^1.11.13",
+    "lucide-react": "^1.7.0",
+    "next": "16.2.2",
+    "pixi.js": "^8.18.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-dropzone": "^15.0.0",
+    "serwist": "^9.5.11",
+    "sqlite": "^5.1.1",
+    "sqlite3": "^6.0.1",
+    "stats.js": "^0.17.0",
+    "tailwind-merge": "^3.5.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "@types/stats.js": "^0.17.4",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.2",
+    "playwright": "^1.61.0",
+    "tailwindcss": "^4",
+    "typescript": "^5"
+  }
+}

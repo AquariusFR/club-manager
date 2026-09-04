@@ -1,0 +1,133 @@
+{
+  "name": "Racing Club Bû Abondant",
+  "shortName": "RCBA",
+  "founded": 2020,
+  "history": "Le RCBA est né en 2020 de la fusion entre le FC Bû et le CO Abondant. En seulement quelques années, le club s'est imposé comme un acteur majeur du football local. En 2023, cette excellence formatrice a été récompensée par une double labellisation FFF (Label Jeunes et Label Féminines - Bronze 2023-2026).",
+  "philosophy": "Formation, Respect, Convivialité et Ambition.",
+  "colors": {
+    "primary": "#00a8e7",
+    "secondary": "#ffffff",
+    "gold": "#d4af37"
+  },
+  "venues": [
+    {
+      "name": "Stade Municipal de Bû",
+      "address": "Rue du Stade, 28410 Bû",
+      "type": "Honneur / Entraînement"
+    },
+    {
+      "name": "Stade de la Plaine d'Abondant",
+      "address": "Rue de la Plaine, 28410 Abondant",
+      "type": "Entraînement / Matchs Jeunes"
+    }
+  ],
+  "contacts": {
+    "email": "582697@lcfoot.fr",
+    "phone": "Permanence aux Stades",
+    "facebook": "https://www.facebook.com/RacingClubBuAbondant",
+    "website": "https://rcba.footeo.com/"
+  },
+  "links": {
+    "registration": "https://www.helloasso.com/beta/associations/racing-club-bu-abondant/adhesions/licence-saison-2026-2027",
+    "boutique": "https://www.adidasteam.com/fr-fr/clubshop/racing-club-bu-abondant/"
+  },
+  "documents": {
+    "reglement": "https://s1.static-footeo.com/uploads/rcba/Medias/R%C3%A8glement%20int%C3%A9rieur%20RCBA__qg1ap8.pdf",
+    "statuts": "https://s2.static-footeo.com/uploads/rcba/Medias/Statuts%20RCBA__qg1bkg.pdf",
+    "organigramme_pdf": "https://s2.static-footeo.com/uploads/rcba/Medias/RCBA_Organigramme_g%C3%A9n%C3%A9ral_2025_2026_court__t6yqb4.pdf"
+  },
+  "cotisations": [
+    { "category": "U6 à U9", "price": 140, "includes": "Licence + Pack équipement (Short, Chaussettes, Maillot entraînement)" },
+    { "category": "U10 à U13", "price": 150, "includes": "Licence + Pack équipement" },
+    { "category": "U15 à U18", "price": 160, "includes": "Licence + Pack équipement" },
+    { "category": "Seniors / Vétérans", "price": 180, "includes": "Licence + Pack équipement" },
+    { "category": "Dirigeants", "price": 50, "includes": "Licence + Vêtement club" }
+  ],
+  "horaires": [
+    { "category": "U7 / U9", "days": "Mercredi", "time": "14h00 - 15h30", "venue": "Abondant" },
+    { "category": "U11", "days": "Lundi / Mercredi", "time": "18h00 - 19h30", "venue": "Bû" },
+    { "category": "U13", "days": "Mardi / Jeudi", "time": "18h00 - 19h30", "venue": "Bû" },
+    { "category": "U15", "days": "Mercredi / Vendredi", "time": "18h30 - 20h00", "venue": "Abondant" },
+    { "category": "Seniors", "days": "Mardi / Vendredi", "time": "20h00 - 21h30", "venue": "Bû" },
+    { "category": "Vétérans", "days": "Jeudi", "time": "20h00 - 21h30", "venue": "Bû" }
+  ],
+  "arbitres": [
+    { "name": "Leny Waroquier", "level": "Ligue / District" }
+  ],
+  "payments": [
+    "Chèques (possibilité de 3 fois)",
+    "Espèces",
+    "Coupons Sport / Chèques Vacances",
+    "Pass'Sport (Aide État)",
+    "Paiement en ligne (via HelloAsso)"
+  ],
+  "partners": [
+    { "name": "HIBLOT.COM", "tag": "Agence Digitale & Web", "desc": "Partenaire digital officiel et concepteur de la plateforme web du RCBA.", "logo": "/images/Partenaires/HIBLOT.COM.png", "link": "https://hiblot.com", "featured": true },
+    { "name": "Les 3S Sports & Pub", "tag": "Équipementier Officiel", "desc": "Spécialiste de l'équipement sportif, textile technique et marquage officiel.", "logo": "/images/Partenaires/Les 3S sport.png" },
+    { "name": "Fillon Technologies", "tag": "Industrie & Innovation", "desc": "Leader mondial des équipements de préparation de peinture, ancré sur notre territoire.", "logo": "/images/Partenaires/Fillon Technologies.png" },
+    { "name": "Crédit Agricole", "tag": "Banque & Assurances", "desc": "Partenaire historique du football amateur et du Label Jeunes FFF.", "logo": "/images/Partenaires/Credit Agricole.png" },
+    { "name": "Garage CMA - Renault", "tag": "Automobile & Concession", "desc": "Votre agent Renault de proximité pour la vente, l'entretien et la réparation.", "logo": "/images/Partenaires/Groupe CMA - Renault.png" },
+    { "name": "O'Plateau", "tag": "Restauration & Convivialité", "desc": "Bar-restaurant et lieu de rassemblement convivial au cœur de notre commune.", "logo": "/images/Partenaires/OuPlateau.png" },
+    { "name": "Générale d'Optique", "tag": "Santé & Vision", "desc": "Opticien conseil à Dreux, partenaire de la santé visuelle de nos sportifs.", "logo": "/images/Partenaires/Gunural duoptique - DREUX.png" },
+    { "name": "ALF Aménagement", "tag": "Aménagement & Habitat", "desc": "Expert en aménagement intérieur, menuiserie et rénovation de l'habitat.", "logo": "/images/Partenaires/Alf.png" },
+    { "name": "Garage AURIAU", "tag": "Mécanique & Carrosserie", "desc": "Atelier mécanique multimarque et dépannage au service des automobilistes.", "logo": "/images/Partenaires/Garage Auriau.png" },
+    { "name": "Tabac Presse", "tag": "Commerce de Proximité", "desc": "Presse, tabac et services du quotidien au centre-bourg de Bû.", "logo": "/images/Partenaires/Bar Tabac Bu.png" },
+    { "name": "ProGreen", "tag": "Paysage & Espaces Verts", "desc": "Création et entretien professionnel des espaces verts et des pelouses sportives.", "logo": "/images/Partenaires/Pro Green.png" },
+    { "name": "SFA", "tag": "Conseil & Services", "desc": "Accompagnement, expertise et soutien au développement associatif et sportif.", "logo": "/images/Partenaires/SFA.png" }
+  ],
+  "bureau": [
+    { "name": "Marc Waroquier", "role": "Président", "icon": "Shield" },
+    { "name": "Matthieu Vity", "role": "Vice-Président", "icon": "Users" },
+    { "name": "Vincent Godet", "role": "Secrétaire Général", "icon": "FileText" },
+    { "name": "Ghislaine Vity", "role": "Responsable Administratif", "icon": "FileText" },
+    { "name": "Vanessa Dessirier", "role": "Responsable Sponsoring", "icon": "Trophy" },
+    { "name": "Nicolas Hiblot", "role": "Responsable Communication", "icon": "Network" },
+    { "name": "Sabine Coipeau", "role": "Membre Pôle communication", "icon": "Users" },
+    { "name": "Florence Raclot", "role": "Membre Pôle communication", "icon": "Users" },
+    { "name": "Quentin Le Corre", "role": "Responsable Animation", "icon": "Music" },
+    { "name": "Philippe Barbier", "role": "Responsable Jeunes", "icon": "Users" },
+    { "name": "Yannick Cavadaski", "role": "Responsable Jeunes", "icon": "Users" },
+    { "name": "Vanessa Ameline", "role": "Membre du CA", "icon": "Users" }
+  ],
+  "technicalStaff": [
+    { "name": "Benjamin Harache", "role": "Entraîneur Principal", "icon": "UserCheck" },
+    { "name": "Didier Vandier", "role": "Entraîneur", "icon": "UserCheck" },
+    { "name": "Sylvain Pennetier", "role": "Entraîneur Adjoint", "icon": "UserCheck" }
+  ],
+  "values": [
+    {
+      "title": "Respect",
+      "desc": "Sentiment de considération envers quelqu'un et qui porte à le traiter avec des égards particuliers. Le respect de l'adversaire, des arbitres et des supporters est primordial.",
+      "keywords": ["Égards", "Considération", "Fair-play"]
+    },
+    {
+      "title": "Sérieux",
+      "desc": "Attacher de l'importance à ce que l'on dit ou fait, respecter ses engagements, agir conformément à ce qu'on attend de nous, avec attention et soin.",
+      "keywords": ["Discipline", "Ponctualité", "Rigueur"]
+    },
+    {
+      "title": "Convivialité",
+      "desc": "Capacité d'une société à favoriser la tolérance et les échanges réciproques des personnes et des groupes qui la composent.",
+      "keywords": ["Tolérance", "Échanges", "Amitié"]
+    },
+    {
+      "title": "Engagement",
+      "desc": "Acte par lequel on s'engage à accomplir quelque chose; promesse, convention ou contrat par lesquels on se lie au club.",
+      "keywords": ["Loyauté", "Implication", "Dévouement"]
+    },
+    {
+      "title": "Performance",
+      "desc": "Résultat obtenu dans un domaine précis par quelqu'un. Nous visons l'excellence individuelle et collective.",
+      "keywords": ["Ambition", "Réussite", "Progrès"]
+    }
+  ],
+  "commitments": [
+    { "title": "Politesse", "desc": "Je reste poli(e) avec tout le monde et en toutes circonstances (dire bonjour, retirer casquette/écouteurs)." },
+    { "title": "Ponctualité", "desc": "Je suis ponctuel(le) et je préviens mon éducateur en cas de retard ou d'absence." },
+    { "title": "Respect de l'Autre", "desc": "Je respecte mes co-équipiers, éducateurs, dirigeants, adversaires et arbitres lors d'une rencontre." },
+    { "title": "Implication", "desc": "Je m'implique dans la vie du club et n'hésite pas à proposer mon aide." },
+    { "title": "Propreté", "desc": "Je veille à toujours laisser propres les endroits que je fréquente (vestiaires, terrains)." },
+    { "title": "Ambassadeur", "desc": "Je me dois d'avoir un comportement exemplaire, tant sur le terrain qu'en dehors du club." }
+  ]
+}
+
