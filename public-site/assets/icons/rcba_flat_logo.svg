@@ -63,14 +63,14 @@
       <animate
          fill="freeze"
          attributeName="stroke-dashoffset"
-         begin="0.9s"
+         begin="0"
          dur="0.3s"
          from="100"
          to="0" />
       <animate
          fill="freeze"
          attributeName="opacity"
-         begin="1s"
+         begin="0.1s"
          dur="0.1s"
          to="1" />
    </path>

@@ -1,0 +1,48 @@
+{
+    "category": "U13",
+    "teamNumber": 1,
+    "season": "2026-2027",
+    "competition": "D2",
+    "staff": [
+        {
+            "firstName": "Jean",
+            "lastName": "Dupont",
+            "role": "Éducateur principal",
+            "photo": "/assets/images/members/example-coach-1.jfif"
+        },
+        {
+            "firstName": "Pierre",
+            "lastName": "Martin",
+            "role": "Éducateur adjoint",
+            "photo": "/assets/images/members/example-coach-2.jfif"
+        }
+    ],
+    "players": [
+        {
+            "firstName": "L.",
+            "lastName": "*****",
+            "number": 1
+        },
+        {
+            "firstName": "T.",
+            "lastName": "*****",
+            "number": 7
+        }
+    ],
+    "events": [
+        {
+            "type": "Entraînement",
+            "title": "Séance U13",
+            "date": "2026-09-12T10:00:00",
+            "time": "10h00",
+            "location": "Stade du RCBA"
+        },
+        {
+            "type": "Match",
+            "title": "RCBA — Adversaire",
+            "date": "2026-09-19T15:00:00",
+            "time": "15h00",
+            "location": "Stade du RCBA"
+        }
+    ]
+}
