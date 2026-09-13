@@ -582,7 +582,39 @@
 
   font-size: var(--font-size-sm);
 }
+/* ========================================
+   STAFF CARD - TEAMS
+======================================== */
 
+.person-card__content {
+    min-width: 0;
+}
+
+.person-card__role {
+    margin: .15rem 0 0;
+    color: var(--color-text-light);
+    font-size: var(--font-size-sm);
+}
+
+.person-card__teams {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem;
+    margin-top: .65rem;
+}
+
+.person-card__teams .meta-pill {
+    text-decoration: none;
+    transition:
+        background-color .2s ease,
+        border-color .2s ease,
+        color .2s ease;
+}
+
+.person-card__teams .meta-pill:hover {
+    background: rgb(16 32 124 / .12);
+    border-color: rgb(16 32 124 / .2);
+}
 /* ========================================
    PLAYERS
 ======================================== */

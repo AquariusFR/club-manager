@@ -1,0 +1,232 @@
+[
+  {
+    "id": 12,
+    "firstName": "Jean",
+    "lastName": "Dupont",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U13",
+        "teamNumber": 1,
+        "label": "U13 Équipe 1"
+      },
+      {
+        "id": 51,
+        "category": "U15",
+        "teamNumber": 1,
+        "label": "U15 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Léo",
+    "lastName": "Larousse",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Moïse",
+    "lastName": "Béliveau",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Silvain",
+    "lastName": "Deschanel",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Jonathan",
+    "lastName": "Souchon",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Jean",
+    "lastName": "Dupont",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Killian",
+    "lastName": "LaRue",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Amadou",
+    "lastName": "Portier",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Roméo",
+    "lastName": "Édouard",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Louis",
+    "lastName": "Bousquet",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Fabrice",
+    "lastName": "Lestrange",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Matthieu",
+    "lastName": "Bouleau",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Claire",
+    "lastName": "Bardin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  }
+]
