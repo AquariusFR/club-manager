@@ -8,13 +8,18 @@
             "firstName": "Jean",
             "lastName": "Dupont",
             "role": "Éducateur principal",
-            "photo": "/assets/images/members/example-coach-1.jfif"
+            "photoUrl": "/assets/images/members/example-coach-1.jfif"
         },
         {
             "firstName": "Pierre",
             "lastName": "Martin",
             "role": "Éducateur adjoint",
-            "photo": "/assets/images/members/example-coach-2.jfif"
+            "photoUrl": "/assets/images/members/example-coach-2.jfif"
+        },
+        {
+            "firstName": "Albert",
+            "lastName": "Wesker",
+            "role": "Éducateur adjoint"
         }
     ],
     "players": [

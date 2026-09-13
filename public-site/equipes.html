@@ -1,769 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-
-<head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Nos équipes — RCBA</title>
 
-    <meta name="description" content="Découvrez les équipes du Racing Club Bû Abondant, des U7 aux Vétérans.">
-    <meta name="theme-color" content="#10207C">
+    <meta
+      name="description"
+      content="Découvrez les équipes du Racing Club Bû Abondant, des U7 aux Vétérans."
+    />
+    <meta name="theme-color" content="#10207C" />
 
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/variables.css">
-    <link rel="stylesheet" href="/assets/css/layout.css">
-    <link rel="stylesheet" href="/assets/css/components.css">
-    <link rel="stylesheet" href="/assets/css/utilities.css">
+    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+    <link rel="stylesheet" href="/assets/css/variables.css" />
+    <link rel="stylesheet" href="/assets/css/layout.css" />
+    <link rel="stylesheet" href="/assets/css/components.css" />
+    <link rel="stylesheet" href="/assets/css/utilities.css" />
+    
+    <script type="module" src="/web-component/club-header.component.js"></script>
+    <script type="module" src="/web-component/club-footer.component.js"></script>
+  </head>
 
-</head>
-
-<body>
-
-    <header class="site-header">
-
-        <div class="container">
-
-            <a href="/" class="site-header__brand" aria-label="Accueil RCBA">
-                <img src="/assets/icons/rcba_flat_logo.svg" alt="RCBA" width="52" height="52">
-                <div class="hidden-mobile">
-                    <strong>RCBA</strong>
-                    <span>
-                        Racing Club Bû Abondant
-                    </span>
-                </div>
-            </a>
-
-            <button class="site-header__menu-button hidden-desktop" aria-label="Ouvrir le menu" aria-expanded="false"
-                aria-controls="main-navigation">
-
-                <span></span>
-                <span></span>
-                <span></span>
-
-            </button>
-
-            <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
-
-                <ul>
-
-                    <li>
-                        <a href="/">
-                            Accueil
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/equipes.html" aria-current="page">
-
-                            Équipes
-
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/educateurs.html">
-                            Éducateurs
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/benevoles.html">
-                            Bénévoles
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/valeurs.html">
-                            Valeurs
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/licences.html">
-                            Licences
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/palmares.html">
-                            Palmarès
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="/contact.html">
-                            Nous trouver
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
-    </header>
-
+  <body>
+    <club-header title="Senior"></club-header>
 
     <main>
-
-        <!-- ========================================
+      <!-- ========================================
          HERO
     ========================================= -->
 
-        <section class="page-hero">
+      <section class="page-hero">
+        <div class="container">
+          <p class="page-hero__eyebrow">Racing Club Bû Abondant</p>
 
-            <div class="container">
+          <h1>Nos équipes</h1>
 
-                <p class="page-hero__eyebrow">
-                    Racing Club Bû Abondant
-                </p>
+          <p>
+            Découvrez les différentes équipes du RCBA, leurs catégories et leur
+            encadrement.
+          </p>
+        </div>
+      </section>
 
-                <h1>
-                    Nos équipes
-                </h1>
-
-                <p>
-                    Découvrez les différentes équipes du RCBA,
-                    leurs catégories et leur encadrement.
-                </p>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
+      <!-- ========================================
          ÉCOLE DE FOOTBALL
     ========================================= -->
-
-        <section class="section">
-
-            <div class="container">
-
-                <div class="section__header">
-
-                    <p class="section__eyebrow">
-                        École de football
-                    </p>
-
-                    <h2>
-                        Les jeunes catégories
-                    </h2>
-
-                    <p>
-                        Les premières catégories du club,
-                        où les enfants découvrent et développent
-                        leur passion du football.
-                    </p>
-
-                </div>
-
-
-                <div class="teams-grid">
-
-                    <!-- U7 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            U7
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                U7
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        U7
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=u7&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-
-                    <!-- U9 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            U9
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                U9
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        U9
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=u9&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-
-                    <!-- U11 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            U11
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                U11
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        U11
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=u11&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
+      <section class="section">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">École de football</p>
+
+            <h2>Les jeunes catégories</h2>
+
+            <p>
+              Les premières catégories du club, où les enfants découvrent et
+              développent leur passion du football.
+            </p>
+          </div>
+
+          <div id="school-teams" class="teams-grid"></div>
+        </div>
+      </section>
+
+      <!-- ========================================
          PRÉFORMATION
     ========================================= -->
 
-        <section class="section bg-alt">
+      <section class="section bg-alt">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">Préformation</p>
 
-            <div class="container">
+            <h2>Grandir avec le club</h2>
 
-                <div class="section__header">
+            <p>
+              Des catégories où le joueur poursuit son apprentissage technique,
+              tactique et collectif.
+            </p>
+          </div>
 
-                    <p class="section__eyebrow">
-                        Préformation
-                    </p>
+          <div id="preformation-teams" class="teams-grid"></div>
+        </div>
+      </section>
 
-                    <h2>
-                        Grandir avec le club
-                    </h2>
-
-                    <p>
-                        Des catégories où le joueur poursuit
-                        son apprentissage technique, tactique
-                        et collectif.
-                    </p>
-
-                </div>
-
-
-                <div class="teams-grid">
-
-                    <!-- U13 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            U13
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                U13
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        U13
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=u13&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-
-                    <!-- U15 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            U15
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                U15
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        U15
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=u15&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ========================================
+      <!-- ========================================
          FORMATION / SENIORS
     ========================================= -->
 
-        <section class="section">
-
-            <div class="container">
-
-                <div class="section__header">
-
-                    <p class="section__eyebrow">
-                        Formation & seniors
-                    </p>
-
-                    <h2>
-                        Les équipes du club
-                    </h2>
-
-                    <p>
-                        Retrouvez les équipes U18, Seniors
-                        et Vétérans du RCBA.
-                    </p>
-
-                </div>
-
-
-                <div class="teams-grid">
-
-                    <!-- U18 -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            U18
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                U18
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        U18
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=u18&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-
-                    <!-- SENIORS -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            Seniors
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                Seniors
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        Seniors
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=senior&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-
-                    <!-- VÉTÉRANS -->
-
-                    <article class="team-card">
-
-                        <div class="team-card__category">
-                            Vétérans
-                        </div>
-
-                        <div class="team-card__content">
-
-                            <h3>
-                                Vétérans
-                            </h3>
-
-                            <p class="team-card__subtitle">
-                                Équipe 1
-                            </p>
-
-                            <dl class="team-card__details">
-
-                                <div>
-
-                                    <dt>
-                                        Catégorie
-                                    </dt>
-
-                                    <dd>
-                                        Vétérans
-                                    </dd>
-
-                                </div>
-
-                                <div>
-
-                                    <dt>
-                                        Éducateur
-                                    </dt>
-
-                                    <dd>
-                                        À venir
-                                    </dd>
-
-                                </div>
-
-                            </dl>
-
-                        </div>
-
-                        <a href="/equipe.html?categorie=veterans&id=1" class="team-card__link">
-
-                            Découvrir l'équipe
-                            <span aria-hidden="true">→</span>
-
-                        </a>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
+      <section class="section">
+        <div class="container">
+          <div class="section__header">
+            <p class="section__eyebrow">Formation & seniors</p>
+
+            <h2>Les équipes du club</h2>
+
+            <p>Retrouvez les équipes U18, Seniors et Vétérans du RCBA.</p>
+          </div>
+
+          <div id="senior-teams" class="teams-grid"></div>
+        </div>
+      </section>
     </main>
 
-
-    <footer class="site-footer">
-
-        <div class="container">
-
-            <div class="site-footer__content">
-
-                <div class="d-flex items-center gap-2">
-
-                    <img src="/assets/images/logo-white.svg" alt="Logo RCBA" width="48" height="48">
-
-                    <div>
-
-                        <strong>
-                            Racing Club Bû Abondant
-                        </strong>
-
-                        <p class="mb-0">
-                            Football • Passion • Respect
-                        </p>
-
-                    </div>
-
-                </div>
-
-                <nav aria-label="Navigation secondaire">
-
-                    <ul class="d-flex flex-column gap-1">
-
-                        <li>
-                            <a href="/mentions-legales.html">
-                                Mentions légales
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="/politique-confidentialite.html">
-                                Politique de confidentialité
-                            </a>
-                        </li>
-
-                    </ul>
-
-                </nav>
-
-            </div>
-
-            <p class="site-footer__copyright">
-                © 2026 Racing Club Bû Abondant — Tous droits réservés.
-            </p>
-
-        </div>
-
-    </footer>
-
-
-    <script src="/assets/js/menu.js" defer>
-    </script>
-
-</body>
-
+    <club-footer></club-footer>
+    <script src="/assets/js/equipes.js" defer></script>
+  </body>
 </html>

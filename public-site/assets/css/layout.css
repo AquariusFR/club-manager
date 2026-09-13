@@ -38,7 +38,8 @@
 
 /* HEADER */
 
-.site-header {
+.site-header,
+club-header {
 
     position: sticky;
 

@@ -44,3 +44,6 @@ séance :
     nom
     catégorie
     1 fichier PNG
+
+# idées
+à la fin d'une saison, créer un PDF commémoratif

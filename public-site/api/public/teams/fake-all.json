@@ -1,0 +1,164 @@
+{
+  "school": {
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1",
+        "season": "2026-2027",
+        "competition": "D2",
+        "coach": "Léo Larousse",
+        "playersCount": 12
+      },
+      {
+        "id": 43,
+        "category": "U9",
+        "teamNumber": 2,
+        "label": "U9 Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Moïse Béliveau",
+        "playersCount": 12
+      },
+      {
+        "id": 43,
+        "category": "U10",
+        "teamNumber": 2,
+        "label": "U10 Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Silvain Deschanel",
+        "playersCount": 12
+      },
+      {
+        "id": 43,
+        "category": "U10",
+        "teamNumber": 2,
+        "label": "U10 Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Jonathan Souchon",
+        "playersCount": 18
+      }
+    ]
+  },
+  "preformation": {
+    "teams": [
+      {
+        "id": 44,
+        "category": "U11",
+        "teamNumber": 1,
+        "label": "U11 Équipe 1",
+        "season": "2026-2027",
+        "competition": "D2",
+        "coach": "Jean Dupont",
+        "playersCount": 14
+      },
+      {
+        "id": 45,
+        "category": "U11",
+        "teamNumber": 2,
+        "label": "U11 Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Pierre Martin",
+        "playersCount": 16
+      },
+      {
+        "id": 44,
+        "category": "U13",
+        "teamNumber": 1,
+        "label": "U13 Équipe 1",
+        "season": "2026-2027",
+        "competition": "D2",
+        "coach": "Killian LaRue",
+        "playersCount": 14
+      },
+      {
+        "id": 45,
+        "category": "U13",
+        "teamNumber": 2,
+        "label": "U13 Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Amadou Portier",
+        "playersCount": 16
+      },
+      {
+        "id": 44,
+        "category": "U15",
+        "teamNumber": 1,
+        "label": "U15 Équipe 1",
+        "season": "2026-2027",
+        "competition": "D2",
+        "coach": "Roméo Édouard",
+        "playersCount": 14
+      },
+      {
+        "id": 45,
+        "category": "U15",
+        "teamNumber": 2,
+        "label": "U15 Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Louis Bousquet",
+        "playersCount": 16
+      }
+    ]
+  },
+  "senior": {
+    "teams": [
+      {
+        "id": 44,
+        "category": "U18",
+        "teamNumber": 1,
+        "label": "U18 Équipe 1",
+        "season": "2026-2027",
+        "competition": "D2",
+        "coach": "Fabrice Lestrange",
+        "playersCount": 20
+      },
+      {
+        "id": 44,
+        "category": "Seniors",
+        "teamNumber": 1,
+        "label": "Seniors",
+        "season": "2026-2027",
+        "competition": "D2",
+        "coach": "Matthieu Bouleau",
+        "playersCount": 25
+      },
+      {
+        "id": 45,
+        "category": "Veterans",
+        "teamNumber": 1,
+        "label": "Veterans Équipe 1",
+        "season": "2026-2027",
+        "competition": "D1",
+        "coach": "Pierre Martin",
+        "playersCount": 25
+      },
+      {
+        "id": 45,
+        "category": "Veterans",
+        "teamNumber": 2,
+        "label": "Veterans Équipe 2",
+        "season": "2026-2027",
+        "competition": "D3",
+        "coach": "Pierre Martin",
+        "playersCount": 27
+      },
+      {
+        "id": 45,
+        "category": "Seniors",
+        "teamNumber": 1,
+        "label": "Seniors Féminines",
+        "season": "2026-2027",
+        "competition": "R1",
+        "coach": "Claire Bardin",
+        "playersCount": 16
+      }
+    ]
+  }
+}
