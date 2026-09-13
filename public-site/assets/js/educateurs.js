@@ -42,7 +42,7 @@
     const staff = await response.json();
 
     if (!Array.isArray(staff)) {
-      throw new Error("Le format de réponse de l'API est invalide.");
+      throw new TypeError("Le format de réponse de l'API est invalide.");
     }
 
     return staff;

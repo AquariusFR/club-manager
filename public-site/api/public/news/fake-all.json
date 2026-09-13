@@ -1,0 +1,13 @@
+[
+  {
+    "id": 13,
+    "title": "Example title",
+    "text": "Lorem ipsum...",
+    "photos": [
+      "/assets/images/news/photo1.jfif",
+      "/assets/images/news/photo2.jfif",
+      "/assets/images/news/photo3.jfif"
+    ],
+    "date": "24-12-2026"
+  }
+]

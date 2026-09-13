@@ -38,6 +38,7 @@ class ClubHeaderComponent extends HTMLElement {
 
                 <ul>
                     <li><a href="/" aria-current="page"><img src="/assets/icons/home.svg" alt="Accueil" width="24" height="24">Accueil</a></li>
+                    <li><a href="/news.html"><img src="/assets/icons/rss.svg" alt="Actualités" width="24" height="24">Actualités</a></li>
                     <li><a href="/equipes.html"><img src="/assets/icons/teams.svg" alt="Équipes" width="24" height="24">Équipes</a></li>
                     <li><a href="/educateurs.html"><img src="/assets/icons/educators.svg" alt="Éducateurs" width="24" height="24">Éducateurs</a></li>
                     <li><a href="/benevoles.html"><img src="/assets/icons/educators.svg" alt="Bénévoles" width="24" height="24">Bénévoles</a></li>

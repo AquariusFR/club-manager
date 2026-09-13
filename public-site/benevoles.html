@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Équipe — RCBA</title>
+    <title>Educateurs — RCBA</title>
     <meta
       name="description"
-      content="Découvrez une équipe du Racing Club Bû Abondant."
+      content="Découvrez les éducateurs du Racing Club Bû Abondant."
     />
     <meta name="theme-color" content="#10207C" />
     <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
@@ -17,11 +17,27 @@
     <link rel="stylesheet" href="/assets/css/utilities.css" />
     <script type="module" src="/web-component/club-header.component.js"></script>
     <script type="module" src="/web-component/club-footer.component.js"></script>
+    <script type="module" src="/assets/js/volunteers.js"></script>
   </head>
-
   <body>
     <club-header title="RCBA"></club-header>
+    <main>
+      <section class="page-hero">
+        <div class="container">
+          <p class="page-hero__eyebrow">Racing Club Bû Abondant</p>
 
+          <h1>Nos bénévoles</h1>
+
+          <p>Découvrez les bénévoles qui font le RCBA.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div id="volunteers-list" class="staff-grid"></div>
+        </div>
+      </section>
+    </main>
     <club-footer></club-footer>
   </body>
 </html>

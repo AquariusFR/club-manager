@@ -45,7 +45,7 @@
     const teams = await response.json();
 
     if (!Array.isArray(teams.school?.teams) || !Array.isArray(teams.preformation?.teams) || !Array.isArray(teams.senior?.teams)) {
-      throw new Error("Le format de réponse de l'API est invalide.");
+      throw new TypeError("Le format de réponse de l'API est invalide.");
     }
 
     return teams;

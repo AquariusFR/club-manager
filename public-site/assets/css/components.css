@@ -587,33 +587,33 @@
 ======================================== */
 
 .person-card__content {
-    min-width: 0;
+  min-width: 0;
 }
 
 .person-card__role {
-    margin: .15rem 0 0;
-    color: var(--color-text-light);
-    font-size: var(--font-size-sm);
+  margin: 0.15rem 0 0;
+  color: var(--color-text-light);
+  font-size: var(--font-size-sm);
 }
 
 .person-card__teams {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .4rem;
-    margin-top: .65rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.65rem;
 }
 
 .person-card__teams .meta-pill {
-    text-decoration: none;
-    transition:
-        background-color .2s ease,
-        border-color .2s ease,
-        color .2s ease;
+  text-decoration: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .person-card__teams .meta-pill:hover {
-    background: rgb(16 32 124 / .12);
-    border-color: rgb(16 32 124 / .2);
+  background: rgb(16 32 124 / 0.12);
+  border-color: rgb(16 32 124 / 0.2);
 }
 /* ========================================
    PLAYERS
@@ -773,6 +773,318 @@
   color: var(--color-text-light);
 
   font-size: var(--font-size-sm);
+}
+
+/* ========================================
+   ARTICLES
+======================================== */
+
+.articles-list {
+  display: grid;
+  gap: var(--spacing-5);
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+.article-card {
+  overflow: hidden;
+  background: white;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.article-card__content {
+  padding: var(--spacing-3);
+}
+
+.article-card__date {
+  display: inline-flex;
+  margin-bottom: 0.5rem;
+  color: var(--color-secondary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+.article-card__title {
+  margin-bottom: var(--spacing-2);
+  color: var(--color-primary);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+.article-card__text {
+  color: var(--color-text);
+  line-height: 1.7;
+  white-space: pre-line;
+}
+
+/* ========================================
+   ARTICLE GALLERY
+======================================== */
+
+.article-card__gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2px;
+  background: var(--color-border);
+}
+
+.article-card__photo {
+  position: relative;
+  display: block;
+  width: 100%;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  background: var(--color-primary);
+  cursor: pointer;
+}
+
+.article-card__photo::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgb(0 0 0 / 0);
+  transition: background-color 0.2s ease;
+}
+
+.article-card__photo:hover::after,
+.article-card__photo:focus-visible::after {
+  background: rgb(0 0 0 / 0.12);
+}
+
+.article-card__photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.article-card__photo:hover img,
+.article-card__photo:focus-visible img {
+  transform: scale(1.03);
+}
+
+.article-card__photo:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: -3px;
+}
+
+/*
+ * Une seule photo
+ */
+
+.article-card__gallery:has(.article-card__photo:only-child) {
+  grid-template-columns: 1fr;
+}
+
+.article-card__photo:only-child img {
+  aspect-ratio: 16 / 9;
+}
+
+/*
+ * Trois photos :
+ * la première prend toute la largeur
+ */
+
+.article-card__gallery:has(.article-card__photo:nth-child(3)):not(
+    :has(.article-card__photo:nth-child(4))
+  ) {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.article-card__gallery:has(.article-card__photo:nth-child(3)):not(
+    :has(.article-card__photo:nth-child(4))
+  )
+  .article-card__photo:first-child {
+  grid-column: 1 / -1;
+}
+
+.article-card__gallery:has(.article-card__photo:nth-child(3)):not(
+    :has(.article-card__photo:nth-child(4))
+  )
+  .article-card__photo:first-child
+  img {
+  aspect-ratio: 16 / 9;
+}
+
+/* ========================================
+   IMAGE VIEWER
+======================================== */
+
+.image-viewer {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--spacing-3);
+
+  background: rgb(0 0 0 / 0.92);
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition:
+    opacity 0.25s ease,
+    visibility 0.25s ease;
+}
+
+.image-viewer--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.image-viewer__content {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: min(100%, 1200px);
+  max-height: 100%;
+}
+
+.image-viewer__image {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 100px);
+
+  object-fit: contain;
+
+  border-radius: var(--radius-md);
+  box-shadow: 0 20px 60px rgb(0 0 0 / 0.4);
+}
+
+.image-viewer__counter {
+  margin-top: 0.75rem;
+
+  color: rgb(255 255 255 / 0.75);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+}
+
+/*
+ * Boutons
+ */
+
+.image-viewer__close,
+.image-viewer__previous,
+.image-viewer__next {
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  padding: 0;
+
+  border: 1px solid rgb(255 255 255 / 0.2);
+  border-radius: var(--radius-full);
+
+  background: rgb(0 0 0 / 0.35);
+  color: white;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.image-viewer__close:hover,
+.image-viewer__previous:hover,
+.image-viewer__next:hover {
+  background: rgb(255 255 255 / 0.15);
+}
+
+/*
+ * Fermer
+ */
+
+.image-viewer__close {
+  top: var(--spacing-2);
+  right: var(--spacing-2);
+
+  font-size: 2rem;
+  line-height: 1;
+}
+
+/*
+ * Navigation
+ */
+
+.image-viewer__previous,
+.image-viewer__next {
+  top: 50%;
+
+  font-size: 2.5rem;
+  line-height: 1;
+
+  transform: translateY(-50%);
+}
+
+.image-viewer__previous {
+  left: var(--spacing-2);
+}
+
+.image-viewer__next {
+  right: var(--spacing-2);
+}
+
+.image-viewer__previous:hover,
+.image-viewer__next:hover {
+  transform: translateY(-50%) scale(1.05);
+}
+
+/*
+ * Focus clavier
+ */
+
+.image-viewer button:focus-visible {
+  outline: 3px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+/*
+ * Empêche le scroll de la page
+ */
+
+body.no-scroll {
+  overflow: hidden;
+}
+
+/*
+ * Desktop
+ */
+
+@media (min-width: 768px) {
+  .image-viewer {
+    padding: var(--spacing-5);
+  }
+
+  .image-viewer__close {
+    top: var(--spacing-3);
+    right: var(--spacing-3);
+  }
+
+  .image-viewer__previous {
+    left: var(--spacing-3);
+  }
+
+  .image-viewer__next {
+    right: var(--spacing-3);
+  }
 }
 
 /* ========================================
