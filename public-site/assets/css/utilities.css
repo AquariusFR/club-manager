@@ -28,6 +28,7 @@
 .d-none{display:none;}
 
 .flex-column{flex-direction:column;}
+.flex-row{flex-direction:row;}
 .flex-wrap{flex-wrap:wrap;}
 
 .items-center{align-items:center;}
