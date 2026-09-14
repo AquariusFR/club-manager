@@ -1,6 +1,7 @@
 [
   {
     "id": 13,
+    "category": "le club",
     "title": "Example title",
     "text": "Lorem ipsum...",
     "photos": [

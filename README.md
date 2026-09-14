@@ -47,3 +47,10 @@ séance :
 
 # idées
 à la fin d'une saison, créer un PDF commémoratif
+
+
+public
+lancer
+```bash
+npx http-server
+```

@@ -1,240 +1,481 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
 
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+  <meta charset="UTF-8" />
 
-    <title>RCBA — Racing Club Bû Abondant</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta
-      name="description"
-      content="Site officiel du Racing Club Bu Abondant. Actualités, équipes, éducateurs, bénévoles, licences et vie du club."
-    />
+  <title>RCBA — Racing Club Bû Abondant</title>
 
-    <meta name="theme-color" content="#10207C" />
+  <meta name="description"
+    content="Site officiel du Racing Club Bu Abondant. Actualités, équipes, éducateurs, bénévoles, licences et vie du club." />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="RCBA — Racing Club Bû Abondant" />
-    <meta
-      property="og:description"
-      content="Découvrez toute la vie du Racing Club Bû Abondant."
-    />
-    <meta property="og:image" content="/assets/images/logo.svg" />
+  <meta name="theme-color" content="#10207C" />
 
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RCBA — Racing Club Bû Abondant" />
+  <meta property="og:description" content="Découvrez toute la vie du Racing Club Bû Abondant." />
+  <meta property="og:image" content="/assets/images/logo.svg" />
 
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/utilities.css" />
-    <script
-      type="module"
-      src="/web-component/club-header.component.js"
-    ></script>
-    <script
-      type="module"
-      src="/web-component/club-footer.component.js"
-    ></script>
-  </head>
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
 
-  <body>
-    <club-header title="RCBA"></club-header>
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/variables.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/utilities.css" />
+  <script type="module" src="/web-component/club-header.component.js"></script>
+  <script type="module" src="/web-component/club-footer.component.js"></script>
+</head>
 
-    <main>
-      <section class="hero">
-        <div class="container text-center">
-          <img
-            src="/assets/images/rcba.png"
-            alt=""
-            width="180"
-            class="mx-auto mb-3"
-          />
+<body>
+  <club-header title="RCBA"></club-header>
 
-          <h1>RACING CLUB BÛ-ABONDANT</h1>
+  <main>
+    <section class="hero">
+      <div class="container text-center">
+        <img src="/assets/images/rcba.png" alt="" width="180" class="mx-auto mb-3" />
 
-          <p class="mx-auto max-w-600">
-            Bienvenue sur le site officiel du RCBA. Retrouvez toute l'actualité
-            du club, nos équipes, nos éducateurs et la vie associative.
-          </p>
+        <h1>RACING CLUB BÛ-ABONDANT</h1>
 
-          <div class="d-flex gap-2 justify-center flex-wrap">
-            <a href="/equipes.html" class="button"> Nos équipes </a>
+        <p class="mx-auto max-w-600">
+          Bienvenue sur le site officiel du RCBA. Retrouvez toute l'actualité
+          du club, nos équipes, nos éducateurs et la vie associative.
+        </p>
 
-            <a href="/actualites.html" class="button button--secondary">
-              Actualités
-            </a>
+        <div class="d-flex gap-2 justify-center flex-wrap">
+          <a href="/equipes.html" class="button"> Nos équipes </a>
+
+          <a href="/actualites.html" class="button button--secondary">
+            Actualités
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header d-flex flex-row gap-1" stytle="align-items: baseline;">
+          <h2 style="text-transform: uppercase; font-style: italic">
+            Actualité
+          </h2>
+          <div class="hidden items-center gap-2 d-flex">
+            <span class="typography-button-1 text-content-secondary">/</span>
+            <a class="typography-button-1 d-flex items-center text-content-secondary hover:text-content-primary"
+              href="/news.html">Voir tout <svg class="d-inline h-4 w-4">
+                <use href="/assets/icons/chevron-right.svg"></use>
+              </svg></a>
           </div>
         </div>
-      </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section__header d-flex flex-row gap-1" stytle="align-items: baseline;">
-            <h2 style="text-transform: uppercase; font-style: italic">
-              Actualité
-            </h2>
-            <div class="hidden items-center gap-2 d-flex">
-              <span class="typography-button-1 text-content-secondary">/</span>
-              <a
-                class="typography-button-1 d-flex items-center text-content-secondary hover:text-content-primary"
-                href="/news.html"
-                >Voir tout <svg class="d-inline h-4 w-4">
-                  <use href="/assets/icons/chevron-right.svg"></use></svg
-              ></a>
+        <div class="mt-2xl md:mt-10">
+          <div class="gap-y-2xl md:gap-x-2xl d-grid grid-cols-12">
+            <!-- news principale -->
+            <div class="col-span-12 md:col-span-6">
+
+              <div class="top-0 md:sticky">
+                <div class="group relative cursor-pointer group">
+                  <div class="relative opacity-0 animate-fade-in">
+                    <!-- article image -->
+                    <div class="relative h-100 w-100 overflow-hidden object-cover">
+                      <div class="aspect-square h-100 w-100 animate-image-scale-in">
+                        <div class="relative h-100 w-100">
+                          <img alt="" loading="lazy" width="2000" height="1334" decoding="async" data-nimg="1"
+                            class="aspect-square duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                            style="color:transparent; object-fit: cover;" sizes="(max-width: 719px) 100vw, 50vw"
+                            src="/assets/images/news/kickoff.jpg">
+                        </div>
+                      </div>
+                    </div>
+                    <!-- article shadow -->
+                    <div class="absolute inset-0 h-100 w-100"
+                      style="background:var(--Gradient-G2, linear-gradient(0deg, rgb(20, 20, 40) 0%, rgba(20, 20, 40, 0) 75%))">
+                    </div>
+                    <!-- article tags-->
+                    <div class="p-lg md:p-2xl absolute inset-0 d-flex w-100 flex-column items-start justify-end">
+                      <div><span class="typography-overline-2 text-dark-content-secondary mb-sm">Le Club</span></div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer mb-sm flex-column items-center overflow-hidden"
+                        href="/content/semaine-du-paris-saint-germain-olympique-de-marseille-le-classique-lundi-14-septembre-ligue-1-2026-2027">
+                        <h3
+                          class="typography-title-3 text-content-primary-inverse opacity-0 animate-reveal-text-vertical">
+                          Lancement du développement du site</h3>
+                      </a><time datetime="2026-09-14T11:50:19.000Z"
+                        class="typography-body-6 text-dark-content-secondary mb-xl d-block">Il y a 7 heures</time>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- autres news -->
+            <div class="col-span-12 md:col-span-6">
+              <div class="gap-x-md gap-y-2xl md:gap-2xl d-grid grid-cols-12">
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(0 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="6822" height="4548"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA9583_ajkhxm"
+                          style="color: transparent;"></div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Handball</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/le-debrief-paris-cesson-daikin-starligue-journee-2-2026-2027"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Le
+                          Débrief&nbsp;: Paris - Cesson</span></a><time datetime="2026-09-14T12:25:48.657Z"
+                        class="typography-body-6 d-d-block text-content-secondary">Il y a 9 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(1 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="4411" height="2941"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_21165_xdxsn3"
+                          style="color: transparent;"></div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Football masculin</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/communique-medical-achraf-hakimi-psg-news-2026-2027"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Communiqué
+                          médical&nbsp;: Achraf Hakimi</span></a><time datetime="2026-09-14T12:41:17.420Z"
+                        class="typography-body-6 d-block text-content-secondary">Il y a 8 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(2 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="2000" height="1333"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/DIAPO_Training_hand_20260914_016_n1mtyf"
+                          style="color: transparent;"></div>
+                      <div class="flex items-center absolute bottom-0 left-0">
+                        <div
+                          class="bg-background-brand-blue text-content-primary-inverse p-xs d-flex h-6 w-6 items-center justify-center">
+                          <svg class="inline h-4 w-4">
+                            <use href="/icons.sprite.svg#gallery"></use>
+                          </svg></div>
+                        <div
+                          class="bg-dark-background-secondary typography-overline-1 px-sm text-content-primary-inverse text d-flex h-6 items-center justify-center text-center">
+                          20</div>
+                      </div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Handball</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/diaporama-j-2-avant-zagreb-saison-2026-2027"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Diaporama&nbsp;:
+                          J-2 avant Zagreb</span></a><time datetime="2026-09-14T12:40:25.127Z"
+                        class="typography-body-6 d-block text-content-secondary">Il y a 8 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(3 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="2000" height="1333"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/DIapo_PSG_Vs_Strasbourg_20260911_013_nuheud"
+                          style="color: transparent;"></div>
+                      <div class="flex items-center absolute bottom-0 left-0">
+                        <div
+                          class="bg-background-brand-blue text-content-primary-inverse p-xs d-flex h-6 w-6 items-center justify-center">
+                          <svg class="inline h-3 w-3">
+                            <use href="/icons.sprite.svg#play"></use>
+                          </svg></div>
+                        <div
+                          class="bg-dark-background-secondary typography-overline-1 px-sm text-content-primary-inverse text d-flex h-6 items-center justify-center text-center">
+                          02:11</div>
+                      </div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Football féminin</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/les-temps-forts-paris-strasbourg-psg-arkema-premiere-ligue-journee-2-2026-2027"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Les
+                          temps forts&nbsp;: Paris-Strasbourg</span></a><time datetime="2026-09-14T12:47:03.000Z"
+                        class="typography-body-6 d-block text-content-secondary">Il y a 8 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(4 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="4950" height="3300"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_JHA0104_ati1q7"
+                          style="color: transparent;"></div>
+                      <div class="flex items-center absolute bottom-0 left-0">
+                        <div
+                          class="bg-background-brand-blue text-content-primary-inverse p-xs d-flex h-6 w-6 items-center justify-center">
+                          <svg class="inline h-3 w-3">
+                            <use href="/icons.sprite.svg#play"></use>
+                          </svg></div>
+                        <div
+                          class="bg-dark-background-secondary typography-overline-1 px-sm text-content-primary-inverse text d-flex h-6 items-center justify-center text-center">
+                          05:00</div>
+                      </div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Handball</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/temps-forts-paris-cesson-rennes-26-27"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Temps
+                          forts&nbsp;: Paris - Cesson-Rennes</span></a><time datetime="2026-09-14T09:41:42.057Z"
+                        class="typography-body-6 d-block text-content-secondary">Il y a 11 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(5 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="6000" height="4000"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20680_fnea1f"
+                          style="color: transparent;"></div>
+                      <div class="flex items-center absolute bottom-0 left-0">
+                        <div
+                          class="bg-background-brand-blue text-content-primary-inverse p-xs d-flex h-6 w-6 items-center justify-center">
+                          <svg class="inline h-3 w-3">
+                            <use href="/icons.sprite.svg#play"></use>
+                          </svg></div>
+                        <div
+                          class="bg-dark-background-secondary typography-overline-1 px-sm text-content-primary-inverse text d-flex h-6 items-center justify-center text-center">
+                          01:29</div>
+                      </div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Football masculin</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/temps-forts-stade-brestois-29-paris-saint-germain-ligue-1-2026-2027"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Temps
+                          forts&nbsp;: Brest-Paris</span></a><time datetime="2026-09-13T23:59:00.000Z"
+                        class="typography-body-6 d-block text-content-secondary">Il y a 21 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(6 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="1107" height="738"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/14-09-2002_strasbourg_ddui9x"
+                          style="color: transparent;"></div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Histoire</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/la-photo-du-jour-du-paris-saint-germain-14-septembre-2002"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">La
+                          photo du jour&nbsp;: 14 septembre... 2002&nbsp;!</span></a><time
+                        datetime="2026-09-14T09:42:06.000Z" class="typography-body-6 d-block text-content-secondary">Il y
+                        a 11 heures</time>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-span-6">
+                  <div
+                    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+                    style="animation-delay: calc(7 * var(--duration-instant));">
+                    <div class="relative aspect-video overflow-hidden">
+                      <div class="relative h-100 w-100"><img alt="" loading="lazy" width="6000" height="4000"
+                          decoding="async" data-nimg="1"
+                          class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+                          sizes="(max-width: 719px) 50vw, 293px"
+                          srcset="https://media.psg.fr/image/upload/w_384,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 384w, https://media.psg.fr/image/upload/w_640,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 640w, https://media.psg.fr/image/upload/w_750,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 750w, https://media.psg.fr/image/upload/w_828,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 828w, https://media.psg.fr/image/upload/w_1080,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 1080w, https://media.psg.fr/image/upload/w_1200,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 1200w, https://media.psg.fr/image/upload/w_1920,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 1920w, https://media.psg.fr/image/upload/w_2048,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 2048w, https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin 3840w"
+                          src="https://media.psg.fr/image/upload/w_3840,c_fill,g_auto,ar_16:9/f_avif,q_75/_M_20856_oztgin"
+                          style="color: transparent;"></div>
+                      <div class="flex items-center absolute bottom-0 left-0">
+                        <div
+                          class="bg-background-brand-blue text-content-primary-inverse p-xs d-flex h-6 w-6 items-center justify-center">
+                          <svg class="inline h-3 w-3">
+                            <use href="/icons.sprite.svg#play"></use>
+                          </svg></div>
+                        <div
+                          class="bg-dark-background-secondary typography-overline-1 px-sm text-content-primary-inverse text d-flex h-6 items-center justify-center text-center">
+                          01:49</div>
+                      </div>
+                    </div>
+                    <div class="gap-sm pt-md d-flex flex-column">
+                      <div class="gap-xs d-flex h-5 items-center self-stretch">
+                        <h3 class="typography-overline-2 d-block text-content-secondary">Football masculin</h3>
+                      </div><a
+                        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+                        href="/content/les-reactions-brest-paris-ligue-1-saison-26-27"><span
+                          class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">Les
+                          réactions&nbsp;: Brest - Paris</span></a><time datetime="2026-09-13T22:13:56.557Z"
+                        class="typography-body-6 d-block text-content-secondary">Il y a 23 heures</time>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-
-          <div class="news-list">
-            <article class="news-card">
-              <time datetime="2026-08-22"> 22 août 2026 </time>
-
-              <h3>Bienvenue sur notre nouveau site</h3>
-
-              <p>
-                Cette nouvelle plateforme accompagnera la vie du RCBA avec un
-                espace public et bientôt un espace réservé au club.
-              </p>
-
-              <a href="/actualites.html"> Lire la suite → </a>
-            </article>
-          </div>
         </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="section bg-alt">
-        <div class="container">
-          <div class="section__header text-center">
-            <h2>Découvrir le RCBA</h2>
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2>Découvrir le RCBA</h2>
 
-            <p>Un club, des valeurs, une passion commune.</p>
-          </div>
-
-          <div class="club-grid">
-            <article class="club-card">
-              <h3>Nos équipes</h3>
-
-              <p>
-                Des U7 jusqu'aux Vétérans, découvrez toutes les catégories du
-                club.
-              </p>
-
-              <a href="/equipes.html">En savoir plus →</a>
-            </article>
-
-            <article class="club-card">
-              <h3>Nos éducateurs</h3>
-
-              <p>
-                Des bénévoles et éducateurs engagés pour transmettre la passion
-                du football.
-              </p>
-
-              <a href="/educateurs.html">Les rencontrer →</a>
-            </article>
-
-            <article class="club-card">
-              <h3>Nos valeurs</h3>
-
-              <p>
-                Respect, engagement, plaisir et esprit d'équipe sont au cœur du
-                RCBA.
-              </p>
-
-              <a href="/valeurs.html">Découvrir →</a>
-            </article>
-          </div>
+          <p>Un club, des valeurs, une passion commune.</p>
         </div>
-      </section>
 
-      <section class="section">
-        <div class="container">
-          <div class="section__header text-center">
-            <h2>Suivez-nous</h2>
+        <div class="club-grid">
+          <article class="club-card">
+            <h3>Nos équipes</h3>
 
-            <p>Retrouvez la vie du club sur nos réseaux sociaux.</p>
-          </div>
+            <p>
+              Des U7 jusqu'aux Vétérans, découvrez toutes les catégories du
+              club.
+            </p>
 
-          <div class="social-links justify-center">
-            <a href="#" aria-label="Facebook RCBA">
-              <img
-                src="/assets/icons/facebook.svg"
-                alt="Logo RCBA"
-                width="24"
-                height="24"
-              />
-              Facebook
-            </a>
+            <a href="/equipes.html">En savoir plus →</a>
+          </article>
 
-            <a href="#" aria-label="Instagram RCBA">
-              <img
-                src="/assets/icons/instagram.svg"
-                alt="Logo RCBA"
-                width="24"
-                height="24"
-              />
-              Instagram
-            </a>
+          <article class="club-card">
+            <h3>Nos éducateurs</h3>
 
-            <a href="#" aria-label="YouTube RCBA">
-              <img
-                src="/assets/icons/youtube.svg"
-                alt="Logo RCBA"
-                width="24"
-                height="24"
-              />
-              YouTube
+            <p>
+              Des bénévoles et éducateurs engagés pour transmettre la passion
+              du football.
+            </p>
+
+            <a href="/educateurs.html">Les rencontrer →</a>
+          </article>
+
+          <article class="club-card">
+            <h3>Nos valeurs</h3>
+
+            <p>
+              Respect, engagement, plaisir et esprit d'équipe sont au cœur du
+              RCBA.
+            </p>
+
+            <a href="/valeurs.html">Découvrir →</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2>Suivez-nous</h2>
+
+          <p>Retrouvez la vie du club sur nos réseaux sociaux.</p>
+        </div>
+
+        <div class="social-links justify-center">
+          <a href="#" aria-label="Facebook RCBA">
+            <img src="/assets/icons/facebook.svg" alt="Logo RCBA" width="24" height="24" />
+            Facebook
+          </a>
+
+          <a href="#" aria-label="Instagram RCBA">
+            <img src="/assets/icons/instagram.svg" alt="Logo RCBA" width="24" height="24" />
+            Instagram
+          </a>
+
+          <a href="#" aria-label="YouTube RCBA">
+            <img src="/assets/icons/youtube.svg" alt="Logo RCBA" width="24" height="24" />
+            YouTube
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-alt">
+      <div class="container text-center">
+        <div class="section__header">
+          <h2>Nous trouver</h2>
+        </div>
+        <div class="mb-4 d-flex flex-row gap-2 justify-center flex-wrap">
+          <div>
+            <address class="mb-3">
+              Racing Club Bu Abondant<br />
+              Stade de Bu<br />
+              Rue de l'Église<br />
+              Bû — Eure-et-Loir
+            </address>
+
+            <a class="button" href="https://maps.app.goo.gl/xq2pLJhW1MBdfoqN6" target="_blank" rel="noopener">
+              Voir l'itinéraire
             </a>
           </div>
-        </div>
-      </section>
+          <div>
+            <address class="mb-3">
+              Racing Club Bu Abondant<br />
+              Stade d'Abondant<br />
+              All. du Château<br />
+              Abondant - 28410 — Eure-et-Loir
+            </address>
 
-      <section class="section bg-alt">
-        <div class="container text-center">
-          <div class="section__header">
-            <h2>Nous trouver</h2>
-          </div>
-          <div class="mb-4 d-flex flex-row gap-2 justify-center flex-wrap">
-            <div>
-              <address class="mb-3">
-                Racing Club Bu Abondant<br />
-                Stade de Bu<br />
-                Rue de l'Église<br />
-                Bû — Eure-et-Loir
-              </address>
-
-              <a
-                class="button"
-                href="https://maps.app.goo.gl/xq2pLJhW1MBdfoqN6"
-                target="_blank"
-                rel="noopener"
-              >
-                Voir l'itinéraire
-              </a>
-            </div>
-            <div>
-              <address class="mb-3">
-                Racing Club Bu Abondant<br />
-                Stade d'Abondant<br />
-                All. du Château<br />
-                Abondant - 28410 — Eure-et-Loir
-              </address>
-
-              <a
-                class="button"
-                href="https://maps.app.goo.gl/au61yMFq468zSo4K8"
-                target="_blank"
-                rel="noopener"
-              >
-                Voir l'itinéraire
-              </a>
-            </div>
+            <a class="button" href="https://maps.app.goo.gl/au61yMFq468zSo4K8" target="_blank" rel="noopener">
+              Voir l'itinéraire
+            </a>
           </div>
         </div>
-      </section>
-    </main>
+      </div>
+    </section>
+  </main>
 
-    <club-footer></club-footer>
-  </body>
+  <club-footer></club-footer>
+</body>
+
 </html>

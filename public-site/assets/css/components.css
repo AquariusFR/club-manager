@@ -40,8 +40,7 @@
 
 /* Cartes */
 
-.club-card,
-.news-card {
+.club-card {
   background: white;
 
   border: 1px solid var(--color-border);
@@ -57,25 +56,14 @@
   transition: var(--transition);
 }
 
-.club-card:hover,
-.news-card:hover {
+.club-card:hover {
   transform: translateY(-4px);
 
   box-shadow: var(--shadow-md);
 }
 
-.news-card time {
-  display: block;
 
-  margin-bottom: var(--spacing-1);
-
-  color: var(--color-text-light);
-
-  font-size: var(--font-size-sm);
-}
-
-.club-card h3,
-.news-card h3 {
+.club-card h3 {
   color: var(--color-primary);
 }
 

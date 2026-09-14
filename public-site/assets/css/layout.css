@@ -229,8 +229,7 @@ club-header {
 
 /* Grilles */
 
-.club-grid,
-.news-list {
+.club-grid {
   display: grid;
   gap: var(--spacing-3);
 }
