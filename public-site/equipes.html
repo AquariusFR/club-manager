@@ -1,110 +1,109 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Nos équipes — RCBA</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta
-      name="description"
-      content="Découvrez les équipes du Racing Club Bû Abondant, des U7 aux Vétérans."
-    />
-    <meta name="theme-color" content="#10207C" />
+  <title>Nos équipes — RCBA</title>
 
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/utilities.css" />
-    
-    <script type="module" src="/web-component/club-header.component.js"></script>
-    <script type="module" src="/web-component/club-footer.component.js"></script>
-  </head>
+  <meta name="description" content="Découvrez les équipes du Racing Club Bû Abondant, des U7 aux Vétérans." />
+  <meta name="theme-color" content="#10207C" />
 
-  <body>
-    <club-header title="Senior"></club-header>
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/variables.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/utilities.css" />
 
-    <main>
-      <!-- ========================================
+  <script type="module" src="/web-component/club-header.component.js"></script>
+  <script type="module" src="/web-component/club-footer.component.js"></script>
+</head>
+
+<body>
+  <club-header title="Senior"></club-header>
+
+  <main>
+    <!-- ========================================
          HERO
     ========================================= -->
 
-      <section class="page-hero">
-        <div class="container">
-          <p class="page-hero__eyebrow">Racing Club Bû Abondant</p>
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__eyebrow">Racing Club Bû Abondant</p>
 
-          <h1>Nos équipes</h1>
+        <h1>Nos équipes</h1>
 
-          <p>
-            Découvrez les différentes équipes du RCBA, leurs catégories et leur
-            encadrement.
-          </p>
-        </div>
-      </section>
+        <p>
+          Découvrez les différentes équipes du RCBA, leurs catégories et leur
+          encadrement.
+        </p>
+      </div>
+    </section>
 
-      <!-- ========================================
+    <!-- ========================================
          ÉCOLE DE FOOTBALL
     ========================================= -->
-      <section class="section">
-        <div class="container">
-          <div class="section__header">
-            <p class="section__eyebrow">École de football</p>
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">École de football</p>
 
-            <h2>Les jeunes catégories</h2>
+          <h2>Les jeunes catégories</h2>
 
-            <p>
-              Les premières catégories du club, où les enfants découvrent et
-              développent leur passion du football.
-            </p>
-          </div>
-
-          <div id="school-teams" class="teams-grid"></div>
+          <p>
+            Les premières catégories du club, où les enfants découvrent et
+            développent leur passion du football.
+          </p>
         </div>
-      </section>
 
-      <!-- ========================================
+        <div id="school-teams" class="teams-grid"></div>
+      </div>
+    </section>
+
+    <!-- ========================================
          PRÉFORMATION
     ========================================= -->
 
-      <section class="section bg-alt">
-        <div class="container">
-          <div class="section__header">
-            <p class="section__eyebrow">Préformation</p>
+    <section class="section bg-alt">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Préformation</p>
 
-            <h2>Grandir avec le club</h2>
+          <h2>Grandir avec le club</h2>
 
-            <p>
-              Des catégories où le joueur poursuit son apprentissage technique,
-              tactique et collectif.
-            </p>
-          </div>
-
-          <div id="preformation-teams" class="teams-grid"></div>
+          <p>
+            Des catégories où le joueur poursuit son apprentissage technique,
+            tactique et collectif.
+          </p>
         </div>
-      </section>
 
-      <!-- ========================================
+        <div id="preformation-teams" class="teams-grid"></div>
+      </div>
+    </section>
+
+    <!-- ========================================
          FORMATION / SENIORS
     ========================================= -->
 
-      <section class="section">
-        <div class="container">
-          <div class="section__header">
-            <p class="section__eyebrow">Formation & seniors</p>
+    <section class="section">
+      <div class="container">
+        <div class="section__header">
+          <p class="section__eyebrow">Formation & seniors</p>
 
-            <h2>Les équipes du club</h2>
+          <h2>Les équipes du club</h2>
 
-            <p>Retrouvez les équipes U18, Seniors et Vétérans du RCBA.</p>
-          </div>
-
-          <div id="senior-teams" class="teams-grid"></div>
+          <p>Retrouvez les équipes U18, Seniors et Vétérans du RCBA.</p>
         </div>
-      </section>
-    </main>
 
-    <club-footer></club-footer>
-    <script src="/assets/js/equipes.js" defer></script>
-  </body>
+        <div id="senior-teams" class="teams-grid"></div>
+      </div>
+    </section>
+  </main>
+
+  <club-footer></club-footer>
+  <script src="/assets/js/equipes.js" defer></script>
+</body>
+
 </html>

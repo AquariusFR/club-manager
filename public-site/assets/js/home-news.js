@@ -2,7 +2,7 @@
   "use strict";
 
   const API_URL = "/api/public/news";
-  
+
   init();
 
   async function init() {
@@ -20,5 +20,4 @@
       showError("Impossible de charger les actualités.");
     }
   }
-
 })();

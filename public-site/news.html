@@ -1,95 +1,74 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Actualités — RCBA</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <meta
-      name="description"
-      content="Retrouvez les dernières actualités du Racing Club Bû Abondant."
-    />
+  <title>Actualités — RCBA</title>
 
-    <meta name="theme-color" content="#10207C" />
+  <meta name="description" content="Retrouvez les dernières actualités du Racing Club Bû Abondant." />
 
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <meta name="theme-color" content="#10207C" />
 
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/utilities.css" />
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
 
-    <script
-      type="module"
-      src="/web-component/club-header.component.js"
-    ></script>
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/variables.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/utilities.css" />
 
-    <script
-      type="module"
-      src="/web-component/club-footer.component.js"
-    ></script>
+  <script type="module" src="/web-component/club-header.component.js"></script>
 
-    <script type="module" src="/assets/js/news.js"></script>
-  </head>
+  <script type="module" src="/web-component/club-footer.component.js"></script>
 
-  <body>
-    <club-header title="RCBA"></club-header>
+  <script type="module" src="/assets/js/news.js"></script>
+</head>
 
-    <main>
-      <section class="page-hero">
-        <div class="container">
-          <p class="page-hero__eyebrow">Racing Club Bû Abondant</p>
+<body>
+  <club-header title="RCBA"></club-header>
 
-          <h1>Actualités</h1>
+  <main>
+    <section class="page-hero">
+      <div class="container">
+        <p class="page-hero__eyebrow">Racing Club Bû Abondant</p>
 
-          <p>Retrouvez les dernières nouvelles du club.</p>
-        </div>
-      </section>
+        <h1>Actualités</h1>
 
-      <section class="section">
-        <div class="container">
-          <div id="articles-list" class="articles-list"></div>
-        </div>
-      </section>
-    </main>
-
-    <club-footer></club-footer>
-
-    <!-- Image viewer -->
-    <dialog
-      id="image-viewer"
-      class="image-viewer"
-      aria-hidden="true"
-      aria-modal="true"
-      aria-label="Visionneuse d'image"
-    >
-      <button type="button" class="image-viewer__close" aria-label="Fermer">
-        ×
-      </button>
-
-      <button
-        type="button"
-        class="image-viewer__previous"
-        aria-label="Image précédente"
-      >
-        ‹
-      </button>
-
-      <div class="image-viewer__content">
-        <img class="image-viewer__image" src="" alt="" />
-
-        <div class="image-viewer__counter"></div>
+        <p>Retrouvez les dernières nouvelles du club.</p>
       </div>
+    </section>
 
-      <button
-        type="button"
-        class="image-viewer__next"
-        aria-label="Image suivante"
-      >
-        ›
-      </button>
-    </dialog>
-  </body>
+    <section class="section">
+      <div class="container">
+        <div id="articles-list" class="articles-list"></div>
+      </div>
+    </section>
+  </main>
+
+  <club-footer></club-footer>
+
+  <!-- Image viewer -->
+  <dialog id="image-viewer" class="image-viewer" aria-hidden="true" aria-modal="true" aria-label="Visionneuse d'image">
+    <button type="button" class="image-viewer__close" aria-label="Fermer">
+      ×
+    </button>
+
+    <button type="button" class="image-viewer__previous" aria-label="Image précédente">
+      ‹
+    </button>
+
+    <div class="image-viewer__content">
+      <img class="image-viewer__image" src="" alt="" />
+
+      <div class="image-viewer__counter"></div>
+    </div>
+
+    <button type="button" class="image-viewer__next" aria-label="Image suivante">
+      ›
+    </button>
+  </dialog>
+</body>
+
 </html>

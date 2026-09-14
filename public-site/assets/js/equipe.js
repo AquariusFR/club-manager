@@ -166,13 +166,13 @@
 
     const avatar = document.createElement("div");
     avatar.setAttribute("aria-hidden", "true");
-    
+
     if (person.photoUrl) {
-        avatar.className = "person-card__photo";
-        avatar.style.backgroundImage = `url(${person.photoUrl})`;
+      avatar.className = "person-card__photo";
+      avatar.style.backgroundImage = `url(${person.photoUrl})`;
     } else {
-        avatar.className = "person-card__avatar";
-        avatar.textContent = getInitials(person.firstName, person.lastName);
+      avatar.className = "person-card__avatar";
+      avatar.textContent = getInitials(person.firstName, person.lastName);
     }
 
     const content = document.createElement("div");

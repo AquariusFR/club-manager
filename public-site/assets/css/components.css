@@ -6,35 +6,24 @@
 
 .button {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 44px;
-
   padding: 0.8rem 1.4rem;
-
   border-radius: var(--radius-md);
-
   background: var(--color-secondary);
-
   color: white;
-
   font-weight: var(--font-weight-bold);
-
   transition: var(--transition);
 }
 
 .button:hover {
   background: var(--color-secondary-dark);
-
   transform: translateY(-2px);
 }
 
 .button--secondary {
   background: transparent;
-
   border: 2px solid white;
 }
 
@@ -42,26 +31,18 @@
 
 .club-card {
   background: white;
-
   border: 1px solid var(--color-border);
-
   border-top: 5px solid var(--color-secondary);
-
   border-radius: var(--radius-md);
-
   padding: var(--spacing-3);
-
   box-shadow: var(--shadow-sm);
-
   transition: var(--transition);
 }
 
 .club-card:hover {
   transform: translateY(-4px);
-
   box-shadow: var(--shadow-md);
 }
-
 
 .club-card h3 {
   color: var(--color-primary);
@@ -71,33 +52,23 @@
 
 .social-links {
   display: flex;
-
   flex-wrap: wrap;
-
   gap: var(--spacing-2);
 }
 
 .social-links a {
   display: inline-flex;
-
   align-items: center;
-
   justify-content: center;
-
   min-height: 44px;
-
   padding: 0.8rem 1rem;
-
   border-radius: var(--radius-md);
-
   border: 1px solid var(--color-border);
-
   transition: var(--transition);
 }
 
 .social-links a:hover {
   background: var(--color-primary-light);
-
   color: var(--color-primary);
 }
 
@@ -105,7 +76,6 @@
 
 :focus-visible {
   outline: 3px solid var(--color-secondary);
-
   outline-offset: 2px;
 }
 
@@ -114,9 +84,7 @@
 @media (prefers-reduced-motion: reduce) {
   * {
     animation: none !important;
-
     transition: none !important;
-
     scroll-behavior: auto !important;
   }
 }
@@ -127,9 +95,7 @@
 
 .page-hero {
   padding-block: var(--spacing-5);
-
   color: white;
-
   background: linear-gradient(
     135deg,
     var(--color-primary-dark),
@@ -139,31 +105,22 @@
 
 .page-hero__eyebrow {
   margin-bottom: var(--spacing-1);
-
   color: var(--color-secondary);
-
   font-size: var(--font-size-sm);
-
   font-weight: var(--font-weight-bold);
-
   text-transform: uppercase;
-
   letter-spacing: 0.08em;
 }
 
 .page-hero h1 {
   margin-bottom: var(--spacing-2);
-
   font-size: clamp(2rem, 8vw, 3.5rem);
 }
 
 .page-hero p:last-child {
   max-width: 650px;
-
   margin-bottom: 0;
-
   font-size: var(--font-size-lg);
-
   color: rgb(255 255 255 / 0.85);
 }
 
@@ -173,15 +130,10 @@
 
 .section__eyebrow {
   margin-bottom: 0.35rem;
-
   color: var(--color-secondary);
-
   font-size: var(--font-size-sm);
-
   font-weight: var(--font-weight-bold);
-
   text-transform: uppercase;
-
   letter-spacing: 0.08em;
 }
 
@@ -191,9 +143,7 @@
 
 .teams-grid {
   display: grid;
-
   grid-template-columns: 1fr;
-
   gap: var(--spacing-3);
 }
 
@@ -203,19 +153,12 @@
 
 .team-card {
   display: flex;
-
   flex-direction: column;
-
   overflow: hidden;
-
   background: var(--color-background);
-
   border: 1px solid var(--color-border);
-
   border-radius: var(--radius-lg);
-
   box-shadow: var(--shadow-sm);
-
   transition:
     transform var(--transition),
     box-shadow var(--transition);
@@ -223,7 +166,6 @@
 
 .team-card:hover {
   transform: translateY(-4px);
-
   box-shadow: var(--shadow-md);
 }
 
@@ -231,17 +173,11 @@
 
 .team-card__category {
   padding: 0.65rem var(--spacing-2);
-
   background: var(--color-primary);
-
   color: white;
-
   font-size: var(--font-size-sm);
-
   font-weight: var(--font-weight-black);
-
   letter-spacing: 0.08em;
-
   text-transform: uppercase;
 }
 
@@ -249,23 +185,18 @@
 
 .team-card__content {
   flex: 1;
-
   padding: var(--spacing-3);
 }
 
 .team-card__content h3 {
   margin-bottom: 0.25rem;
-
   color: var(--color-primary);
-
   font-size: var(--font-size-xl);
 }
 
 .team-card__subtitle {
   margin-bottom: var(--spacing-3);
-
   color: var(--color-secondary);
-
   font-weight: var(--font-weight-bold);
 }
 
@@ -281,27 +212,20 @@
 
 .team-card__details > div {
   display: flex;
-
   flex-direction: column;
-
   gap: 0.15rem;
 }
 
 .team-card__details dt {
   color: var(--color-text-light);
-
   font-size: var(--font-size-xs);
-
   font-weight: var(--font-weight-bold);
-
   text-transform: uppercase;
-
   letter-spacing: 0.05em;
 }
 
 .team-card__details dd {
   margin: 0;
-
   font-weight: var(--font-weight-medium);
 }
 
@@ -309,21 +233,13 @@
 
 .team-card__link {
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
-
   min-height: 52px;
-
   padding: 0.75rem var(--spacing-3);
-
   border-top: 1px solid var(--color-border);
-
   color: var(--color-primary);
-
   font-weight: var(--font-weight-bold);
-
   transition:
     background var(--transition),
     color var(--transition);
@@ -331,13 +247,11 @@
 
 .team-card__link:hover {
   background: var(--color-secondary);
-
   color: white;
 }
 
 .team-card__link span {
   font-size: 1.25rem;
-
   transition: transform var(--transition);
 }
 
@@ -367,13 +281,9 @@
 
 .team-hero {
   position: relative;
-
   overflow: hidden;
-
   padding-block: var(--spacing-4);
-
   color: white;
-
   background: linear-gradient(
     135deg,
     var(--color-primary-dark),
@@ -383,31 +293,22 @@
 
 .team-hero::after {
   content: "";
-
   position: absolute;
-
   inset: 0;
-
   background: url("/assets/patterns/stripes.svg") center / 420px repeat;
-
   opacity: 0.08;
-
   pointer-events: none;
 }
 
 .team-hero .container {
   position: relative;
-
   z-index: 1;
 }
 
 .team-hero__back {
   display: inline-block;
-
   margin-bottom: var(--spacing-3);
-
   color: rgb(255 255 255 / 0.8);
-
   font-weight: var(--font-weight-medium);
 }
 
@@ -417,9 +318,7 @@
 
 .team-hero__content {
   display: flex;
-
   align-items: center;
-
   gap: var(--spacing-3);
 }
 
@@ -429,17 +328,13 @@
 
 .team-hero h1 {
   margin-bottom: 0.25rem;
-
   font-size: clamp(2.5rem, 10vw, 4rem);
 }
 
 .team-hero__team-number {
   margin: 0;
-
   color: var(--color-secondary);
-
   font-size: var(--font-size-lg);
-
   font-weight: var(--font-weight-bold);
 }
 
@@ -449,43 +344,30 @@
 
 .team-information-grid {
   display: grid;
-
   grid-template-columns: 1fr 1fr;
-
   gap: var(--spacing-2);
 }
 
 .information-card {
   padding: var(--spacing-2);
-
   background: white;
-
   border: 1px solid var(--color-border);
-
   border-radius: var(--radius-md);
-
   box-shadow: var(--shadow-sm);
 }
 
 .information-card__label {
   display: block;
-
   margin-bottom: 0.25rem;
-
   color: var(--color-text-light);
-
   font-size: var(--font-size-xs);
-
   font-weight: var(--font-weight-bold);
-
   text-transform: uppercase;
-
   letter-spacing: 0.05em;
 }
 
 .information-card strong {
   color: var(--color-primary);
-
   font-size: var(--font-size-lg);
 }
 
@@ -495,53 +377,36 @@
 
 .staff-grid {
   display: grid;
-
   gap: var(--spacing-2);
 }
 
 .person-card {
   display: flex;
-
   align-items: center;
-
   gap: var(--spacing-2);
-
   padding: var(--spacing-2);
-
   background: white;
-
   border: 1px solid var(--color-border);
-
   border-radius: var(--radius-md);
 }
 
 .person-card__avatar {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   flex-shrink: 0;
-
   width: 56px;
   height: 56px;
-
   border-radius: var(--radius-full);
-
   background: var(--color-primary);
-
   color: white;
-
   font-size: var(--font-size-lg);
-
   font-weight: var(--font-weight-black);
 }
 
 .person-card__name {
   display: flex;
   align-items: start;
-
   justify-content: start;
 }
 
@@ -553,21 +418,17 @@
   border-radius: var(--radius-full);
   background: var(--color-primary);
   color: white;
-
   background-size: contain;
 }
 
 .person-card h3 {
   margin-bottom: 0.1rem;
-
   color: var(--color-primary);
 }
 
 .person-card p {
   margin: 0;
-
   color: var(--color-text-light);
-
   font-size: var(--font-size-sm);
 }
 /* ========================================
@@ -609,61 +470,41 @@
 
 .players-grid {
   display: grid;
-
   grid-template-columns: 1fr;
-
   gap: 0.75rem;
 }
 
 .player-card {
   display: flex;
-
   align-items: center;
-
   min-height: 72px;
-
   overflow: hidden;
-
   background: white;
-
   border: 1px solid var(--color-border);
-
   border-radius: var(--radius-md);
-
   transition: var(--transition);
 }
 
 .player-card:hover {
   transform: translateY(-2px);
-
   box-shadow: var(--shadow-sm);
 }
 
 .player-card__number {
   display: flex;
-
   align-items: center;
-
   justify-content: center;
-
   align-self: stretch;
-
   width: 64px;
-
   background: var(--color-primary);
-
   color: white;
-
   font-size: var(--font-size-lg);
-
   font-weight: var(--font-weight-black);
 }
 
 .player-card__identity {
   display: flex;
-
   flex-direction: column;
-
   padding-inline: var(--spacing-2);
 }
 
@@ -681,55 +522,38 @@
 
 .events-list {
   display: grid;
-
   gap: var(--spacing-2);
 }
 
 .event-card {
   display: flex;
-
   overflow: hidden;
-
   background: white;
-
   border: 1px solid var(--color-border);
-
   border-radius: var(--radius-md);
-
   box-shadow: var(--shadow-sm);
 }
 
 .event-card__date {
   display: flex;
-
   flex-direction: column;
-
   align-items: center;
-
   justify-content: center;
-
   flex-shrink: 0;
-
   width: 76px;
-
   padding: 0.5rem;
-
   background: var(--color-primary);
-
   color: white;
-
   text-align: center;
 }
 
 .event-card__date span {
   font-size: 0.7rem;
-
   font-weight: var(--font-weight-bold);
 }
 
 .event-card__date strong {
   font-size: 1.8rem;
-
   line-height: 1;
 }
 
@@ -739,27 +563,20 @@
 
 .event-card__type {
   color: var(--color-secondary);
-
   font-size: var(--font-size-xs);
-
   font-weight: var(--font-weight-bold);
-
   text-transform: uppercase;
-
   letter-spacing: 0.05em;
 }
 
 .event-card h3 {
   margin: 0.2rem 0;
-
   color: var(--color-primary);
 }
 
 .event-card p {
   margin: 0;
-
   color: var(--color-text-light);
-
   font-size: var(--font-size-sm);
 }
 
@@ -960,18 +777,13 @@
   position: fixed;
   inset: 0;
   z-index: 1000;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   padding: var(--spacing-3);
-
   background: rgb(0 0 0 / 0.92);
-
   opacity: 0;
   visibility: hidden;
-
   transition:
     opacity 0.25s ease,
     visibility 0.25s ease;
@@ -984,31 +796,25 @@
 
 .image-viewer__content {
   position: relative;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   width: min(100%, 1200px);
   max-height: 100%;
 }
 
 .image-viewer__image {
   display: block;
-
   width: auto;
   max-width: 100%;
   max-height: calc(100vh - 100px);
-
   object-fit: contain;
-
   border-radius: var(--radius-md);
   box-shadow: 0 20px 60px rgb(0 0 0 / 0.4);
 }
 
 .image-viewer__counter {
   margin-top: 0.75rem;
-
   color: rgb(255 255 255 / 0.75);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-bold);
@@ -1022,24 +828,17 @@
 .image-viewer__previous,
 .image-viewer__next {
   position: absolute;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   width: 44px;
   height: 44px;
-
   padding: 0;
-
   border: 1px solid rgb(255 255 255 / 0.2);
   border-radius: var(--radius-full);
-
   background: rgb(0 0 0 / 0.35);
   color: white;
-
   cursor: pointer;
-
   transition:
     background-color 0.2s ease,
     transform 0.2s ease;
@@ -1058,7 +857,6 @@
 .image-viewer__close {
   top: var(--spacing-2);
   right: var(--spacing-2);
-
   font-size: 2rem;
   line-height: 1;
 }
@@ -1070,10 +868,8 @@
 .image-viewer__previous,
 .image-viewer__next {
   top: 50%;
-
   font-size: 2.5rem;
   line-height: 1;
-
   transform: translateY(-50%);
 }
 
@@ -1115,16 +911,13 @@ body.no-scroll {
   .image-viewer {
     padding: var(--spacing-5);
   }
-
   .image-viewer__close {
     top: var(--spacing-3);
     right: var(--spacing-3);
   }
-
   .image-viewer__previous {
     left: var(--spacing-3);
   }
-
   .image-viewer__next {
     right: var(--spacing-3);
   }
@@ -1138,11 +931,9 @@ body.no-scroll {
   .team-information-grid {
     grid-template-columns: repeat(4, 1fr);
   }
-
   .players-grid {
     grid-template-columns: repeat(2, 1fr);
   }
-
   .staff-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1152,22 +943,15 @@ body.no-scroll {
   .team-hero {
     padding-block: var(--spacing-5);
   }
-
   .team-hero__badge {
     display: block;
-
     flex-shrink: 0;
-
     width: 110px;
     height: 110px;
-
     padding: 8px;
-
     background: white;
-
     border-radius: var(--radius-full);
   }
-
   .team-hero__badge img {
     width: 100%;
     height: 100%;
@@ -1196,11 +980,9 @@ body.no-scroll {
   align-items: center;
   min-height: 24px;
   padding: 0.2rem 0.55rem;
-
   background: rgb(16 32 124 / 0.06);
   border: 1px solid rgb(16 32 124 / 0.12);
   border-radius: var(--radius-full);
-
   color: var(--color-primary);
   font-size: var(--font-size-xs);
   font-weight: var(--font-weight-bold);

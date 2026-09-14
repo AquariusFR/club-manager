@@ -1,80 +1,73 @@
 <!doctype html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Palmares — RCBA</title>
-    <meta name="description" content="Découvrez les succès du RCBA." />
-    <meta name="theme-color" content="#10207C" />
-    <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
-    <link rel="stylesheet" href="/assets/css/reset.css" />
-    <link rel="stylesheet" href="/assets/css/variables.css" />
-    <link rel="stylesheet" href="/assets/css/layout.css" />
-    <link rel="stylesheet" href="/assets/css/components.css" />
-    <link rel="stylesheet" href="/assets/css/utilities.css" />
-    <script
-      type="module"
-      src="/web-component/club-header.component.js"
-    ></script>
-    <script
-      type="module"
-      src="/web-component/club-footer.component.js"
-    ></script>
-  </head>
-  <body>
-    <club-header title="RCBA"></club-header>
 
-    <main>
-      <section class="hero">
-        <div class="container text-center">
-          <img
-            src="/assets/images/rcba.png"
-            alt=""
-            width="180"
-            class="mx-auto mb-3"
-          />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Palmares — RCBA</title>
+  <meta name="description" content="Découvrez les succès du RCBA." />
+  <meta name="theme-color" content="#10207C" />
+  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/assets/css/reset.css" />
+  <link rel="stylesheet" href="/assets/css/variables.css" />
+  <link rel="stylesheet" href="/assets/css/layout.css" />
+  <link rel="stylesheet" href="/assets/css/components.css" />
+  <link rel="stylesheet" href="/assets/css/utilities.css" />
+  <script type="module" src="/web-component/club-header.component.js"></script>
+  <script type="module" src="/web-component/club-footer.component.js"></script>
+</head>
 
-          <h1>Palmarès</h1>
-        </div>
-      </section>
+<body>
+  <club-header title="RCBA"></club-header>
 
-      <section class="section">
-        <div class="container">
-          <h2 class="text-center mb-4">Nos succès</h2>
+  <main>
+    <section class="hero">
+      <div class="container text-center">
+        <img src="/assets/images/rcba.png" alt="" width="180" class="mx-auto mb-3" />
 
-          <p class="text-center mb-4">
-            Découvrez les succès du RCBA au fil des années.
-          </p>
-        </div>
-      </section>
+        <h1>Palmarès</h1>
+      </div>
+    </section>
 
-      <section class="section">
-        <div class="container" style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
-          <article class="palmares-card-horizontal">
-            <div class="palmares-card__gallery">
-              <button type="button" class="palmares-card__photo" aria-label="Afficher la photo 1">
-                <img src="/assets/images/news/palmares1.avif" alt="Example title — photo 1" loading="eager">
-              </button>
-            </div>
-            <div class="palmares-card__content">
-              <h2 class="article-card__title">Championnat de France</h2>
-              <div class="article-card__text">2020, 2021, 2022</div>
-            </div>
-          </article>
-          <article class="palmares-card-horizontal--reverse">
-            <div class="palmares-card__gallery">
-              <button type="button" class="palmares-card__photo" aria-label="Afficher la photo 1">
-                <img src="/assets/images/news/photo1.jfif" alt="Example title — photo 1" loading="eager">
-              </button>
-            </div>
-            <div class="palmares-card__content">
-              <h2 class="article-card__title">Championnat de France</h2>
-              <div class="article-card__text">2020, 2021, 2022</div>
-            </div>
-          </article>
-        </div>
-      </section>
-    </main>
-    <club-footer></club-footer>
-  </body>
+    <section class="section">
+      <div class="container">
+        <h2 class="text-center mb-4">Nos succès</h2>
+
+        <p class="text-center mb-4">
+          Découvrez les succès du RCBA au fil des années.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container"
+        style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+        <article class="palmares-card-horizontal">
+          <div class="palmares-card__gallery">
+            <button type="button" class="palmares-card__photo" aria-label="Afficher la photo 1">
+              <img src="/assets/images/news/palmares1.avif" alt="Example title — photo 1" loading="eager">
+            </button>
+          </div>
+          <div class="palmares-card__content">
+            <h2 class="article-card__title">Championnat de France</h2>
+            <div class="article-card__text">2020, 2021, 2022</div>
+          </div>
+        </article>
+        <article class="palmares-card-horizontal--reverse">
+          <div class="palmares-card__gallery">
+            <button type="button" class="palmares-card__photo" aria-label="Afficher la photo 1">
+              <img src="/assets/images/news/photo1.jfif" alt="Example title — photo 1" loading="eager">
+            </button>
+          </div>
+          <div class="palmares-card__content">
+            <h2 class="article-card__title">Championnat de France</h2>
+            <div class="article-card__text">2020, 2021, 2022</div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+  <club-footer></club-footer>
+</body>
+
 </html>
