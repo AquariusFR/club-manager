@@ -41,6 +41,7 @@
 
     /* Espacements */
 
+    --spacing: .25rem;
     --spacing-1: .5rem;
     --spacing-2: 1rem;
     --spacing-3: 1.5rem;
@@ -73,6 +74,11 @@
     --animate-hero-image: hero-image var.75s cubic-bezier(.3, 0, 0, 1);
     --animate-reveal-text-vertical: reveal-text-vertical .75s cubic-bezier(.3, 0, 0, 1) forwards;
     
+    --line-height-100: 100%;
     --line-height-120: 120%;
     --letter-spacing-normal: .03125rem;
+
+    --next-font-virage-narrow: virageNarrow, Helvetica, Arial, sans-serif;
+    --font-virage-narrow: var(--next-font-virage-narrow);
+    --font-size-m-button-1: .9375rem;
 }

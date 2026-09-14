@@ -71,10 +71,19 @@
 
       <section class="section">
         <div class="container">
-          <div class="section__header">
-            <h2>À la une</h2>
-
-            <p>Les dernières informations du club.</p>
+          <div class="section__header d-flex flex-row gap-1" stytle="align-items: baseline;">
+            <h2 style="text-transform: uppercase; font-style: italic">
+              Actualité
+            </h2>
+            <div class="hidden items-center gap-2 d-flex">
+              <span class="typography-button-1 text-content-secondary">/</span>
+              <a
+                class="typography-button-1 d-flex items-center text-content-secondary hover:text-content-primary"
+                href="/news.html"
+                >Voir tout <svg class="d-inline h-4 w-4">
+                  <use href="/assets/icons/chevron-right.svg"></use></svg
+              ></a>
+            </div>
           </div>
 
           <div class="news-list">
