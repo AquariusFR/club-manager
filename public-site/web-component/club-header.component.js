@@ -75,26 +75,22 @@ class ClubHeaderComponent extends HTMLElement {
     min-height: var(--header-height);
 }
 
-    .hidden-desktop{
-
-        display:none!important;
-    }
-}
       </style>
     `;
+
+    const menuButton = shadow.querySelector(".site-header__menu-button");
+    const navigation = shadow.querySelector("#main-navigation");
+
+    if (menuButton && navigation) {
+      menuButton.addEventListener("click", () => {
+        const isOpen = navigation.classList.toggle("is-open");
+
+        menuButton.setAttribute("aria-expanded", isOpen);
+
+        menuButton.classList.toggle("is-active", isOpen);
+      });
+    }
   }
 }
 
 customElements.define("club-header", ClubHeaderComponent);
-const menuButton = document.querySelector(".site-header__menu-button");
-const navigation = document.querySelector("#main-navigation");
-
-if (menuButton && navigation) {
-  menuButton.addEventListener("click", () => {
-    const isOpen = navigation.classList.toggle("is-open");
-
-    menuButton.setAttribute("aria-expanded", isOpen);
-
-    menuButton.classList.toggle("is-active", isOpen);
-  });
-}
