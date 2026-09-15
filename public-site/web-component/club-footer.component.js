@@ -5,17 +5,17 @@ class ClubFooterComponent extends HTMLElement {
     const shadow = this.attachShadow({ mode: "open" });
 
     shadow.innerHTML = `
-    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
 
-    <link rel="stylesheet" href="/assets/css/utilities.css">
-    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/utilities.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
 
     <footer class="site-footer">
       <div class="container">
         <div class="site-footer__content">
           <div class="d-flex items-center gap-2">
             <img
-              src="/assets/icons/rcba_flat_logo.svg"
+              src="./assets/icons/rcba_flat_logo.svg"
               alt="Logo RCBA"
               width="48"
               height="48"
@@ -34,7 +34,7 @@ class ClubFooterComponent extends HTMLElement {
                 <a href="/mentions-legales.html"> Mentions légales </a>
               </li>
               <li>
-                <a href="/politique-confidentialite.html"
+                <a href="./politique-confidentialite.html"
                   >Politique de confidentialité</a
                 >
               </li>

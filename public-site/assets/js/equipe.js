@@ -410,7 +410,7 @@
 
     const link = document.createElement("a");
     link.className = "button";
-    link.href = "/equipes.html";
+    link.href = "./equipes.html";
     link.textContent = "← Retour aux équipes";
 
     container.append(title, text, link);

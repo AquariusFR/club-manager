@@ -103,7 +103,7 @@
       const link = document.createElement("a");
 
       link.className = "meta-pill";
-      link.href = `/equipe.html?id=${encodeURIComponent(team.id)}`;
+      link.href = `./equipe.html?id=${encodeURIComponent(team.id)}`;
 
       link.textContent = team.label || formatTeamLabel(team);
 

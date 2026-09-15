@@ -5,16 +5,16 @@ class ClubHeaderComponent extends HTMLElement {
     const shadow = this.attachShadow({ mode: "open" });
 
     shadow.innerHTML = `
-    <link rel="stylesheet" href="/assets/css/layout.css">
+    <link rel="stylesheet" href="./assets/css/layout.css">
 
-    <link rel="stylesheet" href="/assets/css/utilities.css">
-    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/utilities.css">
+    <link rel="stylesheet" href="./assets/css/reset.css">
 
     <header class="header__wrapper">
         <div class="container">
 
-            <a href="/" class="site-header__brand">
-                <img src="/assets/icons/rcba_flat_logo.svg" alt="RCBA" width="52" height="52">
+            <a href="./" class="site-header__brand">
+                <img src="./assets/icons/rcba_flat_logo.svg" alt="RCBA" width="52" height="52">
 
                 <div class="hidden-mobile">
                     <strong>RCBA</strong>
@@ -37,15 +37,15 @@ class ClubHeaderComponent extends HTMLElement {
             <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
 
                 <ul>
-                    <li><a href="/" aria-current="page"><img src="/assets/icons/home.svg" alt="Accueil" width="24" height="24">Accueil</a></li>
-                    <li><a href="/news.html"><img src="/assets/icons/rss.svg" alt="Actualités" width="24" height="24">Actualités</a></li>
-                    <li><a href="/equipes.html"><img src="/assets/icons/teams.svg" alt="Équipes" width="24" height="24">Équipes</a></li>
-                    <li><a href="/educateurs.html"><img src="/assets/icons/educators.svg" alt="Éducateurs" width="24" height="24">Éducateurs</a></li>
-                    <li><a href="/benevoles.html"><img src="/assets/icons/educators.svg" alt="Bénévoles" width="24" height="24">Bénévoles</a></li>
-                    <li><a href="/valeurs.html"><img src="/assets/icons/thumbs-up.svg" alt="Valeurs" width="24" height="24">Valeurs</a></li>
-                    <li><a href="/licences.html"><img src="/assets/icons/document-list.svg" alt="Licences" width="24" height="24">Licences</a></li>
-                    <li><a href="/palmares.html"><img src="/assets/icons/sun.svg" alt="Palmarès" width="24" height="24">Palmarès</a></li>
-                    <li><a href="/contact.html"><img src="/assets/icons/map-marker.svg" alt="Nous trouver" width="24" height="24">Nous trouver</a></li>
+                    <li><a href="./" aria-current="page"><img src="./assets/icons/home.svg" alt="Accueil" width="24" height="24">Accueil</a></li>
+                    <li><a href="./news.html"><img src="./assets/icons/rss.svg" alt="Actualités" width="24" height="24">Actualités</a></li>
+                    <li><a href="./equipes.html"><img src="./assets/icons/teams.svg" alt="Équipes" width="24" height="24">Équipes</a></li>
+                    <li><a href="./educateurs.html"><img src="./assets/icons/educators.svg" alt="Éducateurs" width="24" height="24">Éducateurs</a></li>
+                    <li><a href="./benevoles.html"><img src="./assets/icons/educators.svg" alt="Bénévoles" width="24" height="24">Bénévoles</a></li>
+                    <li><a href="./valeurs.html"><img src="./assets/icons/thumbs-up.svg" alt="Valeurs" width="24" height="24">Valeurs</a></li>
+                    <li><a href="./licences.html"><img src="./assets/icons/document-list.svg" alt="Licences" width="24" height="24">Licences</a></li>
+                    <li><a href="./palmares.html"><img src="./assets/icons/sun.svg" alt="Palmarès" width="24" height="24">Palmarès</a></li>
+                    <li><a href="./contact.html"><img src="./assets/icons/map-marker.svg" alt="Nous trouver" width="24" height="24">Nous trouver</a></li>
                 </ul>
 
             </nav>

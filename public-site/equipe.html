@@ -7,64 +7,18 @@
   <title>Équipe — RCBA</title>
   <meta name="description" content="Découvrez une équipe du Racing Club Bû Abondant." />
   <meta name="theme-color" content="#10207C" />
-  <link rel="icon" href="/assets/icons/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="/assets/css/reset.css" />
-  <link rel="stylesheet" href="/assets/css/variables.css" />
-  <link rel="stylesheet" href="/assets/css/layout.css" />
-  <link rel="stylesheet" href="/assets/css/components.css" />
-  <link rel="stylesheet" href="/assets/css/utilities.css" />
-  <script type="module" src="/web-component/club-header.component.js"></script>
-  <script type="module" src="/web-component/club-footer.component.js"></script>
+  <link rel="icon" href="/.assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="/.assets/css/reset.css" />
+  <link rel="stylesheet" href="/.assets/css/variables.css" />
+  <link rel="stylesheet" href="/.assets/css/layout.css" />
+  <link rel="stylesheet" href="/.assets/css/components.css" />
+  <link rel="stylesheet" href="/.assets/css/utilities.css" />
+  <script type="module" src="./web-component/club-header.component.js"></script>
+  <script type="module" src="./web-component/club-footer.component.js"></script>
 </head>
 
 <body>
-  <header class="site-header">
-    <div class="container">
-      <a href="/" class="site-header__brand" aria-label="Accueil RCBA">
-        <img src="/assets/images/logo-mark.svg" alt="RCBA" width="52" height="52" />
-        <div class="hidden-mobile">
-          <strong>RCBA</strong>
-          <span> Racing Club Bû Abondant </span>
-        </div>
-      </a>
-
-      <button class="site-header__menu-button hidden-desktop" aria-label="Ouvrir le menu" aria-expanded="false"
-        aria-controls="main-navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
-      <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
-        <ul>
-          <li>
-            <a href="/"> Accueil </a>
-          </li>
-          <li>
-            <a href="/equipes.html" aria-current="page"> Équipes </a>
-          </li>
-          <li>
-            <a href="/educateurs.html"> Éducateurs </a>
-          </li>
-          <li>
-            <a href="/benevoles.html"> Bénévoles </a>
-          </li>
-          <li>
-            <a href="/valeurs.html"> Valeurs </a>
-          </li>
-          <li>
-            <a href="/licences.html"> Licences </a>
-          </li>
-          <li>
-            <a href="/palmares.html"> Palmarès </a>
-          </li>
-          <li>
-            <a href="/contact.html"> Nous trouver </a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+  <club-header title="Senior"></club-header>
 
   <main>
     <!-- ========================================
@@ -72,13 +26,13 @@
     ========================================= -->
     <section class="team-hero">
       <div class="container">
-        <a href="/equipes.html" class="team-hero__back">
+        <a href="./equipes.html" class="team-hero__back">
           ← Toutes les équipes
         </a>
 
         <div class="team-hero__content">
           <div class="team-hero__badge">
-            <img src="/assets/images/logo-mark.svg" alt="" width="110" height="110" />
+            <img src="./assets/images/logo-mark.svg" alt="" width="110" height="110" />
           </div>
 
           <div>
@@ -169,14 +123,14 @@
     ========================================= -->
     <section class="section">
       <div class="container text-center">
-        <a href="/equipes.html" class="button">
+        <a href="./equipes.html" class="button">
           ← Retour à toutes les équipes
         </a>
       </div>
     </section>
   </main>
   <club-footer></club-footer>
-  <script src="/assets/js/equipe.js" defer></script>
+  <script src="./assets/js/equipe.js" defer></script>
 </body>
 
 </html>

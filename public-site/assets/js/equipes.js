@@ -77,7 +77,7 @@
     const card = document.createElement("a");
 
     card.className = "team-card";
-    card.href = `/equipe.html?id=${encodeURIComponent(team.id)}`;
+    card.href = `./equipe.html?id=${encodeURIComponent(team.id)}`;
 
     const category = document.createElement("div");
     category.className = "team-card__category";
@@ -106,7 +106,7 @@
     detailsPlayerCountLabel.textContent = team.playersCount || "À venir";
 
     const teamLink = document.createElement("a");
-    teamLink.href = `/equipe.html?id=${encodeURIComponent(team.id)}`;
+    teamLink.href = `./equipe.html?id=${encodeURIComponent(team.id)}`;
     teamLink.className = "team-card__link";
     teamLink.textContent = "Découvrir l'équipe";
 
