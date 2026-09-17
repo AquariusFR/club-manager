@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_URL = "/api/public/news";
+  const API_URL = "api/public/news";
 
   const articlesList = document.querySelector("#articles-list");
   const viewer = document.querySelector("#image-viewer");
