@@ -53,7 +53,7 @@ class ClubHeaderComponent extends HTMLElement {
                         Éducateurs
                     </a></li>
                     <li><a href="./benevoles.html">
-                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/educators.svg" alt="Bénévoles"></use></svg>
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/benevoles.svg" alt="Bénévoles"></use></svg>
                         Bénévoles
                     </a></li>
                     <li><a href="./valeurs.html">
@@ -79,16 +79,17 @@ class ClubHeaderComponent extends HTMLElement {
         </div>
 </header>`;
 
+    const wrapper = shadow.querySelector(".header__wrapper");
     const menuButton = shadow.querySelector(".site-header__menu-button");
     const navigation = shadow.querySelector("#main-navigation");
 
     if (menuButton && navigation) {
       menuButton.addEventListener("click", () => {
         const isOpen = navigation.classList.toggle("is-open");
-
+        wrapper.classList.toggle("is-open", isOpen);
+        menuButton.classList.toggle("is-active", isOpen);
         menuButton.setAttribute("aria-expanded", isOpen);
 
-        menuButton.classList.toggle("is-active", isOpen);
       });
     }
   }

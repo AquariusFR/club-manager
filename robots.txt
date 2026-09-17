@@ -1,0 +1,14 @@
+User-agent: *
+
+# API : données techniques, pas de contenu à indexer
+Disallow: /api/
+
+# Démo : ne pas indexer la version de test
+Disallow: /site-demo/
+
+# Autoriser explicitement les ressources du site
+Allow: /assets/
+Allow: /web-component/
+
+# Sitemap
+Sitemap: https://rcba.club/sitemap.xml

@@ -770,6 +770,34 @@
   img {
   aspect-ratio: 16 / 9;
 }
+
+/* ========================================
+   CALENDAR
+======================================== */
+.calendar__event {
+  color: black;
+  min-width: 0;
+}
+.clip-corner {
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0 100%
+  );
+}
+@media (min-width: 64rem) {
+  .md\:w-\[293px\] {
+    width: 293px;
+  }
+}
+.bg-background-secondary {
+  background-color: rgb(var(--neutral-5));
+}
+.calendar__event.event {
+  background: var(--color-secondary)
+}
 /* ========================================
    IMAGE VIEWER
 ======================================== */

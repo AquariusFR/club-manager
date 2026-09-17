@@ -1,0 +1,72 @@
+[
+    {
+        "type": "match",
+        "category": "senior",
+        "date": "2026-09-13T15:20:45.000Z",
+        "shortDate": "DIM 13 SEPT",
+        "shortHour": "15:20",
+        "competition": "amical",
+        "homeTeam": "RCBA",
+        "awayTeam": "Gambais",
+        "homeTeamLogo": "./assets/images/rcba.svg",
+        "awayTeamLogo": "./assets/images/other-teams/as-gambais.jpg",
+        "homeTeamScore": 2,
+        "awayTeamScore": 1,
+        "summaryUrl": "./match/senior/rcba-vs-as-gambais-2026-09-13",
+        "forfait": false
+    },
+    {
+        "type": "match",
+        "category": "senior",
+        "date": "2026-09-20T15:20:45.000Z",
+        "shortDate": "DIM 20 SEPT",
+        "shortHour": "15:20",
+        "competition": "coupe d'eure-et-loir",
+        "homeTeam": "RCBA",
+        "awayTeam": "Angervile",
+        "homeTeamLogo": "./assets/images/rcba.svg",
+        "awayTeamLogo": "./assets/images/other-teams/angerville.jpg",
+        "homeTeamScore": 3,
+        "awayTeamScore": 0,
+        "forfait": true
+    },
+    {
+        "type": "match",
+        "category": "senior",
+        "date": "2026-09-27T20:45:45.000Z",
+        "shortDate": "DIM 27 SEPT",
+        "shortHour": "20:45",
+        "competition": "J2 District 3",
+        "homeTeam": "RCBA",
+        "awayTeam": "Chateauneuf",
+        "homeTeamLogo": "./assets/images/rcba.svg",
+        "awayTeamLogo": "./assets/images/other-teams/as-chateauneuf.jpg",
+        "homeTeamScore": 3,
+        "awayTeamScore": 0,
+        "forfait": false
+    },
+    {
+        "type": "match",
+        "category": "U15",
+        "date": "2026-09-26T15:00:00.000Z",
+        "shortDate": "DIM 26 SEPT",
+        "shortHour": "15:00",
+        "competition": "J1 D3",
+        "homeTeam": "RCBA",
+        "awayTeam": "Senonches",
+        "homeTeamLogo": "./assets/images/rcba.svg",
+        "awayTeamLogo": "./assets/images/other-teams/fc-senonches.jpg",
+        "homeTeamScore": 3,
+        "awayTeamScore": 0,
+        "forfait": false
+    },
+    {
+        "type": "event",
+        "date": "2026-09-13T15:20:45.000Z",
+        "shortDate": "DIM 09 SEPT",
+        "shortHour": "20:00",
+        "title": "Tombola",
+        "adress": "1, Rue de la Paix, 78000 Versailles",
+        "eventUrl": "./match/senior/rcba-vs-as-chateauneuf-2026-09-13"
+    }
+]
