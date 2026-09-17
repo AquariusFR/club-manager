@@ -55,8 +55,55 @@ function all(sql, params = []) {
   });
 }
 
+async function initializeSchema() {
+  await run(`
+    CREATE TABLE IF NOT EXISTS Equipes (
+      id INTEGER PRIMARY KEY,
+      nom TEXT NOT NULL,
+      categorie TEXT
+    );
+  `);
+
+  await run(`
+    CREATE TABLE IF NOT EXISTS TeamStats (
+      equipe_id INTEGER PRIMARY KEY,
+      level TEXT,
+      footeo_link TEXT,
+      FOREIGN KEY (equipe_id) REFERENCES Equipes(id)
+    );
+  `);
+
+  await run(`
+    CREATE TABLE IF NOT EXISTS Staff (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      nom TEXT NOT NULL,
+      prenom TEXT NOT NULL,
+      role TEXT,
+      role_priority INTEGER DEFAULT 10,
+      photo_url TEXT,
+      created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+      email TEXT,
+      equipe_id INTEGER,
+      UNIQUE(nom, prenom)
+    );
+  `);
+
+  await run(`
+    CREATE TABLE IF NOT EXISTS Resultats (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      equipe_id INTEGER,
+      date TEXT,
+      adversaire TEXT,
+      score TEXT,
+      statut TEXT,
+      FOREIGN KEY (equipe_id) REFERENCES Equipes(id)
+    );
+  `);
+}
+
 async function sync() {
   console.log("Starting RCBA Technical Data Sync...");
+  await initializeSchema();
 
   // 1. Sync Teams
   for (const team of hardcodedTeams) {

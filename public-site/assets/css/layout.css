@@ -33,22 +33,46 @@
 
 .site-header,
 club-header {
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 100;
-  background: white;
   min-height: var(--header-height);
+
+  transition-property: background-color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+club-header.scrolled {
+  background: rgba(255, 255, 255, 0.94);
   border-bottom: 1px solid var(--color-border);
   box-shadow: var(--shadow-sm);
 }
 
+:host(.scrolled) .site-header__navigation a,
+:host(.scrolled) .site-header__navigation svg,
+:host(.scrolled) .site-header__navigation use {
+  color: var(--color-text);
+}
 .site-header > .container {
   display: flex;
   align-items: center;
   justify-content: space-between;
   min-height: var(--header-height);
 }
+.header__wrapper {
+  background: transparent;
+  min-height: var(--header-height);
+  width: 100%;
+}
 
+.header__wrapper .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: var(--header-height);
+}
 .site-header__logo img {
   width: 56px;
   height: 56px;
@@ -62,7 +86,7 @@ club-header {
   left: 0;
   right: 0;
   display: none;
-  background: white;
+  background: transparent;
   padding: var(--spacing-2);
   box-shadow: var(--shadow-md);
 }
@@ -78,6 +102,7 @@ club-header {
 }
 
 .site-header__navigation a {
+  color: var(--color-primary-light);
   display: flex;
   padding: 0.9rem 1rem;
   border-radius: var(--radius-sm);
@@ -131,8 +156,16 @@ club-header {
 .site-header__brand strong {
   display: block;
   font-size: 1.25rem;
+  color: white;
+  transition-property: color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+:host(.scrolled) .site-header__brand strong {
   color: var(--color-primary);
 }
+
 @media (max-width: 767px) {
   .site-header__brand strong {
     font-size: 2rem;

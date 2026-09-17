@@ -6,7 +6,6 @@ class ClubHeaderComponent extends HTMLElement {
 
     shadow.innerHTML = `
     <link rel="stylesheet" href="./assets/css/layout.css">
-
     <link rel="stylesheet" href="./assets/css/utilities.css">
     <link rel="stylesheet" href="./assets/css/reset.css">
 
@@ -37,46 +36,48 @@ class ClubHeaderComponent extends HTMLElement {
             <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
 
                 <ul>
-                    <li><a href="./" aria-current="page"><img src="./assets/icons/home.svg" alt="Accueil" width="24" height="24">Accueil</a></li>
-                    <li><a href="./news.html"><img src="./assets/icons/rss.svg" alt="Actualités" width="24" height="24">Actualités</a></li>
-                    <li><a href="./equipes.html"><img src="./assets/icons/teams.svg" alt="Équipes" width="24" height="24">Équipes</a></li>
-                    <li><a href="./educateurs.html"><img src="./assets/icons/educators.svg" alt="Éducateurs" width="24" height="24">Éducateurs</a></li>
-                    <li><a href="./benevoles.html"><img src="./assets/icons/educators.svg" alt="Bénévoles" width="24" height="24">Bénévoles</a></li>
-                    <li><a href="./valeurs.html"><img src="./assets/icons/thumbs-up.svg" alt="Valeurs" width="24" height="24">Valeurs</a></li>
-                    <li><a href="./licences.html"><img src="./assets/icons/document-list.svg" alt="Licences" width="24" height="24">Licences</a></li>
-                    <li><a href="./palmares.html"><img src="./assets/icons/sun.svg" alt="Palmarès" width="24" height="24">Palmarès</a></li>
-                    <li><a href="./contact.html"><img src="./assets/icons/map-marker.svg" alt="Nous trouver" width="24" height="24">Nous trouver</a></li>
+                    <li><a href="./" aria-current="page">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/home.svg" alt="Accueil"></use></svg>
+                        Accueil
+                    </a></li>
+                    <li><a href="./news.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/rss.svg" alt="Actualités"></use></svg>
+                        Actualités
+                    </a></li>
+                    <li><a href="./equipes.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/teams.svg" alt="Équipes"></use></svg>
+                        Équipes
+                    </a></li>
+                    <li><a href="./educateurs.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/educators.svg" alt="Éducateurs"></use></svg>
+                        Éducateurs
+                    </a></li>
+                    <li><a href="./benevoles.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/educators.svg" alt="Bénévoles"></use></svg>
+                        Bénévoles
+                    </a></li>
+                    <li><a href="./valeurs.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/thumbs-up.svg" alt="Valeurs"></use></svg>
+                        Valeurs
+                    </a></li>
+                    <li><a href="./licences.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/document-list.svg" alt="Licences"></use></svg>
+                        Licences
+                    </a></li>
+                    <li><a href="./palmares.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/sun.svg" alt="Palmarès"></use></svg>
+                        Palmarès
+                    </a></li>
+                    <li><a href="./contact.html">
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/map-marker.svg" alt="Nous trouver"></use></svg>
+                        Nous
+                     trouver</a></li>
                 </ul>
 
             </nav>
 
         </div>
-</header>
-      <style>
-      .header__wrapper {
-      
-    background: white;
-
-    min-height: var(--header-height);
-
-    border-bottom: 1px solid var(--color-border);
-
-    box-shadow: var(--shadow-sm);
-    width: 100%;
-  }
-      .container {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    min-height: var(--header-height);
-}
-
-      </style>
-    `;
+</header>`;
 
     const menuButton = shadow.querySelector(".site-header__menu-button");
     const navigation = shadow.querySelector("#main-navigation");
@@ -94,3 +95,11 @@ class ClubHeaderComponent extends HTMLElement {
 }
 
 customElements.define("club-header", ClubHeaderComponent);
+
+function updateHeader() {
+  const header = document.querySelector("club-header");
+  header.classList.toggle("scrolled", window.scrollY > 20);
+}
+
+window.addEventListener("scroll", updateHeader, { passive: true });
+updateHeader();
