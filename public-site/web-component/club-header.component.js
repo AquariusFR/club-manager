@@ -32,7 +32,6 @@ class ClubHeaderComponent extends HTMLElement {
                 <span></span>
 
             </button>
-
             <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
 
                 <ul>
@@ -72,6 +71,10 @@ class ClubHeaderComponent extends HTMLElement {
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/map-marker.svg" alt="Nous trouver"></use></svg>
                         Nous
                      trouver</a></li>
+                    <li class="shop"><a href="https://boutique.rcba.club" aria-current="page" >
+                        <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/intersport-logo.svg" alt="Boutique"></use></svg>
+                        Boutique
+                    </a></li>
                 </ul>
 
             </nav>
@@ -89,7 +92,6 @@ class ClubHeaderComponent extends HTMLElement {
         wrapper.classList.toggle("is-open", isOpen);
         menuButton.classList.toggle("is-active", isOpen);
         menuButton.setAttribute("aria-expanded", isOpen);
-
       });
     }
   }

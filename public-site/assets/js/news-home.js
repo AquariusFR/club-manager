@@ -159,7 +159,7 @@
                     href="./news/${article.id}">
                       <span class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">${article.title}</span>
                   </a>
-                  <time datetime="2026-09-14T12:25:48.657Z" class="typography-body-6 d-d-block text-content-secondary">Il y a 9 heures</time>
+                  <time datetime="2026-09-14T12:25:48.657Z" class="typography-body-6 d-d-block text-content-secondary">${article.date}</time>
                 </div>
               </div>
             </div>

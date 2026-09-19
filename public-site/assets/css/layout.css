@@ -129,6 +129,12 @@ club-header.scrolled {
   color: var(--color-primary);
 }
 
+.site-header__navigation .shop a,
+.site-header__navigation .shop svg,
+.site-header__navigation .shop use {
+  color: var(--color-secondary-dark);
+}
+
 /* Hamburger */
 
 .site-header__menu-button {
