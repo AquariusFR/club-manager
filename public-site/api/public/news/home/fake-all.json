@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "main": true,
+    "category": "le club",
+    "title": "Lancement du développement du site",
+    "photo": "/assets/images/news/kickoff.jpg",
+    "date": "19-06-2026"
+  },
+  {
+    "id": 2,
+    "main": false,
+    "category": "le club",
+    "title": "Example title 1",
+    "photo": "/assets/images/news/photo1.jfif",
+    "date": "24-12-2026"
+  },
+  {
+    "id": 3,
+    "main": false,
+    "category": "le club",
+    "title": "Example title 2",
+    "photo": "/assets/images/news/photo2.jfif",
+    "date": "24-12-2026"
+  },
+  {
+    "id": 4,
+    "main": false,
+    "category": "le club",
+    "title": "Example title 3",
+    "photo": "/assets/images/news/photo3.jfif",
+    "date": "24-12-2026"
+  },
+  {
+    "id": 5,
+    "main": false,
+    "category": "le club",
+    "title": "Example title 4",
+    "photo": "/assets/images/news/photo1.jfif",
+    "date": "24-12-2026"
+  },
+  {
+    "id": 6,
+    "main": false,
+    "category": "le club",
+    "title": "Example title 5",
+    "photo": "/assets/images/news/photo2.jfif",
+    "date": "24-12-2026"
+  },
+  {
+    "id": 7,
+    "main": false,
+    "category": "le club",
+    "title": "Example title 6",
+    "photo": "/assets/images/news/photo3.jfif",
+    "date": "24-12-2026"
+  }
+]
