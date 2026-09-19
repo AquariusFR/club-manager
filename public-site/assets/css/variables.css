@@ -138,6 +138,13 @@
   --spacing-3xl: 3.5rem;
   --spacing-4xl: 4.5rem;
   --spacing-5xl: 6rem;
+
+  --breakpoint-sm: 45rem;
+  --breakpoint-md: 64rem;
+  --breakpoint-lg: 80rem;
+  --breakpoint-xl: 90rem;
+  --spacing-club-container: 79.25rem;
+  --spacing-club-padding: 5.375rem;
   /* Layout */
 
   --container-width: 1200px;

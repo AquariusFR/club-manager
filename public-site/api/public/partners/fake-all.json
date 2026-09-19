@@ -1,0 +1,75 @@
+[
+  {
+    "name": "Garage AURIAU",
+    "tag": "Mécanique & Carrosserie",
+    "desc": "Atelier mécanique multimarque et dépannage au service des automobilistes.",
+    "logo": "./assets/images/partners/garage-auriau.png"
+  },
+  {
+    "name": "Les 3S Sports & Pub",
+    "tag": "Équipementier Officiel",
+    "desc": "Spécialiste de l'équipement sportif, textile technique et marquage officiel.",
+    "logo": "./assets/images/partners/les-3s-sport.png"
+  },
+  {
+    "name": "Fillon Technologies",
+    "tag": "Industrie & Innovation",
+    "desc": "Leader mondial des équipements de préparation de peinture, ancré sur notre territoire.",
+    "logo": "./assets/images/partners/fillon-technologies.png"
+  },
+  {
+    "name": "Crédit Agricole",
+    "tag": "Banque & Assurances",
+    "desc": "Partenaire historique du football amateur et du Label Jeunes FFF.",
+    "logo": "./assets/images/partners/credit-agricole.png"
+  },
+  {
+    "name": "Garage CMA - Renault",
+    "tag": "Automobile & Concession",
+    "desc": "Votre agent Renault de proximité pour la vente, l'entretien et la réparation.",
+    "logo": "./assets/images/partners/groupe-cma-renault.png"
+  },
+  {
+    "name": "O'Plateau",
+    "tag": "Restauration & Convivialité",
+    "desc": "Bar-restaurant et lieu de rassemblement convivial au cœur de notre commune.",
+    "logo": "./assets/images/partners/o-plateau.png"
+  },
+  {
+    "name": "Générale d'Optique",
+    "tag": "Santé & Vision",
+    "desc": "Opticien conseil à Dreux, partenaire de la santé visuelle de nos sportifs.",
+    "logo": "./assets/images/partners/gunural-duoptique-dreux.png"
+  },
+  {
+    "name": "ALF Aménagement",
+    "tag": "Aménagement & Habitat",
+    "desc": "Expert en aménagement intérieur, menuiserie et rénovation de l'habitat.",
+    "logo": "./assets/images/partners/alf.png"
+  },
+  {
+    "name": "Tabac Presse",
+    "tag": "Commerce de Proximité",
+    "desc": "Presse, tabac et services du quotidien au centre-bourg de Bû.",
+    "logo": "./assets/images/partners/bar-tabac-bu.png"
+  },
+  {
+    "name": "HIBLOT.COM",
+    "tag": "Agence Digitale & Web",
+    "desc": "Partenaire digital officiel et concepteur de la plateforme web du RCBA.",
+    "logo": "./assets/images/partners/hiblot.com.png",
+    "link": "https://hiblot.com",
+    "featured": true
+  },  {
+    "name": "ProGreen",
+    "tag": "Paysage & Espaces Verts",
+    "desc": "Création et entretien professionnel des espaces verts et des pelouses sportives.",
+    "logo": "./assets/images/partners/pro-green.png"
+  },
+  {
+    "name": "SFA",
+    "tag": "Conseil & Services",
+    "desc": "Accompagnement, expertise et soutien au développement associatif et sportif.",
+    "logo": "./assets/images/partners/sfa.png"
+  }
+]

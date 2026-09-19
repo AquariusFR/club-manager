@@ -8,7 +8,8 @@
 
   <title>RCBA - Racing Club Bû Abondant</title>
 
-  <meta name="description" content="Site officiel du Racing Club Bu Abondant. Actualités, équipes, éducateurs, bénévoles, licences et vie du club." />
+  <meta name="description"
+    content="Site officiel du Racing Club Bu Abondant. Actualités, équipes, éducateurs, bénévoles, licences et vie du club." />
   <meta name="theme-color" content="#10207C" />
 
   <meta property="og:type" content="website" />
@@ -27,6 +28,7 @@
   <script type="module" src="./web-component/club-footer.component.js"></script>
   <script type="module" src="./assets/js/events.js"></script>
   <script type="module" src="./assets/js/news-home.js"></script>
+  <script type="module" src="./assets/js/partners-home.js"></script>
 </head>
 
 <body>
@@ -34,9 +36,8 @@
 
   <main>
     <section class="hero">
-      <div class="container text-center">
-        <img src="./assets/images/rcba.svg" alt="" width="180" class="mx-auto mb-3" />
-
+      <div class="container text-center relative">
+        <img src="./assets/images/rcba.svg" alt="" width="180" class="absolute" style="top: 0; left: 90;" />
         <h1>RACING CLUB BÛ-ABONDANT</h1>
 
         <p class="mx-auto max-w-600">
@@ -56,7 +57,7 @@
       </div>
     </section>
 
-    <section class="section bg-alt">
+    <section class="section">
       <div class="container">
         <div class="section__header text-center">
           <h2>Boutique officielle du RCBA</h2>
@@ -72,7 +73,7 @@
         </a>
       </div>
     </section>
-    <section class="section">
+    <section class="section bg-alt">
       <div class="container">
         <div class="section__header d-flex flex-row gap-1" stytle="align-items: baseline;">
           <h2 style="text-transform: uppercase; font-style: italic">
@@ -87,6 +88,18 @@
           </div>
         </div>
         <div id="news-list"></div>
+      </div>
+    </section>
+
+
+    <section class="section">
+      <div class="container">
+        <div class="section__header text-center">
+          <h2>NOS PARTENAIRES OFFICIELS</h2>
+        </div>
+
+        <div id="partners-list" class="gap-x-lg gap-y-2xl md:gap-x-4xl flex flex-wrap justify-center">/div>
+        </div>
       </div>
     </section>
 

@@ -15,7 +15,11 @@ html {
   scrollbar-width: auto;
 
   /* Couleur : [curseur] [fond/piste] */
-  scrollbar-color: var(--color-secondary) white;
+  scrollbar-color: var(--color-secondary) transparent;
+}
+
+html::-webkit-scrollbar-button {
+  display: none;
 }
 
 body {

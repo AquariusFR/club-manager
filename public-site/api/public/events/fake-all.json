@@ -41,8 +41,8 @@
         "awayTeam": "Chateauneuf",
         "homeTeamLogo": "./assets/images/rcba.svg",
         "awayTeamLogo": "./assets/images/other-teams/as-chateauneuf.jpg",
-        "homeTeamScore": 3,
-        "awayTeamScore": 0,
+        "homeTeamScore": "",
+        "awayTeamScore": "",
         "forfait": false
     },
     {
@@ -56,8 +56,8 @@
         "awayTeam": "Senonches",
         "homeTeamLogo": "./assets/images/rcba.svg",
         "awayTeamLogo": "./assets/images/other-teams/fc-senonches.jpg",
-        "homeTeamScore": 3,
-        "awayTeamScore": 0,
+        "homeTeamScore": "",
+        "awayTeamScore": "",
         "forfait": false
     },
     {
