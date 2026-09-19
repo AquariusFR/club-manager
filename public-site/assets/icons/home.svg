@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
-	<path d="M0 0h24v24H0z" fill="none" />
-	<g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
-		<path stroke-dasharray="18" d="M4.5 21.5h15" stroke-dashoffset="0" />
-		<path stroke-dasharray="16" stroke-dashoffset="0" d="M4.5 21.5v-13.5M19.5 21.5v-13.5" />
-		<path stroke-dasharray="28" stroke-dashoffset="0" d="M2 10l10 -8l10 8" />
-		<path stroke-dasharray="26" stroke-dashoffset="0" d="M9.5 21.5v-9h5v9" />
-	</g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="none" d="M0 0h24v24H0z"/><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="18" d="M4.5 21.5h15"/><path stroke-dasharray="16" d="M4.5 21.5V8m15 13.5V8"/><path stroke-dasharray="28" d="m2 10 10-8 10 8"/><path stroke-dasharray="26" d="M9.5 21.5v-9h5v9"/></g></svg>
