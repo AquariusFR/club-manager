@@ -60,16 +60,17 @@
     "logo": "./assets/images/partners/hiblot.com.png",
     "link": "https://hiblot.com",
     "featured": true
-  },  {
-    "name": "ProGreen",
-    "tag": "Paysage & Espaces Verts",
-    "desc": "Création et entretien professionnel des espaces verts et des pelouses sportives.",
-    "logo": "./assets/images/partners/pro-green.png"
   },
   {
     "name": "SFA",
     "tag": "Conseil & Services",
     "desc": "Accompagnement, expertise et soutien au développement associatif et sportif.",
     "logo": "./assets/images/partners/sfa.png"
+  },
+  {
+    "name": "ProGreen",
+    "tag": "Paysage & Espaces Verts",
+    "desc": "Création et entretien professionnel des espaces verts et des pelouses sportives.",
+    "logo": "./assets/images/partners/pro-green.png"
   }
 ]
