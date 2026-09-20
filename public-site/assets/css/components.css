@@ -526,6 +526,43 @@
   gap: var(--spacing-2);
 }
 
+.home-loading {
+  display: flex;
+  width: 100%;
+  min-height: 90px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-1);
+}
+
+.home-loading__bar {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: home-loading-pulse 0.9s ease-in-out infinite alternate;
+}
+
+.home-loading__bar:nth-child(2) {
+  animation-delay: 0.15s;
+}
+
+.home-loading__bar:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes home-loading-pulse {
+  from {
+    opacity: 0.3;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(-5px);
+  }
+}
+
 .event-card {
   display: flex;
   overflow: hidden;
@@ -796,8 +833,35 @@
   background-color: rgb(var(--neutral-5));
 }
 .calendar__event.event {
-  background: var(--color-secondary)
+  background: var(--color-secondary);
 }
+.event-match__forfait-banner {
+  rotate: 45deg;
+  position: absolute;
+  right: -40px;
+  top: -45px;
+  width: 100px;
+  background-color: rgb(255, 87, 34, 0.9);
+  text-align: center;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.event-match_competition {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  right: -10px;
+  align-content: center;
+  z-index: 10;
+  text-align: center;
+}
+@media (min-width: 64rem) {
+  .event-match__forfait-banner {
+    right: -50px;
+    top: -45px;
+  }
+}
+
 /* ========================================
    IMAGE VIEWER
 ======================================== */
@@ -1023,4 +1087,83 @@ body.no-scroll {
   background: rgb(39 179 20 / 0.08);
   border-color: rgb(39 179 20 / 0.18);
   color: var(--color-secondary);
+}
+
+.skeleton {
+  /* Make sure the skeleton wrapper doesn't influence the layout. */
+  display: contents;
+
+  /* Define the colors as css custom props */
+  --_default-color: rgb(224 224 224 / 90%);
+  --_shimmer-color: rgb(192 192 192 / 90%);
+
+  :not(.wrapper) {
+    /* Apply the animation that moves the background */
+    animation: skeleton-shimmer 2s ease-out infinite;
+    /* Create a background that has a small shimmer "stripe"
+      and tilt it 100 degrees. */
+    background: linear-gradient(
+      100deg,
+      var(--_default-color),
+      var(--_default-color) 50%,
+      var(--_shimmer-color) 60%,
+      var(--_default-color) 70%
+    );
+    /* Make the background twice the width so we can offset it. */
+    background-size: 200% 100%;
+    background-attachment: fixed;
+  }
+}
+.profile-image {
+  margin-bottom: 16px;
+  border-radius: 100%;
+  aspect-ratio: 1;
+  width: 100px;
+}
+.profile-name {
+  width: 100px;
+  height: 20px;
+}
+
+.lines {
+  display: grid;
+  gap: 1rem;
+  > * {
+    height: 1.5rem;
+    &:last-child {
+      width: 80%;
+    }
+  }
+}
+
+.skeleton__event {
+  height: 195px;
+  width: 220px;
+  min-width: 0;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% calc(100% - 24px),
+    calc(100% - 24px) 100%,
+    0 100%
+  );
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+@media (min-width: 64rem) {
+  .skeleton__event {
+    width: 293px;
+  }
+}
+
+.image {
+  aspect-ratio: 1;
+}
+@keyframes skeleton-shimmer {
+  0% {
+    background-position-x: 200%;
+  }
+  100% {
+    background-position-x: 0%;
+  }
 }

@@ -305,6 +305,9 @@ flex-col {
 .w-\[220px\] {
   width: 220px;
 }
+.grow-1 {
+  flex-grow: 1;
+}
 .grow-0 {
   flex-grow: 0;
 }
@@ -397,6 +400,15 @@ flex-col {
 }
 .top-0 {
   top: 0;
+}
+.bottom-0 {
+  bottom: 0;
+}
+.left-0 {
+  left: 0;
+}
+.right-0 {
+  right: 0;
 }
 .justify-end {
   justify-content: flex-end;

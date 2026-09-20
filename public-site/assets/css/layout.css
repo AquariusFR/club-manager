@@ -250,15 +250,55 @@ club-header.scrolled {
 .hero {
   position: relative;
   overflow: hidden;
-  padding-block: 6rem;
+  padding-block: 6rem 1rem;
   color: white;
   background: linear-gradient(
     160deg,
     var(--color-primary-dark),
     var(--color-primary)
   );
+  height: 100vh;
+  justify-content: flex-end;
+  display: flex;
+  flex-direction: column;
 }
 
+.hero .background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+.hero .background-gradient {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background:
+    linear-gradient(180deg, rgba(14, 27, 54, 0.4) 0%, rgba(14, 27, 54, 0) 100%),
+    radial-gradient(
+      121.6% 90.18% at 86.15% 0%,
+      rgba(14, 27, 54, 0) 49.83%,
+      rgba(14, 27, 54, 1) 100%
+    );
+}
+.hero .gradient {
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  background:
+    linear-gradient(180deg, rgba(14, 27, 54, 0.4) 0%, rgba(14, 27, 54, 0) 100%),
+    radial-gradient(
+      121.6% 90.18% at 86.15% 0%,
+      rgba(14, 27, 54, 0) 49.83%,
+      rgba(14, 27, 54, 1) 100%
+    );
+}
+
+/* 
 .hero::before {
   content: "";
   position: absolute;
@@ -275,7 +315,7 @@ club-header.scrolled {
     background-size: 90vw;
     animation: move-background 20s linear infinite alternate;
   }
-}
+} */
 
 @keyframes move-background {
   from {
@@ -300,12 +340,13 @@ club-header.scrolled {
 .hero .container {
   position: relative;
   z-index: 1;
+  padding-bottom: 2.5rem;
 }
 
 .hero h1 {
   margin-bottom: var(--spacing-2);
   animation: var(--animate-reveal-text-vertical);
-  font-size: var(--font-size-3xl);
+  font-size: 2.125rem;
   line-height: var(--line-height-120);
   letter-spacing: var(--letter-spacing-normal);
   font-weight: var(--font-weight-black);
@@ -313,6 +354,7 @@ club-header.scrolled {
   font-style: italic;
   --tw-leading: var(--line-height-120);
   --tw-tracking: var(--letter-spacing-normal);
+  text-align: start;
 }
 
 .hero p {
@@ -374,9 +416,23 @@ club-header.scrolled {
   }
 }
 
+@media (max-width: 767px) {
+  .hero .background-image {
+    height: 100%;
+    aspect-ratio: 1;
+    width: auto;
+    max-width: fit-content;
+  }
+}
+
 @media (min-width: 1024px) {
   .hero {
     padding-block: 7rem;
+    height: 135vh;
+    justify-content: flex-end;
+    display: flex;
+    padding: 0 7rem;
+    flex-direction: column;
   }
   .hero h1 {
     font-size: 3.5rem;

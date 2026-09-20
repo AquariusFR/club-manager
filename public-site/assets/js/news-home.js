@@ -1,52 +1,7 @@
 (() => {
   "use strict";
 
-  const API_URL = "api/public/news";
-
   const articlesList = document.querySelector("#news-list");
-  init();
-
-  async function init() {
-    if (!articlesList) {
-      return;
-    }
-
-    try {
-      const articles = await fetchArticles();
-
-      renderArticles(articles);
-    } catch (error) {
-      console.error("Erreur lors du chargement des actualités :", error);
-
-      showError("Impossible de charger les actualités.");
-    }
-  }
-
-  /*
-   * API
-   */
-
-  async function fetchArticles() {
-    const response = await fetch(API_URL + "/home/fake-all.json", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`API ${response.status} ${response.statusText}`);
-    }
-
-    const articles = await response.json();
-
-    if (!Array.isArray(articles)) {
-      throw new TypeError("Le format de réponse de l'API est invalide.");
-    }
-
-    return articles;
-  }
-
   function renderArticles(articles) {
     articlesList.replaceChildren();
 
@@ -221,4 +176,7 @@
 
     return paragraph;
   }
+
+  window.RCBAHomeRenderers = window.RCBAHomeRenderers || {};
+  window.RCBAHomeRenderers.renderArticles = renderArticles;
 })();

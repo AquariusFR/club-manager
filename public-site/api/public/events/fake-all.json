@@ -67,6 +67,7 @@
         "shortHour": "20:00",
         "title": "Tombola",
         "adress": "1, Rue de la Paix, 78000 Versailles",
-        "eventUrl": "./match/senior/rcba-vs-as-chateauneuf-2026-09-13"
+        "eventUrl": "./match/senior/rcba-vs-as-chateauneuf-2026-09-13",
+        "photoUrl": "./assets/images/events/tombola-thumb.png"
     }
 ]

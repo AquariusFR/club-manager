@@ -1,52 +1,7 @@
 (() => {
   "use strict";
 
-  const API_URL = "api/public/partners";
-
   const partnersList = document.querySelector("#partners-list");
-  init();
-
-  async function init() {
-    if (!partnersList) {
-      return;
-    }
-
-    try {
-      const articles = await fetchPartners();
-
-      renderPartners(articles);
-    } catch (error) {
-      console.error("Erreur lors du chargement des actualités :", error);
-
-      showError("Impossible de charger les actualités.");
-    }
-  }
-
-  /*
-   * API
-   */
-
-  async function fetchPartners() {
-    const response = await fetch(API_URL + "/fake-all.json", {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    });
-
-    if (!response.ok) {
-      throw new Error(`API ${response.status} ${response.statusText}`);
-    }
-
-    const articles = await response.json();
-
-    if (!Array.isArray(articles)) {
-      throw new TypeError("Le format de réponse de l'API est invalide.");
-    }
-
-    return articles;
-  }
-
   function renderPartners(partners) {
     partnersList.replaceChildren();
 
@@ -80,7 +35,8 @@
               <img alt="${partner.name}" title="${partner.desc}" loading="lazy" decoding="async" data-nimg="1"
                 class="transition-opacity duration-300 ease-in object-contain"
                 src="${partner.logo}"
-                style="color: transparent; width: auto; height: 90px;"></a>
+                style="color: transparent; width: auto; height: 90px;
+    max-width: 175px;"></a>
             <h3 class="typography-overline-2 d-block text-content-secondary" style="width: 175px; margin: 0; text-align: center;">${partner.desc}</h3>
           </div>
     `;
@@ -103,4 +59,7 @@
 
     return paragraph;
   }
+
+  window.RCBAHomeRenderers = window.RCBAHomeRenderers || {};
+  window.RCBAHomeRenderers.renderPartners = renderPartners;
 })();

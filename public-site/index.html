@@ -26,9 +26,7 @@
   <link rel="stylesheet" href="./assets/css/utilities.css" />
   <script type="module" src="./web-component/club-header.component.js"></script>
   <script type="module" src="./web-component/club-footer.component.js"></script>
-  <script type="module" src="./assets/js/events.js"></script>
-  <script type="module" src="./assets/js/news-home.js"></script>
-  <script type="module" src="./assets/js/partners-home.js"></script>
+  <script type="module" src="./assets/js/home.js"></script>
 </head>
 
 <body>
@@ -36,24 +34,29 @@
 
   <main>
     <section class="hero">
+      <img class="background-image" id="cover-image" src="./assets/images/news/kickoff.jpg"/>
+      <div class="background-gradient"></div>
       <div class="container text-center relative">
-        <img src="./assets/images/rcba.svg" alt="" width="180" class="absolute hidden-mobile" style="top: 0; left: 90;" />
-        <h1>RACING CLUB BÛ-ABONDANT</h1>
+        <a class="static before:absolute before:inset-0 before:cursor-pointer" href="./news.html">
+          <h1 class="flex max-w-[calc(100vw-var(--spacing-2xl))] flex-wrap gap-x-2 typography-headline-1-hero mb-xl">
+            Lancement du site officiel du RCBA !</h1>
+          <div
+            class="typography-button-1 text-dark-content-secondary group-hover:text-dark-content-primary gap-xs duration-medium-3 flex items-center leading-none transition-colors">
+            <span>Lire</span><svg class="block h-4 w-4">
+              <use href="assets/icons/chevron-right.svg"></use>
+            </svg>
+          </div>
+        </a>
 
-        <p class="mx-auto max-w-600">
-          Bienvenue sur le site officiel du RCBA. Retrouvez toute l'actualité
-          du club, nos équipes, nos éducateurs et la vie associative.
-        </p>
-
-        <div class="d-flex gap-2 justify-center flex-wrap">
-          <a href="./equipes.html" class="button">Nos équipes</a>
-
-          <a href="./actualites.html" class="button button--secondary">Actualités</a>
-        </div>
-
-        <div id="events-list" class="flex w-100 flex-row gap-md md:gap-2xl" style="overflow: auto;padding: 2rem 1rem;">
-          chargement en cours ...
-        </div>
+      </div>
+      <div id="events-list" class="skeleton flex w-100 flex-row gap-md md:gap-2xl"
+        style="overflow: auto;padding: 2rem 1rem;">
+        <div class="skeleton__event"></div>
+        <div class="skeleton__event"></div>
+        <div class="skeleton__event"></div>
+        <div class="skeleton__event"></div>
+        <div class="skeleton__event"></div>
+      </div>
       </div>
     </section>
 
@@ -65,7 +68,7 @@
           <p>La boutique officielle du RCBA, pour soutenir le club et afficher son esprit au quotidien.</p>
         </div>
       </div>
-      <div class="social-links justify-center" style="height: 48px;">
+      <div class="social-links justify-center">
         <a href="https://boutique.rcba.club" aria-label="Boutique RCBA" class="flex-wrap gap-2">
           <img style="height: 48px" src="./assets/icons/intersport-brand.svg" alt="intersport">
           <img style="height: 48px" src="./assets/icons/adidas.svg" alt="adidas">
