@@ -13,7 +13,7 @@ class ClubHeaderComponent extends HTMLElement {
         <div class="container">
 
             <a href="./" class="site-header__brand">
-                <img src="./assets/icons/rcba_flat_logo.svg" alt="RCBA" width="52" height="52">
+                <img src="./assets/images/rcba.svg" alt="RCBA" width="52" height="52">
 
                 <div class="hidden-mobile">
                     <strong>RCBA</strong>

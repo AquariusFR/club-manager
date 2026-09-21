@@ -418,10 +418,10 @@ club-header.scrolled {
 
 @media (max-width: 767px) {
   .hero .background-image {
+    object-fit: cover;
     height: 100%;
-    aspect-ratio: 1;
-    width: auto;
-    max-width: fit-content;
+    width: 100%;
+    inset: 0px;
   }
 }
 
