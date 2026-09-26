@@ -1,24 +1,41 @@
 <?php
+
 declare(strict_types=1);
 
 require_once __DIR__ . '/data.php';
 
 function handle(string $method, array $params): void
 {
-    $teams = teams_data();
-    $teamId = isset($params[0]) ? (int) $params[0] : null;
 
     switch ($method) {
         case 'GET':
-            if ($teamId === null) {
-                api_response(array_values($teams));
-            }
 
-            if (!isset($teams[$teamId])) {
+            $data = teams_data();
+            if (count($params) === 0) {
+                api_response($data);
+            } else {
+
+                $teamId = filter_var($params[0], FILTER_VALIDATE_INT);
+                if ($teamId === false) {
+                    api_error(
+                        'INVALID_TEAM_ID',
+                        'L identifiant de l équipe est invalide.',
+                        400
+                    );
+                }
+
+                foreach ($data as $group) {
+
+                    foreach ($group['teams'] as $team) {
+
+                        if ($team['id'] === $teamId) {
+                            api_response($team);
+                        }
+                    }
+                }
+
                 api_error('TEAM_NOT_FOUND', 'Équipe introuvable.', 404);
             }
-
-            api_response($teams[$teamId]);
 
         case 'POST':
             if ($teamId !== null) {
