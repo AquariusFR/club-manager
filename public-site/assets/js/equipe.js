@@ -56,7 +56,7 @@
 
   async function fetchTeam(id) {
     const response = await fetch(
-      `${API_BASE_URL}/fake.json?id=${encodeURIComponent(id)}`,
+      `${API_BASE_URL}/${encodeURIComponent(id)}`,
       {
         method: "GET",
         headers: {

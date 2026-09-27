@@ -38,6 +38,7 @@ function handle(string $method, array $params): void
             }
 
         case 'POST':
+            $teamId = filter_var($params[0], FILTER_VALIDATE_INT);
             if ($teamId !== null) {
                 header('Allow: GET, POST, OPTIONS');
                 api_error(
@@ -55,6 +56,7 @@ function handle(string $method, array $params): void
             ], 201);
 
         case 'PUT':
+            $teamId = filter_var($params[0], FILTER_VALIDATE_INT);
             if ($teamId === null) {
                 api_error(
                     'MISSING_TEAM_ID',
@@ -75,6 +77,8 @@ function handle(string $method, array $params): void
             ]);
 
         case 'DELETE':
+
+            $teamId = filter_var($params[0], FILTER_VALIDATE_INT);
             if ($teamId === null) {
                 api_error(
                     'MISSING_TEAM_ID',
