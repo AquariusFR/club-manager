@@ -143,7 +143,7 @@ if ($resourceIndex === null || $resourceFile === null) {
     api_error(
         'RESOURCE_NOT_FOUND',
         sprintf(
-            'La ressource "%s" n’existe pas.',
+            '1-La ressource "%s" n\'existe pas.',
             $path[0] ?? ''
         ),
         404
@@ -182,7 +182,7 @@ if ($nextResourceIndex < count($path)) {
         api_error(
             'RESOURCE_NOT_FOUND',
             sprintf(
-                'La ressource "%s/%s" n’existe pas.',
+                '2-La ressource "%s/%s" n\'existe pas.',
                 $scope,
                 $expectedResource
             ),
