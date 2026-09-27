@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_URL = "api/public";
+  const API_URL = "/api/public";
   const sections = {
     events: document.querySelector("#events-list"),
     news: document.querySelector("#news-list"),
@@ -22,7 +22,7 @@
 
     const results = await Promise.allSettled([
       fetchJson(`${API_URL}/events/fake-all.json`),
-      fetchJson(`${API_URL}/news/home/fake-all.json`),
+      fetchJson(`${API_URL}/news/`),
       fetchJson(`${API_URL}/partners/fake-all.json`),
     ]);
 
