@@ -21,9 +21,9 @@
     }
 
     const results = await Promise.allSettled([
-      fetchJson(`${API_URL}/events/fake-all.json`),
+      fetchJson(`${API_URL}/events/`),
       fetchJson(`${API_URL}/news/`),
-      fetchJson(`${API_URL}/partners/fake-all.json`),
+      fetchJson(`${API_URL}/partners/`),
     ]);
 
     renderSection("events", results[0], "renderEvents", "événements");
