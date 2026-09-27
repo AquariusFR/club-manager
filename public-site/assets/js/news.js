@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const API_URL = "api/public/news";
+  const API_URL = "/api/public/news";
 
   const articlesList = document.querySelector("#articles-list");
   const viewer = document.querySelector("#image-viewer");
@@ -32,12 +32,9 @@
     }
   }
 
-  /*
-   * API
-   */
-
+  /* API */
   async function fetchArticles() {
-    const response = await fetch(API_URL + "/fake-all.json", {
+    const response = await fetch(API_URL, {
       method: "GET",
       headers: {
         Accept: "application/json",

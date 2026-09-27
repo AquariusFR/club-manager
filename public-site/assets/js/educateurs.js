@@ -28,7 +28,7 @@
   }
 
   async function fetchStaff() {
-    const response = await fetch(API_URL + "/fake-all.json", {
+    const response = await fetch(API_URL, {
       method: "GET",
       headers: {
         Accept: "application/json",

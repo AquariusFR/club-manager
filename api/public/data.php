@@ -362,3 +362,416 @@ function events_data(): array
         ]
     ];
 }
+
+
+function partners_data(): array
+{
+    $json = '
+[
+  {
+    "name": "Garage AURIAU",
+    "tag": "Mécanique & Carrosserie",
+    "desc": "Atelier mécanique multimarque et dépannage au service des automobilistes.",
+    "logo": "./assets/images/partners/garage-auriau.png"
+  },
+  {
+    "name": "Les 3S Sports & Pub",
+    "tag": "Équipementier Officiel",
+    "desc": "Spécialiste de l\'équipement sportif, textile technique et marquage officiel.",
+    "logo": "./assets/images/partners/les-3s-sport.png"
+  },
+  {
+    "name": "Fillon Technologies",
+    "tag": "Industrie & Innovation",
+    "desc": "Leader mondial des équipements de préparation de peinture, ancré sur notre territoire.",
+    "logo": "./assets/images/partners/fillon-technologies.png"
+  },
+  {
+    "name": "Crédit Agricole",
+    "tag": "Banque & Assurances",
+    "desc": "Partenaire historique du football amateur et du Label Jeunes FFF.",
+    "logo": "./assets/images/partners/credit-agricole.png"
+  },
+  {
+    "name": "Garage CMA - Renault",
+    "tag": "Automobile & Concession",
+    "desc": "Votre agent Renault de proximité pour la vente, l\'entretien et la réparation.",
+    "logo": "./assets/images/partners/groupe-cma-renault.png"
+  },
+  {
+    "name": "O\'Plateau",
+    "tag": "Restauration & Convivialité",
+    "desc": "Bar-restaurant et lieu de rassemblement convivial au cœur de notre commune.",
+    "logo": "./assets/images/partners/o-plateau.png"
+  },
+  {
+    "name": "Générale d\'Optique",
+    "tag": "Santé & Vision",
+    "desc": "Opticien conseil à Dreux, partenaire de la santé visuelle de nos sportifs.",
+    "logo": "./assets/images/partners/gunural-duoptique-dreux.png"
+  },
+  {
+    "name": "ALF Aménagement",
+    "tag": "Aménagement & Habitat",
+    "desc": "Expert en aménagement intérieur, menuiserie et rénovation de l\'habitat.",
+    "logo": "./assets/images/partners/alf.png"
+  },
+  {
+    "name": "Tabac Presse",
+    "tag": "Commerce de Proximité",
+    "desc": "Presse, tabac et services du quotidien au centre-bourg de Bû.",
+    "logo": "./assets/images/partners/bar-tabac-bu.png"
+  },
+  {
+    "name": "HIBLOT.COM",
+    "tag": "Agence Digitale & Web",
+    "desc": "Partenaire digital officiel et concepteur de la plateforme web du RCBA.",
+    "logo": "./assets/images/partners/hiblot.com.png",
+    "link": "https://hiblot.com",
+    "featured": true
+  },
+  {
+    "name": "SFA",
+    "tag": "Conseil & Services",
+    "desc": "Accompagnement, expertise et soutien au développement associatif et sportif.",
+    "logo": "./assets/images/partners/sfa.png"
+  },
+  {
+    "name": "ProGreen",
+    "tag": "Paysage & Espaces Verts",
+    "desc": "Création et entretien professionnel des espaces verts et des pelouses sportives.",
+    "logo": "./assets/images/partners/pro-green.png"
+  }
+]';
+
+    return json_decode($json);
+}
+
+function staff_data(): array
+{
+
+    $json = '
+[
+  {
+    "id": 12,
+    "firstName": "Jean",
+    "lastName": "Dupont",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U13",
+        "teamNumber": 1,
+        "label": "U13 Équipe 1"
+      },
+      {
+        "id": 51,
+        "category": "U15",
+        "teamNumber": 1,
+        "label": "U15 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Léo",
+    "lastName": "Larousse",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Moïse",
+    "lastName": "Béliveau",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Silvain",
+    "lastName": "Deschanel",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Jonathan",
+    "lastName": "Souchon",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Jean",
+    "lastName": "Dupont",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Killian",
+    "lastName": "LaRue",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Amadou",
+    "lastName": "Portier",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Roméo",
+    "lastName": "Édouard",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Louis",
+    "lastName": "Bousquet",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Fabrice",
+    "lastName": "Lestrange",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Matthieu",
+    "lastName": "Bouleau",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "firstName": "Claire",
+    "lastName": "Bardin",
+    "role": "Éducateur",
+    "teams": [
+      {
+        "id": 42,
+        "category": "U9",
+        "teamNumber": 1,
+        "label": "U9 Équipe 1"
+      }
+    ]
+  }
+]
+    ';
+    return json_decode($json);
+}
+
+function volunteers_data(): array
+{
+    $json = '[
+  {
+    "id": 12,
+    "firstName": "Jean",
+    "lastName": "Dupont"
+  },
+  {
+    "id": 12,
+    "firstName": "Léo",
+    "lastName": "Larousse"
+  },
+  {
+    "id": 12,
+    "firstName": "Moïse",
+    "lastName": "Béliveau"
+  },
+  {
+    "id": 12,
+    "firstName": "Silvain",
+    "lastName": "Deschanel"
+  },
+  {
+    "id": 12,
+    "firstName": "Jonathan",
+    "lastName": "Souchon"
+  },
+  {
+    "id": 12,
+    "firstName": "Jean",
+    "lastName": "Dupont"
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin"
+  },
+  {
+    "id": 12,
+    "firstName": "Killian",
+    "lastName": "LaRue"
+  },
+  {
+    "id": 12,
+    "firstName": "Amadou",
+    "lastName": "Portier"
+  },
+  {
+    "id": 12,
+    "firstName": "Roméo",
+    "lastName": "Édouard"
+  },
+  {
+    "id": 12,
+    "firstName": "Louis",
+    "lastName": "Bousquet"
+  },
+  {
+    "id": 12,
+    "firstName": "Fabrice",
+    "lastName": "Lestrange"
+  },
+  {
+    "id": 12,
+    "firstName": "Matthieu",
+    "lastName": "Bouleau"
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin"
+  },
+  {
+    "id": 12,
+    "firstName": "Pierre",
+    "lastName": "Martin"
+  },
+  {
+    "id": 12,
+    "firstName": "Claire",
+    "lastName": "Bardin"
+  }
+]
+';
+
+    return json_decode($json);
+}
