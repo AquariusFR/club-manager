@@ -4,6 +4,9 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/lib/response.php';
 require_once __DIR__ . '/lib/request.php';
+require_once __DIR__ . '/checkAuthentication.php';
+
+$securedScope = ['club'];
 
 $method = strtoupper($_SERVER['REQUEST_METHOD'] ?? 'GET');
 
@@ -64,6 +67,11 @@ if (!preg_match('/^[a-zA-Z0-9_-]+$/', $scope)) {
         400
     );
 }
+
+if (in_array($scope, $securedScope)) {
+    checkAuthentication();
+}
+
 
 /*
 |--------------------------------------------------------------------------
