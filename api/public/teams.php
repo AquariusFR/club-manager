@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/data.php';
 
-function handle(string $method, array $params): void
+function handle(string $method, array $params, string $cacheKey): void
 {
 
     switch ($method) {

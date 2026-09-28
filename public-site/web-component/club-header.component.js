@@ -12,7 +12,7 @@ class ClubHeaderComponent extends HTMLElement {
     <header class="header__wrapper">
         <div class="container">
 
-            <a href="./" class="site-header__brand">
+            <a href="./index.php" class="site-header__brand">
                 <img src="./assets/images/rcba.svg" alt="RCBA" width="52" height="52">
 
                 <div class="hidden-mobile">
@@ -35,39 +35,39 @@ class ClubHeaderComponent extends HTMLElement {
             <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
 
                 <ul>
-                    <li><a href="./" aria-current="page">
+                    <li><a href="./index.php" aria-current="page">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/home.svg" alt="Accueil"></use></svg>
                         Accueil
                     </a></li>
-                    <li><a href="./news.html">
+                    <li><a href="./news.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/rss.svg" alt="Actualités"></use></svg>
                         Actualités
                     </a></li>
-                    <li><a href="./equipes.html">
+                    <li><a href="./equipes.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/teams.svg" alt="Équipes"></use></svg>
                         Équipes
                     </a></li>
-                    <li><a href="./educateurs.html">
+                    <li><a href="./educateurs.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/educators.svg" alt="Éducateurs"></use></svg>
                         Éducateurs
                     </a></li>
-                    <li><a href="./benevoles.html">
+                    <li><a href="./benevoles.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/benevoles.svg" alt="Bénévoles"></use></svg>
                         Bénévoles
                     </a></li>
-                    <li><a href="./valeurs.html">
+                    <li><a href="./valeurs.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/thumbs-up.svg" alt="Valeurs"></use></svg>
                         Valeurs
                     </a></li>
-                    <li><a href="./licences.html">
+                    <li><a href="./licences.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/document-list.svg" alt="Licences"></use></svg>
                         Licences
                     </a></li>
-                    <li><a href="./palmares.html">
+                    <li><a href="./palmares.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/sun.svg" alt="Palmarès"></use></svg>
                         Palmarès
                     </a></li>
-                    <li><a href="./contact.html">
+                    <li><a href="./contact.php">
                         <svg width="24" height="24"><use width="24" height="24" href="./assets/icons/map-marker.svg" alt="Nous trouver"></use></svg>
                         Nous
                      trouver</a></li>

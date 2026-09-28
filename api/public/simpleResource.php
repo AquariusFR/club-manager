@@ -3,15 +3,26 @@
 declare(strict_types=1);
 
 require_once __DIR__ . '/data.php';
+require_once __DIR__ . '/../lib/cache.php';
 
-function handleRequest(string $method, array $params, array $data): void
+function handleRequest(string $method, array $params, array $data, string $cacheKey): void
 {
 
     switch ($method) {
         case 'GET':
             if (count($params) === 0) {
                 // TODO getAll method in database.
-                api_response(array_values($data));
+                $response = array_values($data);
+
+                cache_set(
+                    $cacheKey,
+                    json_encode(
+                        $response,
+                        JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT
+                    )
+                );
+
+                api_response($response);
             } else {
 
                 $resourceId = filter_var($params[0], FILTER_VALIDATE_INT);

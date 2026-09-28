@@ -444,7 +444,7 @@ function partners_data(): array
   }
 ]';
 
-    return json_decode($json);
+    return json_decode($json, true);
 }
 
 function staff_data(): array

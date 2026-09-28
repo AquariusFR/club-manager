@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 require_once __DIR__ . '/lib/response.php';
 require_once __DIR__ . '/lib/request.php';
+require_once __DIR__ . '/lib/cache.php';
 require_once __DIR__ . '/checkAuthentication.php';
 
 $securedScope = ['club'];
@@ -68,10 +69,14 @@ if (!preg_match('/^[a-zA-Z0-9_-]+$/', $scope)) {
     );
 }
 
+/*
+|--------------------------------------------------------------------------
+| Check Authentication if route is secured
+|--------------------------------------------------------------------------
+*/
 if (in_array($scope, $securedScope)) {
     checkAuthentication();
 }
-
 
 /*
 |--------------------------------------------------------------------------
@@ -251,4 +256,19 @@ if (!function_exists('handle')) {
 |--------------------------------------------------------------------------
 */
 
-handle($method, $params);
+/*
+|--------------------------------------------------------------------------
+| Check Cache
+|--------------------------------------------------------------------------
+*/
+
+$cached = cache_get($route, 300);
+
+if ($cached !== null) {
+    http_response_code(201);
+    header('Content-Type: application/json; charset=utf-8');
+    echo $cached;
+    exit;
+}
+
+handle($method, $params, $route);
