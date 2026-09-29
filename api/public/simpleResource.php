@@ -10,6 +10,15 @@ function handleRequest(string $method, array $params, array $data, string $cache
 
     switch ($method) {
         case 'GET':
+            $cached = cache_get($cacheKey, 300);
+
+            if ($cached !== null) {
+                http_response_code(201);
+                header('Content-Type: application/json; charset=utf-8');
+                echo $cached;
+                exit;
+            }
+
             if (count($params) === 0) {
                 // TODO getAll method in database.
                 $response = array_values($data);
@@ -55,6 +64,8 @@ function handleRequest(string $method, array $params, array $data, string $cache
 
             $body = request_json();
 
+            invalidatePublicPageCache($cacheKey);
+
             api_response([
                 'message' => 'Création simulée.',
                 'data' => $body
@@ -76,6 +87,8 @@ function handleRequest(string $method, array $params, array $data, string $cache
 
             $body = request_json();
 
+            invalidatePublicPageCache($cacheKey);
+
             api_response([
                 'message' => 'Modification simulée.',
                 'data' => array_merge($singles[$resourceId], $body)
@@ -96,6 +109,7 @@ function handleRequest(string $method, array $params, array $data, string $cache
                 api_error('TEAM_NOT_FOUND', 'event introuvable.', 404);
             }
 
+            invalidatePublicPageCache($cacheKey);
             api_response(null, 204);
 
         default:
@@ -106,4 +120,18 @@ function handleRequest(string $method, array $params, array $data, string $cache
                 405
             );
     }
+}
+
+function invalidatePublicPageCache(string $cacheKey): void
+{
+    $segments = explode('/', trim($cacheKey, '/'));
+    $resource = $segments[1] ?? '';
+
+    if (($segments[0] ?? '') !== 'public' || !in_array($resource, ['events', 'news', 'partners'], true)) {
+        return;
+    }
+
+    cache_delete($cacheKey);
+    cache_delete('public/' . $resource);
+    cache_delete('public/page/index');
 }

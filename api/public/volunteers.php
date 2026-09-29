@@ -7,5 +7,5 @@ require_once __DIR__ . '/simpleResource.php';
 
 function handle(string $method, array $params, string $cacheKey): void
 {
-    handleRequest($method, $params, volunteers_data(), $cacheKey));
+    handleRequest($method, $params, volunteers_data(), $cacheKey);
 }

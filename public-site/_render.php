@@ -4,6 +4,15 @@ declare(strict_types=1);
 
 function renderPublicPage(string $page): void
 {
+    require_once dirname(__DIR__) . '/api/lib/cache.php';
+
+    $cacheKey = 'public/page/' . $page;
+    $cached = cache_get($cacheKey, 300);
+    if ($cached !== null) {
+        echo $cached;
+        return;
+    }
+
     $sourcePage = $page === 'index' ? 'index_dynamic' : $page;
     $source = __DIR__ . '/templates/' . $sourcePage . '.html';
     $html = file_get_contents($source);
@@ -34,6 +43,7 @@ function renderPublicPage(string $page): void
         $html = replaceElementContents($html, 'partners-list', renderHomePartners(partners_data()));
     }
 
+    cache_set($cacheKey, $html);
     echo $html;
 }
 

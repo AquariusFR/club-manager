@@ -262,13 +262,4 @@ if (!function_exists('handle')) {
 |--------------------------------------------------------------------------
 */
 
-$cached = cache_get($route, 300);
-
-if ($cached !== null) {
-    http_response_code(201);
-    header('Content-Type: application/json; charset=utf-8');
-    echo $cached;
-    exit;
-}
-
 handle($method, $params, $route);
