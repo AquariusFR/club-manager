@@ -32,6 +32,10 @@
 
 Options -Indexes
 
+<IfModule mod_setenvif.c>
+    SetEnvIf Request_URI "^/public-site(/[^.]*)?/?$|^/public-site/[^/]+\.php$" public_site_page_request
+</IfModule>
+
 
 # ----------------------------------------------------------
 # 3. Compression GZIP
@@ -133,6 +137,8 @@ Options -Indexes
 # ----------------------------------------------------------
 
 <IfModule mod_headers.c>
+
+    Header merge Vary X-Requested-With env=public_site_page_request
 
     # ------------------------------------------------------
     # Assets statiques

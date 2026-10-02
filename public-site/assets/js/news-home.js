@@ -1,8 +1,8 @@
 (() => {
   "use strict";
 
-  const articlesList = document.querySelector("#news-list");
   function renderArticles(articles) {
+    const articlesList = document.querySelector("#news-list");
     articlesList.replaceChildren();
 
     if (articles.length === 0) {
@@ -13,7 +13,7 @@
       return;
     }
 
-    const sortedArticles = [...articles].sort(compareArticlesByDate);
+    const sortedArticles = articles.sort(compareArticlesByDate);
 
     const firstMain = sortedArticles.find(a=>a.main === true);
     const main = firstMain ?? sortedArticles[0];

@@ -1,8 +1,8 @@
 (() => {
   "use strict";
 
-  const partnersList = document.querySelector("#partners-list");
   function renderPartners(partners) {
+    const partnersList = document.querySelector("#partners-list");
     partnersList.replaceChildren();
 
     if (partners.length === 0) {

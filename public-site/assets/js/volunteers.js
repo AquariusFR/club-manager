@@ -3,11 +3,12 @@
 
   const API_URL = "/api/public/volunteers";
 
-  const volunteersList = document.querySelector("#volunteers-list");
-
-  init();
+  if (window.spaEnabled) {
+    init();
+  }
 
   async function init() {
+    const volunteersList = document.querySelector("#volunteers-list");
     if (!volunteersList) {
       return;
     }
@@ -49,6 +50,7 @@
   }
 
   function renderVolunteers(volunteers) {
+    const volunteersList = document.querySelector("#volunteers-list");
     volunteersList.replaceChildren();
 
     if (volunteers.length === 0) {
@@ -63,6 +65,8 @@
       volunteersList.appendChild(createVolunteerCard(person));
     });
   }
+
+  window.renderVolunteers = renderVolunteers;
 
   function createVolunteerCard(person) {
     const article = document.createElement("article");

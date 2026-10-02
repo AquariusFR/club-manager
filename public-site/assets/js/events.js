@@ -1,9 +1,8 @@
 (() => {
   "use strict";
 
-  const eventsList = document.querySelector("#events-list");
-
   function renderEvents(events) {
+    const eventsList = document.querySelector("#events-list");
     const eventsRendered = events.sort(compareArticlesByDate).map((event) => {
       if (event.type === "match") {
         return renderMatch(event);
@@ -29,7 +28,7 @@
       : '<div class="h-4" aria-hidden="true"></div>';
     const eventPhoto = event.photoUrl
       ? `style="background-image: url(${event.photoUrl});"`
-      : '';
+      : "";
     return `
 <article class="calendar__event event min-w-0 shrink-0 grow-0 clip-corner duration-medium-1 bg-background-secondary relative flex w-[220px] flex-col overflow-hidden md:w-[293px] hover:bg-background-secondary-hover">
   <div class="d-flex flex-column h-100 grow-1 absolute top-0 bottom-0 left-0 right-0" ${eventPhoto}></div>
@@ -59,8 +58,7 @@
   }
   function renderMatch(match) {
     const overTag =
-        !match.forfait &&
-      parseDate(match.date) < new Date()
+      !match.forfait && parseDate(match.date) < new Date()
         ? '<span class="mt-0.5 leading-none">Terminé</span>'
         : "";
 

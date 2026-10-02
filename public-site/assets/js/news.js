@@ -1,20 +1,13 @@
 (() => {
   "use strict";
 
-  const API_URL = "/api/public/news";
+  const API_URL = "/api/public/news/";
 
-  const articlesList = document.querySelector("#articles-list");
-  const viewer = document.querySelector("#image-viewer");
-  const viewerImage = viewer?.querySelector(".image-viewer__image");
-  const viewerCounter = viewer?.querySelector(".image-viewer__counter");
-  const previousButton = viewer?.querySelector(".image-viewer__previous");
-  const nextButton = viewer?.querySelector(".image-viewer__next");
-  const closeButton = viewer?.querySelector(".image-viewer__close");
+  let articlesList;
 
-  let currentPhotos = [];
-  let currentPhotoIndex = 0;
-
-  init();
+  if (window.spaEnabled) {
+    init();
+  }
 
   async function init() {
     if (!articlesList) {
@@ -24,7 +17,7 @@
     try {
       const articles = await fetchArticles();
 
-      renderArticles(articles);
+      renderNews(articles);
     } catch (error) {
       console.error("Erreur lors du chargement des actualités :", error);
 
@@ -58,7 +51,9 @@
    * ARTICLES
    */
 
-  function renderArticles(articles) {
+  function renderNews(articles) {
+    articlesList = document.querySelector("#articles-list");
+
     articlesList.replaceChildren();
 
     if (articles.length === 0) {
@@ -71,234 +66,50 @@
 
     const sortedArticles = [...articles].sort(compareArticlesByDate);
 
-    sortedArticles.forEach((article) => {
-      articlesList.appendChild(createArticle(article));
-    });
+    articlesList.insertAdjacentHTML(
+      "beforeend",
+      sortedArticles.map(createArticle).join(""),
+    );
   }
+
+  window.renderNews = renderNews;
 
   function createArticle(article) {
-    const element = document.createElement("article");
+    const title = article.title || "Sans titre";
+    const date = toIsoDate(article.date);
+    const photo = article.photo || "";
+    const category = article.category || "";
+    const id = article.id || "";
 
-    element.className = "article-card";
-
-    /*
-     * Galerie
-     */
-
-    if (Array.isArray(article.photos) && article.photos.length > 0) {
-      element.appendChild(createArticleGallery(article));
-    }
-
-    /*
-     * Contenu
-     */
-
-    const content = document.createElement("div");
-
-    content.className = "article-card__content";
-
-    /*
-     * Date
-     */
-
-    const date = document.createElement("time");
-
-    date.className = "article-card__date";
-
-    date.dateTime = toIsoDate(article.date);
-
-    date.textContent = formatDate(article.date);
-
-    /*
-     * Titre
-     */
-
-    const title = document.createElement("h2");
-
-    title.className = "article-card__title";
-
-    title.textContent = article.title || "Sans titre";
-
-    /*
-     * Texte
-     */
-
-    const text = document.createElement("div");
-
-    text.className = "article-card__text";
-
-    text.textContent = article.text || "";
-
-    content.append(date, title, text);
-
-    element.appendChild(content);
-
-    return element;
+    const articleHTML = `
+<div class="col-span-6">
+    <div
+    class="group cursor-pointer relative d-flex flex-column text-content-primary opacity-0 animate-slide-in-fade-up"
+    style="animation-delay: calc(0 * var(--duration-instant));">
+    <div class="relative aspect-video overflow-hidden">
+        <div class="relative h-100 w-100"><img alt="" loading="lazy" width="6822" height="4548"
+            decoding="async" data-nimg="1"
+            class="duration-300 ease-in duration-medium-1 ease-standard scale-100 transition-all group-hover:scale-105"
+            sizes="(max-width: 719px) 50vw, 293px"
+            style="color: transparent;"
+            src="${photo}"></div>
+    </div>
+    <div class="gap-sm pt-md d-flex flex-column">
+        <div class="gap-xs d-flex h-5 items-center self-stretch">
+        <h3 class="typography-overline-2 d-block text-content-secondary">${category}</h3>
+        </div>
+        <a
+        class="static before:absolute before:inset-0 before:cursor-pointer typography-body-4-semibold gap-sm d-flex items-center"
+        href="./news/${id}">
+            <span class="[display:-webkit-box] overflow-hidden [-webkit-box-orient:vertical] [-webkit-line-clamp:3]">${title}</span>
+        </a>
+        <time datetime="2026-09-14T12:25:48.657Z" class="typography-body-6 d-d-block text-content-secondary">${date}</time>
+    </div>
+    </div>
+</div>
+    `;
+    return articleHTML;
   }
-
-  /*
-   * GALERIE
-   */
-
-  function createArticleGallery(article) {
-    const gallery = document.createElement("div");
-
-    gallery.className = "article-card__gallery";
-
-    article.photos.forEach((photo, index) => {
-      const button = document.createElement("button");
-
-      button.type = "button";
-
-      button.className = "article-card__photo";
-
-      button.setAttribute("aria-label", `Afficher la photo ${index + 1}`);
-
-      const image = document.createElement("img");
-
-      image.src = photo;
-
-      image.alt = `${article.title || "Actualité"} — photo ${index + 1}`;
-
-      image.loading = index === 0 ? "eager" : "lazy";
-
-      button.appendChild(image);
-
-      button.addEventListener("click", () => {
-        openViewer(article.photos, index, article.title);
-      });
-
-      gallery.appendChild(button);
-    });
-
-    return gallery;
-  }
-
-  /*
-   * VISIONNEUSE
-   */
-
-  function openViewer(photos, index, title) {
-    if (
-      !viewer ||
-      !viewerImage ||
-      !Array.isArray(photos) ||
-      photos.length === 0
-    ) {
-      return;
-    }
-
-    currentPhotos = photos;
-    currentPhotoIndex = index;
-
-    viewerImage.alt = `${title || "Actualité"} — photo ${index + 1}`;
-
-    updateViewer();
-
-    viewer.classList.add("image-viewer--open");
-
-    viewer.setAttribute("aria-hidden", "false");
-
-    document.body.classList.add("no-scroll");
-
-    closeButton?.focus();
-  }
-
-  function closeViewer() {
-    if (!viewer) {
-      return;
-    }
-
-    viewer.classList.remove("image-viewer--open");
-
-    viewer.setAttribute("aria-hidden", "true");
-
-    document.body.classList.remove("no-scroll");
-
-    currentPhotos = [];
-    currentPhotoIndex = 0;
-  }
-
-  function showPreviousPhoto() {
-    if (currentPhotos.length === 0) {
-      return;
-    }
-
-    currentPhotoIndex =
-      (currentPhotoIndex - 1 + currentPhotos.length) % currentPhotos.length;
-
-    updateViewer();
-  }
-
-  function showNextPhoto() {
-    if (currentPhotos.length === 0) {
-      return;
-    }
-
-    currentPhotoIndex = (currentPhotoIndex + 1) % currentPhotos.length;
-
-    updateViewer();
-  }
-
-  function updateViewer() {
-    const photo = currentPhotos[currentPhotoIndex];
-
-    if (!photo || !viewerImage) {
-      return;
-    }
-
-    viewerImage.src = photo;
-
-    if (viewerCounter) {
-      viewerCounter.textContent = `${currentPhotoIndex + 1} / ${currentPhotos.length}`;
-    }
-
-    const hasMultiplePhotos = currentPhotos.length > 1;
-
-    previousButton?.classList.toggle("hidden", !hasMultiplePhotos);
-
-    nextButton?.classList.toggle("hidden", !hasMultiplePhotos);
-  }
-
-  /*
-   * EVENTS VISIONNEUSE
-   */
-
-  closeButton?.addEventListener("click", closeViewer);
-
-  previousButton?.addEventListener("click", showPreviousPhoto);
-
-  nextButton?.addEventListener("click", showNextPhoto);
-
-  viewer?.addEventListener("click", (event) => {
-    /*
-     * Cliquer sur le fond ferme la visionneuse.
-     * Cliquer sur l'image ne la ferme pas.
-     */
-    if (event.target === viewer) {
-      closeViewer();
-    }
-  });
-
-  document.addEventListener("keydown", (event) => {
-    if (!viewer?.classList.contains("image-viewer--open")) {
-      return;
-    }
-
-    switch (event.key) {
-      case "Escape":
-        closeViewer();
-        break;
-
-      case "ArrowLeft":
-        showPreviousPhoto();
-        break;
-
-      case "ArrowRight":
-        showNextPhoto();
-        break;
-    }
-  });
 
   /*
    * FORMATAGE

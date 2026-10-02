@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="fr">
+
+<head>
+  <base href="/public-site/" />
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>RCBA - Racing Club Bû Abondant</title>
+
+  <meta name="description"
+    content="Site officiel du Racing Club Bu Abondant. Actualités, équipes, éducateurs, bénévoles, licences et vie du club." />
+  <meta name="theme-color" content="#10207C" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RCBA - Racing Club Bû Abondant" />
+  <meta property="og:description" content="Découvrez toute la vie du Racing Club Bû Abondant." />
+  <meta property="og:image" content="./assets/images/rcba.svg" />
+
+  <link rel="icon" href="./assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/variables.css" />
+  <link rel="stylesheet" href="./assets/css/layout.css" />
+  <link rel="stylesheet" href="./assets/css/components.css" />
+  <link rel="stylesheet" href="./assets/css/utilities.css" />
+  <script type="module" src="./assets/js/menu.js" defer></script>
+</head>
+
+<body>
+  <header class="header__wrapper">
+    <div class="container">
+
+      <a href="./index.php" class="site-header__brand">
+        <img src="./assets/images/rcba.svg" alt="RCBA" width="52" height="52">
+
+        <div class="hidden-mobile">
+          <strong>RCBA</strong>
+          <span>Racing Club Bû Abondant</span>
+        </div>
+        <div class="site-header__title hidden-desktop">
+          <strong>RCBA</strong>
+        </div>
+      </a>
+
+      <button class="site-header__menu-button hidden-desktop" aria-label="Ouvrir le menu" aria-expanded="false"
+        aria-controls="main-navigation">
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+      <nav id="main-navigation" class="site-header__navigation" aria-label="Navigation principale">
+
+        <ul>
+          <li><a href="./home" aria-current="page">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/home.svg" alt="Accueil"></use>
+              </svg>
+              Accueil
+            </a></li>
+          <li><a href="./news">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/rss.svg" alt="Actualités"></use>
+              </svg>
+              Actualités
+            </a></li>
+          <li><a href="./teams">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/teams.svg" alt="Équipes"></use>
+              </svg>
+              Équipes
+            </a></li>
+          <li><a href="./staff">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/educators.svg" alt="Éducateurs"></use>
+              </svg>
+              Éducateurs
+            </a></li>
+          <li><a href="./volunteers">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/benevoles.svg" alt="Bénévoles"></use>
+              </svg>
+              Bénévoles
+            </a></li>
+          <li><a href="./valeurs">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/thumbs-up.svg" alt="Valeurs"></use>
+              </svg>
+              Valeurs
+            </a></li>
+          <li><a href="./licences">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/document-list.svg" alt="Licences"></use>
+              </svg>
+              Licences
+            </a></li>
+          <li><a href="./palmares">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/sun.svg" alt="Palmarès"></use>
+              </svg>
+              Palmarès
+            </a></li>
+          <li><a href="./contact">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/map-marker.svg" alt="Nous trouver"></use>
+              </svg>
+              Nous
+              trouver</a></li>
+          <li class="shop"><a href="https://boutique.rcba.club" aria-current="page">
+              <svg width="24" height="24">
+                <use width="24" height="24" href="./assets/icons/intersport-logo.svg" alt="Boutique"></use>
+              </svg>
+              Boutique
+            </a></li>
+        </ul>
+
+      </nav>
+
+    </div>
+  </header>
