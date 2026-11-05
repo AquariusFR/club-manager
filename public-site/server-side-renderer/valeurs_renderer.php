@@ -9,11 +9,6 @@ function render(): string
 {
     $html = findTemplate('valeurs');
 
-    $valeursData = valeurs_data();
-
-    // build html for the following sections : school-teams, preformation-teams, senior-teams
-    //$html = replaceElementContents($html, 'valeurs-list', renderValeurs($valeursData));
-    
     return $html;
 }
 
