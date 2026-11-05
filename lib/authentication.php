@@ -85,20 +85,30 @@ function createAccount(string $mail, string $password): bool
  */
 function checkAuthentication(string $mail, string $password): bool
 {
+    return authenticateUser($mail, $password) !== null;
+}
+
+/**
+ * Vérifie les identifiants et renvoie les informations non sensibles du compte.
+ *
+ * @return array{id: int, login: string, role: string}|null
+ */
+function authenticateUser(string $mail, string $password): ?array
+{
     $mail = trim($mail);
 
     if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-        return false;
+        return null;
     }
 
     if ($password === '') {
-        return false;
+        return null;
     }
 
     $db = database();
 
     $stmt = $db->prepare(
-        'SELECT password
+        'SELECT id, login, password, role
          FROM authentication
          WHERE login = :login
          LIMIT 1'
@@ -111,11 +121,19 @@ function checkAuthentication(string $mail, string $password): bool
     $user = $stmt->fetch();
 
     if ($user === false) {
-        return false;
+        return null;
     }
 
-    return password_verify(
+    if (!password_verify(
         $password,
         $user['password']
-    );
+    )) {
+        return null;
+    }
+
+    return [
+        'id' => (int) $user['id'],
+        'login' => $user['login'],
+        'role' => $user['role']
+    ];
 }

@@ -2,57 +2,44 @@
 
 declare(strict_types=1);
 
-function checkAuthentication()
+require_once __DIR__ . '/../lib/jwt.php';
+
+function checkAuthentication(): void
 {
-    // Extraction et vérification du Token JWT
-    $headers = getallheaders();
-    $authHeader = isset($headers['Authorization']) ? $headers['Authorization'] : '';
+    $authorization = $_SERVER['HTTP_AUTHORIZATION'] ?? '';
 
-    if (empty($authHeader) || !preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
+    if ($authorization === '' && function_exists('getallheaders')) {
+        $headers = getallheaders();
+        $authorization = $headers['Authorization'] ?? $headers['authorization'] ?? '';
+    }
+
+    if (!preg_match('/^Bearer\s+([A-Za-z0-9._~-]+)$/i', $authorization, $matches)) {
         http_response_code(401);
-        echo json_encode(["status" => "error", "message" => "Missing token."], JSON_UNESCAPED_UNICODE);
-        exit();
+        echo json_encode([
+            'status' => 'error',
+            'message' => 'Missing or invalid token.'
+        ], JSON_UNESCAPED_UNICODE);
+        exit;
     }
 
-    $jwt = $matches[1];
-    // ATTENTION : Utilisez exactement la même clé secrète que votre premier endpoint !
-    $secret_key = "VOTRE_CLE_SECRETE_SUPER_SECURISEE_IONOS"; // devra être stocké à l'exterieur des sources.
+    try {
+        $claims = jwt_verify_token($matches[1]);
+    } catch (RuntimeException $e) {
+        error_log('JWT configuration error: ' . $e->getMessage());
+        http_response_code(500);
+        echo json_encode([
+            'status' => 'error',
+            'message' => 'Authentication service is not configured.'
+        ], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
 
-    // Séparation des 3 parties du JWT
-    $jwtParts = explode('.', $jwt);
-    if (count($jwtParts) !== 3) {
+    if ($claims === null) {
         http_response_code(401);
-        echo json_encode(["status" => "error", "message" => "invalid token format."], JSON_UNESCAPED_UNICODE);
-        exit();
+        echo json_encode([
+            'status' => 'error',
+            'message' => 'Invalid or expired token.'
+        ], JSON_UNESCAPED_UNICODE);
+        exit;
     }
-
-    list($base64UrlHeader, $base64UrlPayload, $base64UrlSignature) = $jwtParts;
-
-
-    // Recalcul de la signature pour validation
-    $signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, $secret_key, true);
-    $expectedSignature = str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($signature));
-
-    if ($base64UrlSignature !== $expectedSignature) {
-        http_response_code(401);
-        echo json_encode(["status" => "error", "message" => "invalid token signature ."], JSON_UNESCAPED_UNICODE);
-        exit();
-    }
-
-    // Vérification de la date d'expiration (exp)
-    $payload = json_decode(base64UrlDecode($base64UrlPayload), true);
-    if (isset($payload['exp']) && $payload['exp'] < time()) {
-        http_response_code(401);
-        echo json_encode(["status" => "error", "message" => "token has expired."], JSON_UNESCAPED_UNICODE);
-        exit();
-    }
-}
-// Fonction utilitaire pour décoder le format Base64Url
-function base64UrlDecode(string $data)
-{
-    $remainder = strlen($data) % 4;
-    if ($remainder) {
-        $data .= str_repeat('=', 4 - $remainder);
-    }
-    return base64_decode(str_replace(['-', '_'], ['+', '/'], $data));
 }

@@ -52,6 +52,14 @@ Pour une autre zone, créer `/api/club/staff.php` :
 /api/club/staff
 /api/club/staff/12
 
+## Authentification JWT
+
+Les routes `/api/club/...` exigent un en-tête `Authorization: Bearer <token>`.
+Le token est émis par `POST /authentication/login` et expire après une heure.
+Le serveur PHP doit avoir la variable d'environnement `CLUB_MANAGER_JWT_SECRET`
+configurée avec une valeur aléatoire d'au moins 32 caractères. Utiliser la même
+valeur pour l'authentification et l'API.
+
 ## Important
 
 POST, PUT et DELETE sont simulés dans cette première version.

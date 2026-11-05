@@ -1,27 +1,27 @@
 <?php
 
 require_once __DIR__ . '/../lib/authentication.php';
+require_once __DIR__ . '/../lib/jwt.php';
 
-// 1. Configuration des entêtes HTTP pour une API REST et CORS
-header("Access-Control-Allow-Origin: *");
-header("Content-Type: application/json; charset=UTF-8");
-header("Access-Control-Allow-Methods: POST, OPTIONS");
-header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
+header('Access-Control-Allow-Origin: *');
+header('Content-Type: application/json; charset=UTF-8');
+header('Access-Control-Allow-Methods: POST, OPTIONS');
+header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With');
 
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    http_response_code(200);
+    http_response_code(204);
     exit();
 }
 
-// 2. Restriction à la méthode POST
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     http_response_code(405);
-    echo json_encode(["status" => "error", "message" => "Méthode non autorisée. Utilisez POST."], JSON_UNESCAPED_UNICODE);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Method not allowed. Use POST.'
+    ], JSON_UNESCAPED_UNICODE);
     exit();
 }
 
-// 3. Récupération du login (JSON ou Formulaire)
-// Récupération du JSON envoyé
 $input = json_decode(
     file_get_contents('php://input'),
     true
@@ -40,58 +40,49 @@ if (!is_array($input)) {
 
 $mail = $input['mail'] ?? '';
 $password = $input['password'] ?? '';
-if(!checkAuthentication($mail, $password)) {
-    
-    http_response_code(401);
-
+if (!is_string($mail) || !is_string($password)) {
+    http_response_code(400);
     echo json_encode([
         'success' => false,
-        'message' => 'Invalid credentials.'
-    ]);
-
+        'message' => 'Invalid request.'
+    ], JSON_UNESCAPED_UNICODE);
     exit;
 }
 
-// 4. Clé secrète pour signer le JWT
-// ATTENTION : Changez cette clé par une chaîne complexe et gardez-la secrète !
-$secret_key = "VOTRE_CLE_SECRETE_SUPER_SECURISEE_IONOS";
+try {
+    $user = authenticateUser($mail, $password);
 
-// 5. Construction du JWT (Header + Payload)
-$header = json_encode(['typ' => 'JWT', 'alg' => 'HS256']);
+    if ($user === null) {
+        http_response_code(401);
+        echo json_encode([
+            'success' => false,
+            'message' => 'Invalid credentials.'
+        ], JSON_UNESCAPED_UNICODE);
+        exit;
+    }
 
-$issuedAt = time();
-$expirationTime = $issuedAt + 3600; // Valable 1 heure
+    $issuedAt = time();
+    $expiresAt = $issuedAt + 3600;
+    $token = jwt_create_token([
+        'iat' => $issuedAt,
+        'exp' => $expiresAt,
+        'sub' => (string) $user['id'],
+        'user' => [
+            'login' => $user['login'],
+            'role' => $user['role']
+        ]
+    ]);
 
-$payload = json_encode([
-    'iss' => "https://" . $_SERVER['HTTP_HOST'], // Émetteur
-    'iat' => $issuedAt,                         // Date de création
-    'exp' => $expirationTime,                  // Date d'expiration
-    'user' => [
-        'login' => htmlspecialchars($mail),
-        'role' => 'user'
-    ]
-]);
-
-// Fonction utilitaire pour le formatage Base64Url (requis pour le standard JWT)
-function base64UrlEncode(string $data): string {
-    return str_replace(['+', '/', '='], ['-', '_', ''], base64_encode($data));
+    echo json_encode([
+        'success' => true,
+        'token' => $token,
+        'expires_in' => $expiresAt - $issuedAt
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES);
+} catch (Throwable $e) {
+    error_log('Authentication login error: ' . $e->getMessage());
+    http_response_code(500);
+    echo json_encode([
+        'success' => false,
+        'message' => 'Internal server error.'
+    ], JSON_UNESCAPED_UNICODE);
 }
-
-$base64UrlHeader = base64UrlEncode($header);
-$base64UrlPayload = base64UrlEncode($payload);
-
-// 6. Création de la signature HMAC-SHA256
-$signature = hash_hmac('sha256', $base64UrlHeader . "." . $base64UrlPayload, $secret_key, true);
-$base64UrlSignature = base64UrlEncode($signature);
-
-// Assemblage du JWT final
-$jwt = $base64UrlHeader . "." . $base64UrlPayload . "." . $base64UrlSignature;
-
-// 7. Envoi de la réponse de succès
-http_response_code(200);
-echo json_encode([
-    "status" => "success",
-    "message" => "Authentification réussie (sans vérification)",
-    "token" => $jwt,
-    "expires_in" => 3600
-], JSON_UNESCAPED_UNICODE);
