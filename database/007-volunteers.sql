@@ -1,0 +1,11 @@
+CREATE TABLE
+    volunteers (
+        id INT NOT NULL AUTO_INCREMENT,
+        first_name VARCHAR(100) NOT NULL,
+        last_name VARCHAR(100) NOT NULL,
+        email VARCHAR(255) NULL,
+        phone VARCHAR(30) NULL,
+        created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    );

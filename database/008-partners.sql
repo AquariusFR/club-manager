@@ -1,0 +1,11 @@
+CREATE TABLE
+    partners (
+        id INT NOT NULL AUTO_INCREMENT,
+        name VARCHAR(150) NOT NULL,
+        logo VARCHAR(500) NULL,
+        description TEXT NULL,
+        website VARCHAR(500) NULL,
+        created_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+        updated_at DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+        PRIMARY KEY (id)
+    );
