@@ -1,10 +1,13 @@
 import { TestBed } from '@angular/core/testing';
+import { provideHttpClient } from '@angular/common/http';
 import { App } from './app';
+import { LoginComponent } from './login/login.component';
 
 describe('App', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [App],
+      providers: [provideHttpClient()],
     })
       .compileComponents();
   });
@@ -15,10 +18,11 @@ describe('App', () => {
     expect(app).toBeTruthy();
   });
 
-  it('should render title', async () => {
-    const fixture = TestBed.createComponent(App);
+  it('should render the login page', async () => {
+    const fixture = TestBed.createComponent(LoginComponent);
+    fixture.detectChanges();
     await fixture.whenStable();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, club');
+    expect(compiled.textContent).toContain('Connexion');
   });
 });

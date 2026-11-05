@@ -229,7 +229,7 @@ Options -Indexes
 
 </FilesMatch>
 
-
+SetEnv CLUB_MANAGER_JWT_SECRET "2020_RCBA_SSs_PjxeNWAzd0lDMQ_YWY1Tm9rQSFveklvPyl+JG80WitPKn5lJA_Q2oiL35eVyBROTs7Uz0wd3grODo_LXo8dzsqUns_"
 # ----------------------------------------------------------
 # FIN
 # ----------------------------------------------------------

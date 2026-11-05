@@ -57,3 +57,15 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+## Authentification
+
+L'écran d'accueil permet de se connecter avec une adresse e-mail et un mot de
+passe. La connexion appelle `POST /authentication/login` avec `{ mail,
+password }`. Le JWT reçu est conservé dans `localStorage` avec sa date
+d'expiration, ajouté aux requêtes HTTP suivantes dans l'en-tête
+`Authorization: Bearer <token>`, puis supprimé à son expiration ou après une
+réponse HTTP 401.
+
+L'application suppose que l'API d'authentification est disponible à
+`/authentication/login` sur la même origine que le client.

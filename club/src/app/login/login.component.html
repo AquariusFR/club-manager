@@ -1,0 +1,62 @@
+<main class="login-page">
+  @if (auth.isAuthenticated()) {
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Club</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <p>Vous êtes connecté.</p>
+        <button mat-flat-button type="button" (click)="logout()">
+          Se déconnecter
+        </button>
+      </mat-card-content>
+    </mat-card>
+  } @else {
+    <mat-card class="login-card">
+      <mat-card-header>
+        <mat-card-title>Connexion</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <form [formGroup]="form" (ngSubmit)="submit()">
+          <mat-form-field appearance="outline">
+            <mat-label>Adresse e-mail</mat-label>
+            <input
+              matInput
+              type="email"
+              formControlName="mail"
+              autocomplete="username"
+              required
+            />
+            @if (form.controls.mail.touched && form.controls.mail.hasError('email')) {
+              <mat-error>Entrez une adresse e-mail valide.</mat-error>
+            } @else if (form.controls.mail.touched && form.controls.mail.hasError('required')) {
+              <mat-error>L'adresse e-mail est obligatoire.</mat-error>
+            }
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Mot de passe</mat-label>
+            <input
+              matInput
+              type="password"
+              formControlName="password"
+              autocomplete="current-password"
+              required
+            />
+            @if (form.controls.password.touched && form.controls.password.hasError('required')) {
+              <mat-error>Le mot de passe est obligatoire.</mat-error>
+            }
+          </mat-form-field>
+
+          @if (errorMessage()) {
+            <p class="error-message" role="alert">{{ errorMessage() }}</p>
+          }
+
+          <button mat-flat-button type="submit" [disabled]="form.invalid || isLoading()">
+            {{ isLoading() ? 'Connexion…' : 'Se connecter' }}
+          </button>
+        </form>
+      </mat-card-content>
+    </mat-card>
+  }
+</main>
