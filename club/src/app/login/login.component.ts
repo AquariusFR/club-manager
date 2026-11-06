@@ -1,6 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, inject, signal } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
@@ -23,6 +24,7 @@ import { AuthenticationService } from '../authentication/authentication.service'
 export class LoginComponent {
   private readonly formBuilder = inject(FormBuilder);
   private readonly authentication = inject(AuthenticationService);
+  private readonly router = inject(Router);
 
   protected readonly form = this.formBuilder.nonNullable.group({
     mail: ['', [Validators.required, Validators.email]],
@@ -46,6 +48,9 @@ export class LoginComponent {
       .login(mail, password)
       .pipe(finalize(() => this.isLoading.set(false)))
       .subscribe({
+        next: () => {
+          void this.router.navigateByUrl('/');
+        },
         error: (error: unknown) => {
           this.errorMessage.set(this.getErrorMessage(error));
         },
