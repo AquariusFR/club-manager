@@ -1,1 +1,22 @@
-<p>main works!</p>
+<main class="dashboard">
+  <h1>Espace club</h1>
+  <nav class="screen-grid" aria-label="Écrans du club">
+    @for (screen of screens; track screen.path) {
+      <a
+        mat-card
+        class="screen-card"
+        [routerLink]="screen.path"
+        [attr.aria-label]="screen.title + ' : ' + screen.description"
+      >
+        <mat-card-content>
+          <mat-icon aria-hidden="true">{{ screen.icon }}</mat-icon>
+          <div class="screen-copy">
+            <h2>{{ screen.title }}</h2>
+            <p>{{ screen.description }}</p>
+          </div>
+          <mat-icon class="screen-arrow" aria-hidden="true">arrow_forward</mat-icon>
+        </mat-card-content>
+      </a>
+    }
+  </nav>
+</main>

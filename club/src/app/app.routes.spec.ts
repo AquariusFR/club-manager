@@ -36,6 +36,6 @@ describe('routes', () => {
     await harness.navigateByUrl('/');
 
     expect(TestBed.inject(Router).url).toBe('/');
-    expect(harness.routeNativeElement?.textContent).toContain('main works!');
+    expect(harness.routeNativeElement?.textContent).toContain('Espace club');
   });
 });
