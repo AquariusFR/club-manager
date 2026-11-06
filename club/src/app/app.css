@@ -1,0 +1,9 @@
+.toolbar-offset {
+  height: 64px;
+}
+
+@media (max-width: 599px) {
+  .toolbar-offset {
+    height: 56px;
+  }
+}

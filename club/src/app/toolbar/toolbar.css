@@ -1,0 +1,12 @@
+:host {
+  box-shadow: 0 2px 8px rgb(0 0 0 / 18%);
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+}
+
+.example-spacer {
+  flex: 1 1 auto;
+}

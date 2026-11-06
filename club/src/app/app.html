@@ -1,1 +1,5 @@
+@if (authentication.isAuthenticated()) {
+  <app-toolbar />
+  <div class="toolbar-offset" aria-hidden="true"></div>
+}
 <router-outlet />
