@@ -1,0 +1,7 @@
+{
+  "name": "club-manager-dev-server",
+  "private": true,
+  "scripts": {
+    "start": "node server.mjs"
+  }
+}
